@@ -1,0 +1,3150 @@
+<!DOCTYPE html>
+<html class=" no-touch" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8"><script src="page22_fichiers/templates.js" type="text/javascript"></script><script src="page22_fichiers/main.js" type="text/javascript"></script><script src="page22_fichiers/discovery.js" type="text/javascript"></script><script src="page22_fichiers/nr-974.js"></script><script src="page22_fichiers/analytics.js" async=""></script><script src="page22_fichiers/analytics_002.js" async="" type="text/javascript"></script><script async="" type="text/javascript" src="page22_fichiers/gtm.js"></script><script src="page22_fichiers/gpt.js" type="text/javascript" async=""></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="title" content="Cairo facts, information, pictures | Encyclopedia.com articles about Cairo">
+<meta name="description" content="Get information, facts, and pictures about Cairo at Encyclopedia.com. Make research projects and school reports about Cairo easy with credible articles from our FREE, online encyclopedia and dictionary.">
+<meta name="abstract" content="Encyclopedia.com – Online dictionary and encyclopedia with pictures, facts, and videos. Get information and homework help with millions of articles in our FREE, online library.">
+<meta name="keywords" content="Get information, facts, and pictures, about Cairo, at Encyclopedia.com, Make, research, projects, and school reports, about Cairo, easy, with credible, articles, from our FREE, online encyclopedia and dictionary">
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="shortcut icon" href="http://www.encyclopedia.com/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="canonical" href="http://www.encyclopedia.com/places/africa/egyptian-political-geography/cairo">
+<link rel="shortlink" href="http://www.encyclopedia.com/node/1215042">
+<link rel="revision" href="http://www.encyclopedia.com/places/africa/egyptian-political-geography/cairo">
+
+    <title>Cairo facts, information, pictures | Encyclopedia.com articles about Cairo</title>
+    <link rel="stylesheet" href="page22_fichiers/css_kPMtNduWUKQI-NsU4-KVKke3FpoE8ePQVShWw0fk40M.css" media="all">
+<link rel="stylesheet" href="page22_fichiers/css_HqCXZM_cX3UmKJRchtZsElYioMBDjvH4h24VdDriBIw.css" media="all">
+<link rel="stylesheet" href="page22_fichiers/css.css" media="all">
+<link rel="stylesheet" href="page22_fichiers/font-awesome.css" media="all">
+<link rel="stylesheet" href="page22_fichiers/css_KD7ndQvTzWsnBOIzjLQNKaOIoD7YSWsRo-IyBb_ehnE.css" media="all">
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="page22_fichiers/js_umybUo-atbHRtsWF875Pv-ESSh2gg-4VzKb2R8zQGE0.js"></script>
+<script src="page22_fichiers/syndication.js"></script>
+
+    <script>
+      var _reportClientErrors = false;
+    </script>
+  <link href="page22_fichiers/style.css" rel="stylesheet"><style>sf-block,
+sf-title,
+sf-header,
+sf-img {
+  display: block;
+}
+
+sf-span {
+  display: inline;
+}
+
+sf-highlight {
+  font-weight: bold;
+  font-size: inherit;
+}
+
+.sfdw-header.sfdw-oneline form {
+  max-width: 330px;
+  margin-right: 20px;
+}
+.sfdw-header.sfdw-oneline .sfdw-search-box {
+  margin-left: 0;
+  width: 100%;
+}
+.sfdw-header.sfdw-oneline .sfdw-sorting {
+  font-size: 13px;
+  color: #666;
+  height: 40px;
+  line-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.ft-desktop .sfdw-header.sfdw-oneline {
+  padding: 10px 0;
+}
+.ft-mobile .sfdw-header.sfdw-oneline {
+  padding: 10px 46px 10px 0;
+}
+
+.sfdw-header.sfdw-oneline-slim {
+  font-size: 13px;
+  margin-right: 0;
+  background-color: white;
+  justify-content: space-between;
+}
+.sfdw-header.sfdw-oneline-slim .sfdw-search-box .sfdw-search-input {
+  background: transparent;
+  color: inherit;
+}
+.sfdw-header.sfdw-oneline-slim .sfdw-additional-data {
+  width: 260px;
+  margin-left: 10px;
+  padding-right: 20px;
+  overflow: hidden;
+  flex: 0 1 185px;
+}
+.sfdw-header.sfdw-oneline-slim .sfdw-sorting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 13px;
+  color: #000;
+}
+.sfdw-header.sfdw-oneline-slim .sfdw-sorting-title {
+  line-height: 30px;
+  display: block;
+  float: left;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  white-space: nowrap;
+}
+.sfdw-header.sfdw-oneline-slim .sfdw-switch-field {
+  display: block;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  border: 1px solid #4c4c4c;
+  background-color: #fff;
+}
+.sfdw-header.sfdw-oneline-slim .sfdw-switch-field:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.sfdw-header.sfdw-oneline-slim .sfdw-switch-field input {
+  display: none;
+}
+.sfdw-header.sfdw-oneline-slim .sfdw-switch-field label {
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  width: 75px;
+  font-weight: normal;
+  text-align: center;
+  transition: all 0.1s ease-in-out;
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+.sfdw-header.sfdw-oneline-slim .sfdw-switch-field label span {
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1.5;
+}
+.ft-desktop .sfdw-header.sfdw-oneline-slim {
+  margin-left: -20px;
+  border-bottom: 1px solid #4c4c4c;
+  padding: 0 40px 0 0;
+}
+.ft-desktop .sfdw-header.sfdw-oneline-slim .sfdw-switch-field {
+  float: left;
+}
+.ft-desktop .sfdw-header.sfdw-oneline-slim .sfdw-switch-field label {
+  background-color: #fff;
+}
+.ft-desktop .sfdw-header.sfdw-oneline-slim .sfdw-switch-field label:hover {
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+.ft-desktop .sfdw-header.sfdw-oneline-slim .sfdw-switch-field label.sfdw-sort-selected {
+  border-radius: 2px;
+  color: #fff;
+  background-color: #424242;
+}
+.ft-desktop .sfdw-header.sfdw-oneline-slim .sfdw-switch-field label.sfdw-sort-selected:hover {
+  cursor: default;
+  background-color: #424242;
+}
+.ft-desktop .sfdw-header.sfdw-oneline-slim .sfdw-search-box {
+  border: 1px solid #4c4c4c;
+}
+.ft-desktop .sfdw-header.sfdw-oneline-slim .search-field {
+  max-width: 250px;
+}
+.ft-desktop .sfdw-header.sfdw-oneline-slim .sfdw-switch-field {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  margin-left: 5px;
+  padding: 1px;
+}
+.ft-desktop .sfdw-header.sfdw-oneline-slim .sfdw-switch-field label {
+  padding: 4px;
+}
+.ft-mobile .sfdw-header.sfdw-oneline-slim {
+  margin-left: -10px;
+  margin-bottom: 40px;
+  transition: all 1s linear;
+  border-bottom: 1px solid #d6d6d6;
+  padding: 0 46px 0 0;
+}
+.ft-mobile .sfdw-header.sfdw-oneline-slim.sfdw-slide-up {
+  margin-bottom: 0;
+}
+.ft-mobile .sfdw-header.sfdw-oneline-slim .search-field {
+  width: auto;
+}
+.ft-mobile .sfdw-header.sfdw-oneline-slim .sfdw-sorting {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 1px;
+  transition: top 1s linear;
+  z-index: -1;
+  display: none;
+}
+.ft-mobile .sfdw-header.sfdw-oneline-slim .sfdw-sorting.sfdw-slide-up {
+  top: 19px;
+}
+.ft-mobile .sfdw-header.sfdw-oneline-slim .sfdw-sorting-title {
+  display: none;
+}
+.ft-mobile .sfdw-header.sfdw-oneline-slim .sfdw-search-box {
+  border: 1px solid #d6d6d6;
+}
+.ft-mobile .sfdw-header.sfdw-oneline-slim .sfdw-switch-field {
+  width: 100%;
+  border: 0;
+}
+.ft-mobile .sfdw-header.sfdw-oneline-slim .sfdw-switch-field label {
+  width: 50%;
+  background-color: white;
+  color: #b2b2b2;
+  border: 0;
+  border-bottom: 1px solid #b2b2b2;
+  border-radius: 0;
+  padding: 10px;
+}
+.ft-mobile .sfdw-header.sfdw-oneline-slim .sfdw-switch-field label span {
+  font-size: inherit;
+}
+.ft-mobile .sfdw-header.sfdw-oneline-slim .sfdw-switch-field label.sfdw-sort-selected {
+  color: black;
+  border-bottom: 2px solid black;
+}
+.ft-mobile .sfdw-header.sfdw-oneline-slim .sfdw-additional-data {
+  display: none;
+}
+.ft-mobile .ft-no-sorting .sfdw-header.sfdw-oneline-slim {
+  margin-bottom: 0;
+}
+.ft-no-logo .sfdw-header.sfdw-oneline-slim {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.sfdw-header.sfdw-oneline-slim .sfdw-logo {
+  width: 60px;
+  height: 60px;
+  flex: 0 0 60px;
+}
+
+.ft-mobile .sfdw-body-with-content .sfdw-header.sfdw-oneline-slim .sfdw-sorting {
+  display: block;
+}
+
+.ft-desktop sf-button.dw-x-btn.oneline-slim-close-btn {
+  top: 22px;
+}
+.ft-mobile sf-button.dw-x-btn.oneline-slim-close-btn {
+  top: 22px;
+}
+
+.sfdw-ext-header {
+  padding-top: 20px;
+  padding-bottom: 21px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 29px;
+  line-height: 1;
+  position: relative;
+}
+.ft-mobile .sfdw-ext-header {
+  margin-right: 10px;
+  text-align: center;
+}
+.ft-desktop .sfdw-ext-header {
+  margin-right: 40px;
+}
+
+.sfdw-go-back {
+  display: inline-block;
+  height: 18px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #2d2d2d;
+  cursor: pointer;
+  opacity: 0;
+  position: relative;
+  transition: all .4s linear;
+}
+.sfdw-go-back.sfdw-visible {
+  opacity: 1;
+}
+.ft-desktop .sfdw-go-back.sfdw-visible {
+  right: 0;
+}
+.ft-mobile .sfdw-go-back.sfdw-visible {
+  top: 0;
+}
+.ft-desktop .sfdw-go-back {
+  right: -35px;
+}
+.ft-desktop .sfdw-go-back svg {
+  height: 18px;
+  width: 10px;
+  margin-right: 10px;
+  float: left;
+}
+.ft-mobile .sfdw-go-back {
+  top: -15px;
+}
+.ft-mobile .sfdw-go-back svg {
+  position: absolute;
+  left: 50%;
+  margin-left: -9px;
+  top: 21px;
+  height: 7px;
+  width: 13px;
+}
+
+.sfdw-ext-header-logo {
+  position: absolute;
+  height: 20px;
+  bottom: -10px;
+  right: 0;
+  font-size: 11px;
+  line-height: 21px;
+  background-color: #fff;
+  color: #8e8e8e;
+  padding-left: 10px;
+}
+.sfdw-ext-header-logo .sfdw-logo-img {
+  height: 100%;
+  display: inline-block;
+  margin-left: 5px;
+  float: right;
+}
+.sfdw-ext-header-logo .sfdw-YouTube.sfdw-logo-img {
+  background: url("http://sitefuel-static-storage.mmccint.com/webAssets/logo_youtube.png") center no-repeat;
+  background-size: contain;
+  width: 49px;
+}
+.sfdw-ext-header-logo .sfdw-dailymotion.sfdw-logo-img {
+  background: url("http://sitefuel-static-storage.mmccint.com/webAssets/logo_dailymotion.png") center no-repeat;
+  background-size: contain;
+  width: 74px;
+}
+
+input[type="radio"].sfdw-sort-input {
+  box-shadow: none;
+  outline: none;
+  -webkit-appearance: radio;
+}
+
+.sfdw-sort-label {
+  margin-left: 10px;
+  line-height: inherit;
+}
+
+.ft-no-logo .sfdw-logo {
+  display: none;
+}
+
+.sfdw-default-insearch {
+  color: #5b5b5b;
+  border-bottom: 1px solid #d6d6d6;
+}
+.ft-mobile .sfdw-default-insearch {
+  margin: 20px 0 0 0;
+  padding: 0 0 20px 0;
+}
+.ft-desktop .sfdw-default-insearch {
+  margin: 20px 0 0 0;
+  padding: 0 0 20px 0;
+}
+.sfdw-default-insearch .dw-article-title {
+  font-weight: bold;
+}
+.ft-mobile .sfdw-default-insearch .dw-article-title {
+  font-size: 16px;
+}
+.ft-desktop .sfdw-default-insearch .dw-article-title {
+  font-size: 20px;
+}
+.sfdw-default-insearch .dw-article-text {
+  line-height: 1.6;
+  float: left;
+}
+.ft-mobile .sfdw-default-insearch .dw-article-text {
+  width: calc(100% - 60px - 8px);
+  height: 44.8px;
+  -webkit-line-clamp: 2;
+  font-size: 14px;
+}
+.ft-desktop .sfdw-default-insearch .dw-article-text {
+  width: calc(100% - 110px - 11px);
+  height: 102.4px;
+  font-size: 16px;
+}
+.sfdw-default-insearch .dw-add-info {
+  float: left;
+}
+.ft-mobile .sfdw-default-insearch .dw-add-info {
+  width: calc(100% - 60px - 8px);
+}
+.ft-mobile .sfdw-default-insearch .dw-article-image {
+  -webkit-box-flex: 0 0 60px;
+  -webkit-flex: 0 0 60px;
+  -ms-flex: 0 0 60px;
+  flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin-right: 8px;
+}
+.ft-desktop .sfdw-default-insearch .dw-article-image {
+  -webkit-box-flex: 0 0 110px;
+  -webkit-flex: 0 0 110px;
+  -ms-flex: 0 0 110px;
+  flex: 0 0 110px;
+  width: 110px;
+  height: 110px;
+  line-height: 110px;
+  margin-right: 11px;
+}
+.ft-mobile .sfdw-default-insearch.sfdw-kw-ad .dw-article-text {
+  height: 67.2px;
+  -webkit-line-clamp: 3;
+}
+.ft-desktop .sfdw-default-insearch.sfdw-kw-ad .dw-article-text {
+  height: 128px;
+}
+.ft-mobile .sfdw-default-insearch.sfdw-kw-ad.sfdw-ad-SearchAPI .dw-article-text {
+  height: 44.8px;
+  -webkit-line-clamp: 2;
+}
+.ft-desktop .sfdw-default-insearch.sfdw-kw-ad.sfdw-ad-SearchAPI .dw-article-text {
+  height: 102.4px;
+}
+
+.sfdw-ext-content {
+  height: calc(100% - 90px);
+}
+.ft-desktop .sfdw-ext-content {
+  padding: 0 40px 0 0;
+}
+.ft-mobile .sfdw-ext-content {
+  padding: 0 10px 0 0;
+}
+.sfdw-ext-content > sf-block {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sfdw-extension .ft-desktop {
+  padding: 0 40px 0 0;
+}
+.sfdw-extension .dw-article-text {
+  font-size: 13px;
+  color: #8e8e8e;
+  line-height: 1.5;
+  margin-top: 5px;
+  padding-top: 18px;
+  border-top: 1px solid #ccc;
+  overflow: auto;
+}
+.sfdw-extension .dw-iframe-holder {
+  margin-bottom: 22px;
+  background-color: black;
+}
+.sfdw-extension .dw-article-title {
+  font-size: 24px;
+  color: #5f5f5f;
+}
+.ft-desktop .sfdw-extension {
+  padding: 0 40px 0 0;
+}
+.ft-mobile .sfdw-extension {
+  padding: 0 10px 0 0;
+}
+
+.sfdw-player-info {
+  color: #979797;
+  font-size: 12px;
+  clear: both;
+  margin-bottom: 5px;
+}
+.sfdw-player-info:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sfdw-player-published {
+  float: left;
+}
+
+.sfdw-player-views {
+  float: right;
+}
+
+.sfdw-player-author {
+  font-weight: bold;
+}
+
+.sfdw-serp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.sfdw-serp:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.ft-mobile .sfdw-serp {
+  margin: 40px 0 0 0;
+  color: #5b5b5b;
+}
+.ft-desktop .sfdw-serp {
+  margin: 40px 0 0 0;
+  color: #5b5b5b;
+}
+.sfdw-serp > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.sfdw-serp .sfdw-open-player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+}
+.ft-mobile .sfdw-serp .dw-article-image {
+  -webkit-box-flex: 0 0 60px;
+  -webkit-flex: 0 0 60px;
+  -ms-flex: 0 0 60px;
+  flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin-right: 8px;
+}
+.ft-desktop .sfdw-serp .dw-article-image {
+  -webkit-box-flex: 0 0 100px;
+  -webkit-flex: 0 0 100px;
+  -ms-flex: 0 0 100px;
+  flex: 0 0 100px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  margin-right: 11px;
+}
+.sfdw-serp .dw-text-wrapper {
+  float: left;
+  width: 65%;
+  -webkit-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-top: -3px;
+}
+.sfdw-serp .dw-article-title {
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 20px;
+  color: #5b5b5b;
+  line-height: 1.2;
+}
+.sfdw-serp .dw-article-title a {
+  color: inherit;
+  text-decoration: none;
+}
+.sfdw-serp .dw-article-title a:hover {
+  color: #4141a0;
+}
+.sfdw-serp .dw-article-text {
+  font-size: 14px;
+  width: 100%;
+}
+.ft-desktop .sfdw-serp .dw-article-text {
+  height: 60.8px;
+}
+.ft-mobile .sfdw-serp .dw-article-text {
+  height: 60.8px;
+  -webkit-line-clamp: 3;
+}
+.sfdw-serp .dw-add-info {
+  clear: both;
+}
+.sfdw-serp .dw-add-info:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.sfdw-serp .dw-link {
+  max-width: 300px;
+}
+.ft-mobile .sfdw-serp.sfdw-kw-ad .dw-article-text {
+  height: 78.4px;
+  -webkit-line-clamp: 4;
+}
+.ft-desktop .sfdw-serp.sfdw-kw-ad .dw-article-text {
+  height: 78.4px;
+}
+.ft-mobile .sfdw-serp.sfdw-kw-ad.sfdw-ad-SearchAPI .dw-article-text {
+  height: 58.8px;
+  -webkit-line-clamp: 3;
+}
+.ft-desktop .sfdw-serp.sfdw-kw-ad.sfdw-ad-SearchAPI .dw-article-text {
+  height: 58.8px;
+}
+
+.ft-mobile .sfdw-section1 > sf-block.sfdw-serp:first-child {
+  margin-top: 20px;
+}
+
+.sfdw-serp-bing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  border-bottom: 1px solid #f0f0f0;
+  color: #666;
+}
+.sfdw-serp-bing:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.ft-mobile .sfdw-serp-bing {
+  margin: 0 0 0 10px;
+  padding: 15px 0;
+}
+.ft-mobile .sfdw-serp-bing .sfdw-active {
+  background-color: #ededed;
+}
+.ft-desktop .sfdw-serp-bing {
+  margin: 0;
+  padding: 20px 0;
+}
+.sfdw-serp-bing > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.sfdw-serp-bing .sfdw-open-player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+}
+.sfdw-serp-bing .dw-article-image {
+  border-color: #f0f0f0;
+  margin-right: 10px;
+}
+.ft-mobile .sfdw-serp-bing .dw-article-image {
+  -webkit-box-flex: 0 0 70px;
+  -webkit-flex: 0 0 70px;
+  -ms-flex: 0 0 70px;
+  flex: 0 0 70px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+}
+.ft-desktop .sfdw-serp-bing .dw-article-image {
+  -webkit-box-flex: 0 0 90px;
+  -webkit-flex: 0 0 90px;
+  -ms-flex: 0 0 90px;
+  flex: 0 0 90px;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+}
+.sfdw-serp-bing .dw-text-wrapper {
+  float: left;
+  width: 65%;
+  -webkit-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-top: -3px;
+}
+.sfdw-serp-bing .dw-article-title {
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: normal;
+  color: #666;
+}
+.ft-desktop .sfdw-serp-bing .dw-article-title {
+  line-height: 1.8;
+}
+.ft-mobile .sfdw-serp-bing .dw-article-title {
+  line-height: 1.4;
+}
+.sfdw-serp-bing .dw-article-title a {
+  color: inherit;
+  text-decoration: none;
+}
+.sfdw-serp-bing .dw-article-title a:hover {
+  color: #4141a0;
+}
+.sfdw-serp-bing .dw-article-text {
+  font-size: 14px;
+  font-weight: normal;
+  color: #666;
+  height: auto;
+  line-height: 1.8;
+  width: 100%;
+}
+.ft-desktop .sfdw-serp-bing .dw-article-text {
+  -webkit-line-clamp: 2;
+}
+.ft-mobile .sfdw-serp-bing .dw-article-text {
+  -webkit-line-clamp: 2;
+}
+.sfdw-serp-bing .dw-add-info {
+  clear: both;
+}
+.sfdw-serp-bing .dw-add-info:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.sfdw-serp-bing .dw-link {
+  max-width: 300px;
+  font-size: 13px;
+  font-weight: normal;
+}
+.sfdw-serp-bing .sfdw-rate {
+  color: #f47320;
+  line-height: 12px;
+}
+.ft-desktop .sfdw-serp-bing .sfdw-rate {
+  font-size: 12px;
+}
+.ft-mobile .sfdw-serp-bing .sfdw-rate {
+  font-size: 12px;
+}
+.sfdw-serp-bing .sfdw-rate .sfdw-rating {
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  display: inline-block;
+  margin-right: 5px;
+}
+.sfdw-serp-bing .sfdw-rate .sfdw-reviews {
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  padding-left: 5px;
+  border-left: 1px solid #ccc;
+}
+.sfdw-serp-bing .sfdw-rate .sfdw-empty-star svg {
+  fill: #ccc;
+}
+.sfdw-serp-bing .sfdw-rate .sfdw-full-star svg {
+  fill: #f47320;
+}
+.sfdw-serp-bing .sfdw-rate .sfdw-half-star svg .sfdw-h-star {
+  fill: #f47320;
+}
+.sfdw-serp-bing .sfdw-rate .sfdw-half-star svg .sfdw-h-star_e {
+  fill: #ccc;
+}
+.sfdw-serp-bing .sfdw-ad-span {
+  color: #666;
+  border: 1px solid #666;
+  line-height: 1.1;
+  font-size: 12px;
+}
+.ft-desktop .sfdw-serp-bing .sfdw-ad-span {
+  padding: 1px 4px 0;
+}
+.ft-mobile .sfdw-serp-bing .sfdw-ad-span {
+  padding: 2px 4px 0;
+}
+.sfdw-serp-bing.sfdw-kw-ad {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #f7f7f7;
+  border: 1px solid #f0f0f0;
+}
+.ft-mobile .sfdw-serp-bing.sfdw-kw-ad {
+  margin-right: -10px;
+}
+.sfdw-serp-bing.sfdw-video {
+  padding: 0;
+  border: 0;
+  flex-wrap: wrap;
+}
+.ft-desktop .sfdw-serp-bing.sfdw-video {
+  margin: 10px 0;
+}
+.ft-mobile .sfdw-serp-bing.sfdw-video {
+  margin: 0 0 0 10px;
+}
+.sfdw-serp-bing.sfdw-video > a {
+  flex-wrap: wrap;
+}
+.sfdw-serp-bing.sfdw-video .dw-article-title {
+  width: 100%;
+  flex: 0 0 100%;
+}
+.sfdw-serp-bing + .sfdw-serp-bing.sfdw-kw-ad {
+  margin-top: 0;
+  border-top: 0;
+}
+
+.sfdw-serp-slim {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.sfdw-serp-slim:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.ft-mobile .sfdw-serp-slim {
+  margin-top: 0;
+  padding: 15px 0;
+  color: #5b5b5b;
+  border-bottom: 1px solid #d6d6d6;
+}
+.ft-mobile .sfdw-serp-slim:hover {
+  background-color: #ededed;
+}
+.ft-mobile .sfdw-serp-slim:first-child {
+  padding-top: 0;
+}
+.ft-desktop .sfdw-serp-slim {
+  margin-top: 0;
+  padding: 15px 0 15px 0;
+  color: #5c5c5c;
+  border-bottom: 1px solid #f0f0f0;
+}
+.sfdw-serp-slim > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.sfdw-serp-slim .dw-article-image {
+  border: 1px solid #c4c4c4;
+}
+.sfdw-serp-slim .dw-article-image:hover {
+  border: 2px solid #5c5c5c;
+}
+.ft-mobile .sfdw-serp-slim .dw-article-image {
+  -webkit-box-flex: 0 0 70px;
+  -webkit-flex: 0 0 70px;
+  -ms-flex: 0 0 70px;
+  flex: 0 0 70px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  margin-right: 8px;
+}
+.ft-desktop .sfdw-serp-slim .dw-article-image {
+  -webkit-box-flex: 0 0 70px;
+  -webkit-flex: 0 0 70px;
+  -ms-flex: 0 0 70px;
+  flex: 0 0 70px;
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
+  margin-right: 11px;
+}
+.sfdw-serp-slim .dw-text-wrapper {
+  float: left;
+  width: 65%;
+  -webkit-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-top: -3px;
+  overflow: hidden;
+}
+.sfdw-serp-slim .dw-text-wrapper .sfdw-ad-span {
+  font-size: 10px;
+  margin-right: 3px;
+}
+.sfdw-serp-slim .dw-article-title {
+  margin: 0;
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+.sfdw-serp-slim .dw-article-title a {
+  color: inherit;
+  text-decoration: none;
+}
+.sfdw-serp-slim .dw-article-title a:hover {
+  color: #000000;
+}
+.ft-desktop .sfdw-serp-slim .dw-article-title {
+  font-weight: normal;
+  font-size: 18px;
+  color: #5c5c5c;
+}
+.ft-mobile .sfdw-serp-slim .dw-article-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #5b5b5b;
+}
+.sfdw-serp-slim .dw-article-text {
+  line-height: 1.4;
+  width: 100%;
+}
+.ft-desktop .sfdw-serp-slim .dw-article-text {
+  font-size: 12px;
+  height: 33.6px;
+}
+.ft-mobile .sfdw-serp-slim .dw-article-text {
+  font-size: 14px;
+  height: 39.2px;
+  -webkit-line-clamp: 2;
+}
+.sfdw-serp-slim .sfdw-video-play {
+  margin-top: -16px;
+  margin-left: -16px;
+  width: 32px;
+  height: 32px;
+}
+.sfdw-serp-slim .sfdw-video-time {
+  font-size: 10px;
+}
+.sfdw-serp-slim .dw-link {
+  max-width: 300px;
+  color: #006d21;
+}
+.ft-mobile .sfdw-serp-slim .dw-link {
+  font-size: 12px;
+}
+.ft-mobile .sfdw-serp-slim.sfdw-kw-ad .dw-article-text {
+  height: 58.8px;
+  -webkit-line-clamp: 3;
+}
+.ft-desktop .sfdw-serp-slim.sfdw-kw-ad .dw-article-text {
+  height: 58.8px;
+}
+.ft-mobile .sfdw-serp-slim.sfdw-kw-ad.sfdw-ad-SearchAPI .dw-article-text {
+  height: 33.6px;
+  -webkit-line-clamp: 2;
+}
+.ft-desktop .sfdw-serp-slim.sfdw-kw-ad.sfdw-ad-SearchAPI .dw-article-text {
+  height: 33.6px;
+}
+
+/*# sourceMappingURL=style.css.map */
+</style><style id="sfdw_styles" type="text/css"></style></head>
+  <body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KNC4D8"
+ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="text/javascript">
+(function(w,d,s,l,i){
+
+  w[l]=w[l]||[];
+  w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0];
+  var j=d.createElement(s);
+  var dl=l!='dataLayer'?'&l='+l:'';
+  j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;
+  j.type='text/javascript';
+  j.async=true;
+  f.parentNode.insertBefore(j,f);
+
+})(window,document,'script','dataLayer','GTM-KNC4D8');
+</script>
+<!-- End Google Tag Manager -->
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+	<div id="header">
+		<header class="smaller">
+			<div class="container clearfix">
+				  <div>
+    <div id="block-encyclopedia-branding" class="site-branding">
+  
+    
+      <div id="logo">
+    <a id="imagelink" href="http://www.encyclopedia.com/" title="Home" rel="home" class="site-branding__logo">
+      <img src="page22_fichiers/header-logo.jpg" alt="Home">
+    </a>
+	</div>
+    </div>
+
+  </div>
+
+				<div class="hdr-r clearfix">
+				  <div>
+    <form action="/search" method="get" id="searchForm">
+  <div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+    <label for="edit-keys" class="visually-hidden">Search</label>
+    <input title="Enter the terms you wish to search for." class="searchbox form-search" placeholder="Search" data-drupal-selector="edit-keys" id="edit-keys" name="keys" size="15" maxlength="128" type="search">
+    <span class="field-suffix">
+      <i class="fa fa-search clickable"></i>
+    </span>
+  </div>
+  <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+    <input class="hidden button js-form-submit form-submit" data-drupal-selector="edit-submit" id="edit-submit" value="GO!" type="submit">
+  </div>
+</form>
+<span class="mobile-search-icon"><i class="fa fa-search"></i></span>
+
+  
+
+<div class="hdr-categories-container">
+	<a id="rcLink" class="rc-link" onclick="toggleFlyout()">
+						
+		<span class="text" id="block-encyclopedia-main-menu-menu">Research categories</span>
+		
+		<i class="fa fa-bars"></i>
+	</a>
+	<div class="rc-flyout" id="rcFlyout">
+		<i onclick="closeOverlays();" class="fa fa-close"></i>
+		<div class="categories">
+			<span class="title">Research categories</span>
+			 
+			   			  				
+              <ul block="block-encyclopedia-main-menu">
+              <li>
+        <a href="http://www.encyclopedia.com/earth-and-environment">Earth and Environment</a>
+              </li>
+          <li>
+        <a href="http://www.encyclopedia.com/history">History</a>
+              </li>
+          <li>
+        <a href="http://www.encyclopedia.com/literature-and-arts">Literature and the Arts</a>
+              </li>
+          <li>
+        <a href="http://www.encyclopedia.com/medicine">Medicine</a>
+              </li>
+          <li>
+        <a href="http://www.encyclopedia.com/people">People</a>
+              </li>
+          <li>
+        <a href="http://www.encyclopedia.com/philosophy-and-religion">Philosophy and Religion</a>
+              </li>
+          <li>
+        <a href="http://www.encyclopedia.com/places">Places</a>
+              </li>
+          <li>
+        <a href="http://www.encyclopedia.com/plants-and-animals">Plants and Animals</a>
+              </li>
+          <li>
+        <a href="http://www.encyclopedia.com/science-and-technology">Science and Technology</a>
+              </li>
+          <li>
+        <a href="http://www.encyclopedia.com/social-sciences-and-law">Social Sciences and the Law</a>
+              </li>
+          <li>
+        <a href="http://www.encyclopedia.com/sports-and-everyday-life">Sports and Everyday Life</a>
+              </li>
+          <li>
+        <a href="http://www.encyclopedia.com/references">Additional References</a>
+              </li>
+        </ul>
+  
+
+
+			  
+			  
+		</div>
+	   
+	</div>
+</div>
+  </div>
+        
+				</div>
+				<div class="overlay" onclick="closeOverlays();"></div>
+			</div>
+		</header>
+	</div>
+	<div class="print-logo">
+		  <div>
+    <div id="block-printlogo">
+  
+    
+      
+            <div><img src="page22_fichiers/header-logo.jpg" alt="Encyclopedia.com -- Online dictionary and encyclopedia of facts, information, and biographies"></div>
+      
+  </div>
+
+  </div>
+
+	</div>
+
+	<div id="wrapper">       
+		<div id="shell">
+			<div id="center-container">
+				<a id="main-content" tabindex="-1"></a>				
+				
+
+
+<div id="topic_wrap" class="clearfix topic-wrapper">
+
+		<div class="dfp-ad-header">
+		<div id="div-gpt-ad-header">
+			  <div>
+    <div id="block-headerad">
+  
+    
+      <!-- /62541793/enc_header -->
+<div id="div-gpt-ad-header">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-header'); });
+</script>
+</div>
+  </div>
+
+  </div>
+
+		</div>
+	</div>
+	
+	<div class="main-section">
+		<div class="toparea">
+			  <div>
+    <div id="block-encyclopedia-page-title">
+  
+    
+      
+  <h1 class="js-quickedit-page-title"><span>Cairo</span>
+</h1>
+
+
+  </div>
+
+  </div>
+
+			  <div>
+    <div id="block-encyclopedia-breadcrumbs">
+  
+    
+      <div id="expapand_breadcrumb_expanded">
+	<div class="breadcrumb">
+                      <a href="http://www.encyclopedia.com/">Home</a>
+        						<i class="fa fa-angle-right"></i>
+					
+                      <a href="http://www.encyclopedia.com/places">Places</a>
+        						<i class="fa fa-angle-right"></i>
+					
+                      <a href="http://www.encyclopedia.com/places/africa">Africa</a>
+        						<i class="fa fa-angle-right"></i>
+					
+                      <a href="http://www.encyclopedia.com/places/africa/egyptian-political-geography">Egyptian Political Geography</a>
+        						<i class="fa fa-angle-right"></i>
+					
+                      Cairo
+        						
+					
+    	</div>
+</div>
+
+  </div>
+
+  </div>
+
+		</div>
+        Select source:
+        <div id="articleSelectWrapper"></div>
+		  <div>
+    <div id="block-topcontentad">
+  
+    
+      
+  </div>
+<div class="views-element-container" id="block-views-block-subcategories-for-category-block-2">
+  
+    
+      <div block="block-views-block-subcategories-for-category-block-2"><div class="js-view-dom-id-8b0aab02e6d6c8cc0f7f7fe372c25197dc26dc9678570c316d888215e82ac2fd">
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  </div>
+</div>
+
+  </div>
+<div id="block-encyclopedia-content">
+  
+    
+      <article role="article" about="/places/africa/egyptian-political-geography/cairo">
+
+  
+    
+
+  
+  <div>
+    
+  </div>
+
+</article>
+
+  </div>
+<div class="views-element-container" id="block-views-block-article-topic-articles-block">
+  
+    
+      <div block="block-views-block-article-topic-articles-block"><div class="js-view-dom-id-14de24a78af579517342a459db890111f3aa5a4e831c8968136fda87938d8c53">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="articleWrapper" id="articleWrapper-726000">
+    <div class="divpagetoolscontrol" id="divpagetoolscontrol">
+    <div class="page-tools-flyout" id="divpagetoolsflyout">        
+        <ul>
+            <li><a rel="nofollow" id="pagetools_hlPrint" class="pagetools_hlPrint"><i class="fa fa-print"></i>Print this article</a></li>
+            <li><a target="_blank" rel="nofollow" class="pagetools_printAll"><i class="fa fa-print"></i>Print all entries for this topic</a></li>
+            <li><a class="pagetools_showCitation"><i class="fa fa-quote-left"></i>Cite this article</a></li>           
+        </ul>  
+    </div>
+    <a class="btn btn-primary btn-tools linkimagepagetools" id="linkimagepagetools">
+        Tools <i class="fa fa-angle-down"></i>
+    </a>
+</div>
+<span class="document-id" data-val="1G23426000016"></span>
+<h2 class="doctitle">Cairo
+</h2><div class="bylinecontainer" id="divwallbyline"><span class="publisher" data-pub="2785"></span><span class="publication">Junior Worldmark Encyclopedia of World Cities</span> <br>
+COPYRIGHT 2000 The Gale Group, Inc.</div>
+<!-- /62541793/enc_linkads -->
+<div id="div-gpt-ad-bodyatf">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-bodyatf'); });
+</script>
+</div>
+<div class="doccontentwrapper">
+
+
+<h1><a href="http://www.encyclopedia.com/places/africa/egyptian-political-geography/cairo">Cairo</a></h1>
+<p><a href="#INTRODUCTION">Introduction</a><br><a href="#GETTING_THERE">Getting There</a><br><a href="#GETTING_AROUND">Getting Around</a><br><a href="#PEOPLE">People</a><br><a href="#NEIGHBORHOODS">Neighborhoods</a><br><a href="#HISTORY">History</a><br><a href="#GOVERNMENT">Government</a><br><a href="#PUBLIC_SAFETY">Public Safety</a><br><a href="#ECONOMY">Economy</a><br><a href="#ENVIRONMENT">Environment</a><br><a href="#SHOPPING">Shoppping</a><br><a href="#EDUCATION">Education</a><br><a href="#HEALTH_CARE">Health Care</a><br><a href="#MEDIA">Media</a><br><a href="#SPORTS">Sports</a><br><a href="#PARKS_AND_RECREATION">Parks and Recreation</a><br><a href="#PERFORMING_ARTS">Performing Arts</a><br><a href="#LIBRARIES_AND_MUSEUMS">Libraries and Museums</a><br><a href="#TOURISM">Tourism</a><br><a href="#HOLIDAYS_AND_FESTIVALS">Holidays and Festivals</a><br><a href="#FAMOUS_CITIZENS">Famous Citizens</a><br><a href="#FOR_FURTHER_STUDY">For Further Study</a></p>
+<p><b>Cairo, <a href="http://www.encyclopedia.com/places/africa/egyptian-political-geography/egypt">Egypt</a>, Africa</b>  </p>
+<p><b>Founded:</b>   a.d. 969<br><b>Location:</b>   Near the head of the Nile River delta, Egypt; northeastern Africa<br><b>Time Zone:</b>   2 pm Cairo time = noon Greenwich Mean Time (GMT)<br><b>Elevation:</b>   194 m (636 ft)<br><b>Latitude and Longitude:</b>   43<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">°</span></span></span></span></span></span></span></span>40'N, 79<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">°</span></span></span></span></span></span></span></span>22'W<br><b>Coastline:</b>   (Greater Cairo) approximately 27 km (17 mi)<br><b>Climate:</b>   Desert climate, with hot summers and mild winters; rain is rare, and <i>hamsin</i> dust storms can occur in the spring.<br><b>Annual Mean Temperature:</b>   January -4<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">°</span></span></span></span></span></span></span></span>C (24<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">°</span></span></span></span></span></span></span></span>F); July 21.7<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">°</span></span></span></span></span></span></span></span>C (71<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">°</span></span></span></span></span></span></span></span>F)<br><b>Seasonal Average Snowfall:</b>   141 cm (55.5 in)<br><b>Average Annual Precipitation (total of rainfall and melted snow):</b>   81.3 cm (32 in)<br><b>Government:</b>   governor-council<br><b>Weights and Measures:</b>   Metric<br><b>Monetary Units:</b>   Egyptian pounds<br><b>Telephone Area Codes:</b>   20 (Egypt), 02 (Cairo)</p>
+
+<h2>1. <a id="INTRODUCTION">Introduction</a></h2>
+<p>Located on the banks of the Nile River, Cairo is Africa's largest 
+city, as well as the largest city in the Arab world. In the course of 
+its thousand-year history it has been the capital of the great Egyptian 
+dynasties of the <a href="http://www.encyclopedia.com/history/modern-europe/ancient-history-middle-ages-and-feudalism/middle-ages">Middle Ages</a>,
+ a British colonial enclave, and a modern industrialized city. Today it 
+is a teeming, vibrant national capital with one of the world's highest 
+population densities per square mile. Even as the city struggles with 
+the social and environmental effects of overcrowding, it dominates Egypt
+ politically, economically, and culturally and remains a prime tourist 
+destination in spite of a campaign of terrorist activity by Islamic 
+extremists seeking to destabilize the country's government.</p>
+
+
+<h2>2. <a id="GETTING_THERE">Getting There</a></h2>
+<p>Cairo, the largest city in Africa, is located on the Nile River, 160 kilometers (100 miles) inland from the <a href="http://www.encyclopedia.com/places/oceans-continents-and-polar-regions/oceans-and-continents/mediterranean-sea">Mediterranean Sea</a> and 135 kilometers (80 miles) west of the <a href="http://www.encyclopedia.com/places/oceans-continents-and-polar-regions/oceans-and-continents/red-sea">Red Sea</a>.</p>
+
+
+<h3>Highways</h3>
+<p>Cairo is connected by highway with all other major cities in Egypt. 
+The Desert Road links Cairo and Alexandria; there are main roads 
+connecting Cairo with Ismailiyyah and Luxor. In addition, there is the 
+Red Sea Highway, completed in the early 1990s. Roads connect Cairo with <a href="http://www.encyclopedia.com/places/africa/libyan-political-geography/libya">Libya</a> to the west
+
+and Israel to the east (however, special permission must be obtained to enter Egypt from Israel in a private vehicle).</p>
+
+
+<h3>Bus and Railroad Service</h3>
+<p>Rail service is available between Cairo and all areas of the Nile River Valley. An air-conditioned nonstop express train, the <i>turbino,</i>
+ makes three trips daily between Cairo and Alexandria. Cairo's main 
+railway station is located at Maydan Ramsis. Several bus companies offer
+ inter-city bus service between Cairo and Alexandria, the <a href="http://www.encyclopedia.com/places/africa/african-physical-geography/nile">Nile</a>
+ Valley, the Red Sea, Sinai Peninsula, the Suez Canal, and other 
+destinations. There is nonstop bus service between Cairo and Alexandria,
+ and buses run between Cairo and all major towns.</p>
+
+
+<h3>Airports</h3>
+<p>Cairo International Airport, an important connecting point between <a href="http://www.encyclopedia.com/places/oceans-continents-and-polar-regions/oceans-and-continents/europe">Europe</a>, <a href="http://www.encyclopedia.com/places/oceans-continents-and-polar-regions/oceans-and-continents/asia">Asia</a>,
+ and Africa, offers regular service by most major airlines. EgyptAir 
+offers both domestic flights to Luxor, Aswan, and Hurghada and 
+international service.</p>
+
+
+<h3>Shipping</h3>
+<p>Although it is located on the Nile River, Cairo is not one of Egypt's
+ major shipping cities, all of which have ports on the Mediterranean 
+(Alexandria, <a href="http://www.encyclopedia.com/places/africa/egyptian-political-geography/suez">Suez</a>, and Port Said).</p>
+
+
+<h2>3. <a id="GETTING_AROUND">Getting Around</a></h2>
+<p>Greater Cairo is spread out over both banks of the Nile River, which 
+runs north-south through the center of the city. The neighborhoods of 
+Gizah, Aguza, Mohandisin are on the west bank, the districts of Gazirah 
+and Geziret Al-Rawdah on islands in the river, and the major urban 
+center on the east bank, together with a number of suburbs. Downtown 
+Cairo's streets and avenues are laid out around a series of traffic 
+circles<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">—</span></span></span></span></span></span></span></span>Maydan Talaat Harb, Maydan Orabi, Maydan Mustafa Kamel, and, at the heart of the city, Maydan Tahrir.</p>
+
+
+
+
+<h2>Cairo Population Profile</h2>
+<h3>City Proper</h3>
+<p><b>Population:</b>   9,690,000<br><b>Area:</b>   20 sq km (7.7 sq mi)<br><b>Nicknames:</b>   Mother of the World, The Well-Guarded</p>
+
+<h3>Metropolitan Area</h3>
+<p><b>Population:</b>   12,000,000<br><b>Description:</b>   Central Cairo, Giza, Shubra al-Khaymah, and parts of Giza and Qalyubiyah provinces<br><b>Area:</b>   215 sq km (83 sq mi)<br><b>World population rank</b>  <sup>1</sup><b>:</b>   17<br><b>Percentage of national population</b>  <sup>2</sup><b>:</b>   16%<br><b>Average yearly growth rate:</b>   2.1%</p>
+<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">—</span></span></span></span></span></span></span></span><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">—</span></span></span></span></span></span></span></span><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">—</span></span></span></span></span></span></span></span>
+<ol><li>The Cairo metropolitan area's rank among the world's urban areas.</li>
+<li>The percent of Egypt's total population living in the Cairo metropolitan area.</li>
+</ol><h3>Bus and Commuter Rail Service</h3>
+<p>Packed buses offer local service in Cairo, stopping at the Maydan 
+Tahrir, the Maydan Ataba and Opera Square, the Pyramids Road, Ramses 
+Station, and
+
+the Citadel. Minibuses offer more reliable and somewhat more expensive 
+service. Also available are privately owned and operated 12-seat taxis. 
+Cairo's commuter rail service, the Metro, runs both above-and 
+underground. The trains are clean; service is efficient; and fares are 
+reasonable.</p>
+
+
+<h3>Sightseeing</h3>
+<p>Organized tours to Cairo's major tourist attractions, such as the 
+Giza and Saqqara pyramids and the Sphinx, are offered by hotels, private
+ guides, and travel agencies.</p>
+
+
+<h2>4. <a id="PEOPLE">People</a></h2>
+<p>More than one-quarter of all Egyptians live in Cairo. The population 
+of the city proper stood at 9,690,000 in 1998 while the population of 
+the greater metropolitan area has been variously estimated between 12 
+and 18 million.
+
+The city's population is more homogenous today than during the colonial 
+period when large numbers of Europeans lived in Cairo. Today about 95 
+percent of the city's residents were born in Egypt, and 90 percent are 
+Muslims. Cairo's population also includes significant numbers of people 
+from other African countries, especially <a href="http://www.encyclopedia.com/places/africa/sudan-political-geography/sudan">Sudan</a>
+ (Sudanese are thought to number about 400,000). About 20,000 African 
+Muslims from other countries are students at Al-Azhar University. Even 
+more are refugees who fled their home-lands.</p>
+
+
+<h2>5. <a id="NEIGHBORHOODS">Neighborhoods</a></h2>
+<p>Downtown Cairo, whose center is the plaza of Maydan Tahrir, is a 
+bustling district of shops, restaurants, hotels, and other commercial 
+establishments, as well as museums, gardens, and art galleries. It also 
+affords a scenic view of the Nile River.</p>
+<p>To the east of central Cairo is the walled medieval section of the 
+city known as Islamic Cairo, which includes poorer residential 
+districts, historic architecture dating back over a thousand years, and 
+the bustling Khan Khalili marketplace. Its main street, Shar'a Mu'iz, is
+ lined with buildings from several eras of Egyptian history, including 
+those of the early dynasties before the Ottoman Era.</p>
+<p>Garden City, south of Maydan Tahrir, is an upscale district with 
+expensive homes and numerous embassies. To the east is the area 
+dominated by the Citadel, a medieval fortress that was home to Egypt's 
+rulers for some 700 years. In the vicinity are three mosques and several
+ museums.</p>
+<p>Northeast of Cairo's central and historic districts is the wealthy 
+residential suburb of Heliopolis, home to Egypt's former president Gamal
+ Abdel Nasser. Although named for an ancient Egyptian city, Heliopolis 
+was actually planned and laid out with reference to European models and 
+is more spacious than other parts of Cairo. (Egyptians generally call 
+the suburb Masr al-Gedida, or New Cairo). Many members of the 
+professional classes live in the neighborhood, which has a large 
+Christian minority.</p>
+<p>The exclusive residential suburb of Zamalek<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">—</span></span></span></span></span></span></span></span>Cairo's wealthiest neighborhood<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">—</span></span></span></span></span></span></span></span>is
+ located on the island of Gazirah, occupying the northern two-thirds of 
+the island; the remainder is the site of private sports clubs and parks.</p>
+<p>The newer suburbs of Duqqi, Mohandisin, Aguza, Gizah, and Imbabah are
+ located on the west bank of the Nile, opposite the older part of the 
+city.</p>
+
+
+<h2>6. <a id="HISTORY">History</a></h2>
+<p>The first settlement in the region of present-day Cairo was 
+al-Fustat, founded in A. D. 641 as a military encampment by the Arabic 
+commander 'Amr ibn al-'As. Under the dynasties that ruled Egypt over the
+ following centuries, the town grew into a major port city. In A. D. 969
+ Jawhar, the leader of an Islamic sect called the Fatimids,
+
+founded a new city near al-Fustat, initially naming it al-Mansuriyah 
+(its name was later changed to al-Qahirah, or Cairo). When the Fatimids 
+became the rulers of Egypt, founding a dynasty that lasted for two 
+centuries, Cairo became their capital.</p>
+<p>When Saladin, a Sunni <a href="http://www.encyclopedia.com/philosophy-and-religion/islam/islam/muslim">Muslim</a>,
+ defeated the Crusaders and founded the Ayyubid dynasty in the twelfth 
+century, he retained Cairo as his capital, and it became the center of a
+ vast empire. (Al-Fustat, however, was burned down as part of the 
+"scorched earth" strategy that defeated the Crusaders.) In the 
+thirteenth century, the Ayyubids were eclipsed by Turkish military 
+conquerors known as the Mamluks, who ruled Egypt from A. D. 1260 to 
+1516. During the first hundred years of Mamluk rule, Cairo experienced 
+its most illustrious period. Al-Azhar University, which had been founded
+ in the tenth century, became the foremost center of learning in the 
+Islamic world, and Cairo played a key role in the east-west spice trade.
+ Most of its greatest buildings were constructed during this period.</p>
+
+
+
+<table><thead align="center"><tr><td rowspan="1" colspan="1"><b>City Fact Comparison</b>  </td>
+</tr><tr><td rowspan="1" colspan="1" align="left">Indicator</td>
+<td rowspan="1" colspan="1"><b>Cairo</b>  </td>
+<td rowspan="1" colspan="1"><a href="http://www.encyclopedia.com/places/united-states-and-canada/us-political-geography/new-york">New York</a></td>
+<td rowspan="1" colspan="1"><a href="http://www.encyclopedia.com/places/spain-portugal-italy-greece-and-balkans/italian-political-geography/rome">Rome</a></td>
+<td rowspan="1" colspan="1"><a href="http://www.encyclopedia.com/places/asia/chinese-political-geography/beijing">Beijing</a></td>
+</tr><tr><td rowspan="1" colspan="1"></td>
+<td rowspan="1" colspan="1"><b>(Egypt)</b>  </td>
+<td rowspan="1" colspan="1">(<a href="http://www.encyclopedia.com/places/united-states-and-canada/us-political-geography/united-states">United States</a>)</td>
+<td rowspan="1" colspan="1">(<a href="http://www.encyclopedia.com/places/spain-portugal-italy-greece-and-balkans/italian-political-geography/italy">Italy</a>)</td>
+<td rowspan="1" colspan="1">(<a href="http://www.encyclopedia.com/places/asia/chinese-political-geography/china">China</a>)</td>
+</tr></thead><tbody align="center"><tr><td rowspan="1" colspan="1" align="left">Population of urban area<sup>1</sup></td>
+<td rowspan="1" colspan="1"><b>10,772,000</b>  </td>
+<td rowspan="1" colspan="1">16,626,000</td>
+<td rowspan="1" colspan="1">2,688,000</td>
+<td rowspan="1" colspan="1">12,033,000</td>
+</tr><tr><td rowspan="1" colspan="1" align="left">Date the city was founded</td>
+<td rowspan="1" colspan="1"><b>AD 969</b>  </td>
+<td rowspan="1" colspan="1">1613</td>
+<td rowspan="1" colspan="1">753 BC</td>
+<td rowspan="1" colspan="1">723 BC</td>
+</tr><tr><td rowspan="1" colspan="1" align="left">Daily costs to visit the city<sup>2</sup></td>
+<td rowspan="1" colspan="1"></td>
+<td rowspan="1" colspan="1"></td>
+<td rowspan="1" colspan="1"></td>
+<td rowspan="1" colspan="1"></td>
+</tr><tr><td rowspan="1" colspan="1" align="left"><i>Hotel (single occupancy)</i> </td>
+<td rowspan="1" colspan="1"><b>$193</b>  </td>
+<td rowspan="1" colspan="1">$198</td>
+<td rowspan="1" colspan="1">$172</td>
+<td rowspan="1" colspan="1">$129</td>
+</tr><tr><td rowspan="1" colspan="1" align="left"><i>Meals (breakfast, lunch, dinner)</i> </td>
+<td rowspan="1" colspan="1"><b>$56</b>  </td>
+<td rowspan="1" colspan="1">$44</td>
+<td rowspan="1" colspan="1">$59</td>
+<td rowspan="1" colspan="1">$62</td>
+</tr><tr><td rowspan="1" colspan="1" align="left"><i>Incidentals (laundry, dry cleaning, etc.)</i> </td>
+<td rowspan="1" colspan="1"><b>$14</b>  </td>
+<td rowspan="1" colspan="1">$26</td>
+<td rowspan="1" colspan="1">$15</td>
+<td rowspan="1" colspan="1">$16</td>
+</tr><tr><td rowspan="1" colspan="1" align="left"><i>Total daily costs (hotel, meals, incidentals)</i> </td>
+<td rowspan="1" colspan="1"><b>$173</b>  </td>
+<td rowspan="1" colspan="1">$244</td>
+<td rowspan="1" colspan="1">$246</td>
+<td rowspan="1" colspan="1">$207</td>
+</tr><tr><td rowspan="1" colspan="1" align="left">Major Newspapers<sup>3</sup></td>
+<td rowspan="1" colspan="1"></td>
+<td rowspan="1" colspan="1"></td>
+<td rowspan="1" colspan="1"></td>
+<td rowspan="1" colspan="1"></td>
+</tr><tr><td rowspan="1" colspan="1" align="left"><i>Number of newspapers serving the city</i> </td>
+<td rowspan="1" colspan="1"><b>13</b>  </td>
+<td rowspan="1" colspan="1">10</td>
+<td rowspan="1" colspan="1">20</td>
+<td rowspan="1" colspan="1">11</td>
+</tr><tr><td rowspan="1" colspan="1" align="left"><i>Largest newspaper</i> </td>
+<td rowspan="1" colspan="1"><b>Akhbar El Yom/Al Akhbar</b>  </td>
+<td rowspan="1" colspan="1"><i>The Wall Street Journal</i> </td>
+<td rowspan="1" colspan="1"><i>La Repubblica</i> </td>
+<td rowspan="1" colspan="1"><i>Renmin Ribao</i> </td>
+</tr><tr><td rowspan="1" colspan="1" align="left"><i>Circulation of largest newspaper</i> </td>
+<td rowspan="1" colspan="1"><b>1,159,339</b>  </td>
+<td rowspan="1" colspan="1">1,740,450</td>
+<td rowspan="1" colspan="1">754,930</td>
+<td rowspan="1" colspan="1">3,000,000</td>
+</tr><tr><td rowspan="1" colspan="1" align="left"><i>Date largest newspaper was established</i> </td>
+<td rowspan="1" colspan="1"><b>1944</b>  </td>
+<td rowspan="1" colspan="1">1889</td>
+<td rowspan="1" colspan="1">1976</td>
+<td rowspan="1" colspan="1">1948</td>
+</tr><tr><td rowspan="1" colspan="5"><sup>1</sup>United Nations population estimates for the year 2000.</td>
+</tr><tr><td rowspan="1" colspan="5"><sup>2</sup>The maximum amount the 
+U.S. Government reimburses its employees for business travel. The 
+lodging portion of the allowance is based on the cost for a single room 
+at a moderately-priced hotel. The meal portion is based on the costs of 
+an average breakfast, lunch, and dinner including taxes, service 
+charges, and customary tips. Incidental travel expenses include such 
+things as laundry and dry cleaning.</td>
+</tr><tr><td rowspan="1" colspan="5"><sup>3</sup>David Maddux, ed. <i>Editor&amp;Publisher International Year Book.</i> New York: The Editor&amp;Publisher Company, 1999.</td>
+</tr></tbody></table><p>Starting in the second half of the fourteenth 
+century, Cairo experienced a decline, beginning with the scourge of the 
+Black Death (1348) and other epidemics.
+
+
+By the end of the fifteenth century, new trade routes had broken the 
+city's monopoly on the spice trade, and in 1517 the Ottoman sultan Selim
+ I (r. 1512<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span></span></span></span></span>20)
+ conquered Egypt, defeating the Mamluk forces at Ar Raydaniyah, outside 
+Cairo, and the city came under Turkish rule. Under the Ottomans, Cairo 
+was reduced to a provincial capital, and by the end of the eighteenth 
+century, its population had declined to under 300,000. The city was 
+occupied by Napoleon's troops between 1798 and 1801 but then returned to
+ Turkish rule.</p>
+<p>The modernization of Egypt and its capital began under Mehemet 'Ali (c. 1769<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span></span></span></span></span>1849),
+ often called the "father of modern Egypt," who ruled the country for 
+nearly half a century beginning in 1805, modernizing and strengthening 
+it, and expanding its borders. Modernization of Cairo began in 1830, but
+ the period of greatest progress occurred during the reign of Ismail 
+Pasha (r. 1863-79). Pasha undertook a major modernization of the city 
+modeled on the renovation of <a href="http://www.encyclopedia.com/places/britain-ireland-france-and-low-countries/french-political-geography/paris">Paris</a> under <a href="http://www.encyclopedia.com/people/history/french-history-biographies/napoleon-iii">Napoleon III</a> (1808<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span></span></span></span></span>1873).
+ To the west of the older, medieval part of Cairo (now called Islamic 
+Cairo), a newer section of the city boasted wide avenues laid out around
+ circular plazas in the style of a
+
+European city. The development of this area was also influenced by the 
+growth of French and British colonial power in Egypt.</p>
+<p>The advent of the twentieth century saw advances in bridge building 
+and flood control, which encouraged riverfront development. By 1927, 
+Cairo's population had reached one million. In the first half of the 
+century, Cairo was dominated by foreign influences. During World War I 
+(1914<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span></span></span></span></span>18),
+ it became the center for British military operations in the region, and
+ British troops were headquartered in the city. The British military 
+presence in Egypt was curtailed in the 1920s, but the country was 
+reoccupied by British forces during <a href="http://www.encyclopedia.com/history/modern-europe/wars-and-battles/world-war-ii">World War II</a> (1939<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span></span></span></span></span>1945).</p>
+<p>With the Egyptian Revolution in 1952, the colonial presence in Cairo<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">—</span></span></span></span></span></span></span></span>and throughout the country<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">—</span></span></span></span></span></span></span></span>came
+ to an end. Since then, large numbers of Egyptians from other parts of 
+the country have migrated to the capital, and the government has worked 
+to accommodate a rapidly growing urban population by creating new, 
+planned suburbs, including Nasr City, Muqattam City, and Engineers' 
+City.</p>
+<p>In recent decades, Cairo has become the nation's industrial, 
+commercial, and cultural center, as well as the seat of its government.</p>
+
+
+<h2>7. <a id="GOVERNMENT">Government</a></h2>
+<p>Cairo has only had a municipal government since 1950, and Egypt's 
+central government plays a large role in administering the capital, 
+controlling its budget and spending programs. The city's municipal 
+government consists of a governor, who is appointed by the president of 
+Egypt, and a council called the Popular Assembly, which includes both 
+appointed and elected members. Only the elected members can vote.</p>
+
+
+<h2>8. <a id="PUBLIC_SAFETY">Public Safety</a></h2>
+<p>Although Cairo is notorious for government corruption, it is known as
+ a safe city with a much lower incidence of violent crime than most 
+major Western cities. Petty theft<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">—</span></span></span></span></span></span></span></span>especially pick-pocketing<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">—</span></span></span></span></span></span></span></span>is known to occur, and in recent years there have been some reports of armed robbery and sales of hard drugs.</p>
+<p>However, the major form of violence to which Cairo has been subjected
+ is terrorism. In 1992 Islamic extremists began a campaign of terrorism 
+aimed at overthrowing the secular government of President Hosni Mubarak.
+ Within the first four years, 920 people had died, including 25 foreign 
+visitors.</p>
+<p>Terrorism persisted in the latter part of the 1990s in spite of a government crackdown on extremist groups.</p>
+
+
+<h2>9. <a id="ECONOMY">Economy</a></h2>
+<p>Cairo is the economic center of Egypt, with two-thirds of the 
+country's gross national product generated in the greater metropolitan 
+area. Industrialization, which began in the nineteenth
+
+century, grew rapidly following the 1952 revolution and revolved 
+primarily around textiles (based on Egypt's traditional economic 
+mainstay, long-staple cotton) and food processing. Other industries 
+include iron and steel production and consumer goods. Today the majority
+ of Cairo's work force is employed in service sector jobs, especially in
+ government, financial services, and commerce. The tourism industry is a
+ major source of revenue for the country, along with weapons sales, 
+petroleum, and Suez Canal tariffs (following nationalization of the 
+canal on July 26, 1956). Foreign aid from other countries is also an 
+important source of income.</p>
+<p>Although government agricultural subsidies, cheap public 
+transportation, and low-cost medical care help keep Cairo's cost of 
+living relatively low, the average Cairene still struggle to make ends 
+meet, often holding down two or more jobs, or going overseas to find 
+work and send money home. The poorest are forced to send their children 
+to work as early as eight or nine years of age, often in "sweatshops" 
+producing manufactured goods.</p>
+
+
+<h2>10. <a id="ENVIRONMENT">Environment</a></h2>
+<p>Industrial and vehicular emissions combine to give Cairo a serious 
+air pollution problem. Thousands of old vehicles crowd the city streets 
+without government regulation of emission levels, and the city's 
+factories create additional environmental hazards. Levels of both lead 
+and particulate emissions far exceed internationally acceptable 
+standards. In the 1990s the Egyptian government began a serious effort 
+to improve the city's air quality, with legislation requiring air 
+filters in factories as well as an air-quality-improvement project, the 
+Cairo Air Improvement Project (CAIP), designed to reduce pollution from 
+lead and particulates. CAIP's goals included development of a vehicle 
+emission testing and certification program; increasing the use of 
+compressed natural gas a fuel in municipal buses; the upgrading and 
+relocation of secondary lead smelters; and air quality monitoring and 
+analysis.</p>
+
+
+<h2>11. <a id="SHOPPING">Shopping</a></h2>
+<p>Cairo's most famous shopping venue is the Khan al-Khalili Bazaar, a 
+large open-air market located amid medieval ruins. Featured among its 
+wares is the handiwork of local craftsmen working in gold, silver, 
+copper, brass, ivory, and leather, as well as such items as carpets and 
+perfumes. The Tentmakers' Bazaar (Khiyamiyyah) in the old part of the 
+city is known for its appliqu<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">é</span></span></span></span></span></span></span></span>.
+ In both the Khan al-Khalili and the myriad of other bazaars in the 
+city, bargaining is a universal practice, for both tourists and locals 
+alike. Other items available in the city's bazaars and boutiques include
+ handwoven rugs, ceramics, glassware, inlaid boxes, hand-woven goods 
+made from rattan and palm fiber, antiques, and a variety of clothing. A 
+number of artisans sell high-quality crafts at their own shops or 
+galleries.</p>
+
+
+
+
+
+
+<h2>12. <a id="EDUCATION">Education</a></h2>
+<p>Primary education is free and compulsory in Cairo, as elsewhere in 
+Egypt, and university tuition has been free since 1962. In the 1990s, 
+Egypt's first lady, Suzanne Mubarak, spearheaded a program to improve 
+literacy that included the creation of new public libraries; the 
+"Reading for All" program to make inexpensive juvenile books available 
+to children throughout the country; and a series of international book 
+fairs. The Children's Cultural Center was officially opened by Mrs. 
+Mubarak in Heliopolis in 1997.</p>
+<p>Founded in the tenth century, Al-Azhar University, the premier center
+ of religious instruction in the Islamic world, is said to be the oldest
+ continuously operating university in the world.
+
+
+Cairo University, founded in 1908, produces the country's largest number
+ of college graduates and college-educated professionals. It has about 
+155,000 students and 3,158 faculty members, operates some 100 research 
+institutes and offers programs in agriculture, medicine, nursing, 
+economics, political science, the arts, and other fields. Most 
+facilities of the university's main campus are located to the southeast 
+of downtown Cairo, and it operates branches in Al Fayyum and Bani 
+Suwayf, as well as <a href="http://www.encyclopedia.com/places/africa/sudan-political-geography/khartoum">Khartoum</a> (Sudan).</p>
+<p>Cairo's third major institution of higher learning is Ain Shams 
+University. Located in the heart of the city, it enrolls approximately 
+100,000 undergraduates and 30,000 graduate students and has a faculty of
+ 3,700.</p>
+
+
+<h2>13. <a id="HEALTH_CARE">Health Care</a></h2>
+<p>Cairo is Egypt's major center for health care. It has the greatest 
+concentration of medical facilities in the country, including government
+ hospitals, such as Qasr al-Ayni and Dimardash; smaller private 
+hospitals, such as the
+
+Anglo-American Hospital; and facilities affiliated with university 
+medical programs. There are also hospitals and clinics for the treatment
+ of specific types of problems, including several that specialize in eye
+ disorders.</p>
+
+
+<h2>14. <a id="MEDIA">Media</a></h2>
+<p>Cairo is the only city in Egypt with daily newspapers, of which it 
+has four (all distributed nationally). The oldest and best known is <i>Al-Ahram,</i> founded in 1876 in Alexandria. Others include <i>Al-Alam al-Yom,</i> a newer and livelier paper with a strong business focus, and a local edition of the Arabic world daily, <i>Al-Hayat.</i> Daily newspapers are also published in English (<i>The Egyptian Gazette</i> ) and French (<i>Le Progr<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">è</span></span></span></span></span></span></span></span>s Egyptien</i> and <i>Le Journal d'<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">É</span></span></span></span></span></span></span></span>gypte</i> ). Two English-language weeklies also appear: <i>Al-Ahram Weekly</i> and <i>Middle East Times.</i> A monthly magazine, <i>Egypt Today,</i> features general-interest articles and events listings and is affiliated with two other monthlies, <i>Sports &amp; Fitness</i> and <i>Business Today.</i> </p>
+<p>Three government-operated television stations broadcast in Arabic and
+ are supplemented by at least a half-dozen private stations, and 
+satellite and cable TV are also available at some locations. Both AM and
+ FM radio stations are in operation throughout the week.</p>
+
+
+<h2>15. <a id="SPORTS">Sports</a></h2>
+<p>Soccer is Cairo's (and Egypt's) most popular sport, boasting players 
+of international stature. Matches are played every weekend to sell-out 
+crowds, and the city's residents eagerly follow games by its two leading
+ teams, Zamalek and Ahli. The soccer season runs from September to May, 
+and matches are held in Cairo Stadium. Horse racing can be seen at the 
+Heliopolis Hippodrome. Every year the city hosts the Cairo Classic, a 
+running and cycling event.</p>
+
+
+<h2>16. <a id="PARKS_AND_RECREATION">Parks and Recreation</a></h2>
+<p>The Zoological Garden (Hadiiqat al-Hayawaan), located in the southern
+ suburb of Giza, is over 100 years old. When it was founded in 1891, it 
+contained the private menagerie of Egyptian ruler Khedive Ismail, and 
+for years it was one of the world's premier zoos. Although the 
+zoological garden no longer serves as a noteworthy botanical or 
+zoological attraction, it remains a popular recreation area for local 
+residents, who use it for sports, picnics, and other activities. There 
+are several parks, as well as sporting clubs, located in the southern 
+part of the island of Gazirah, whose northern section is occupied by the
+ suburb of Zamalek.</p>
+<p>With their warm climate, Cairo residents enjoy spending their leisure
+ time in outdoor activities, from strolling and window shopping to 
+swimming and picnicking in open areas surrounding the city.</p>
+<p>The best venues for participant sports are the city's exclusive 
+sports clubs, made up of middle-and upper-class Cairenes. The most 
+prestigious is the Gazirah Sporting club, which offers facilities for 
+basketball, squash, and tennis,
+
+as well as a golf course, two swimming pools, a running track, and a 
+croquet lawn. Skeet shooting is offered at the neighboring Shooting Club
+ in Dokki. Cairo also has a rugby club, yacht clubs, and a diving club.</p>
+
+
+<h2>17. <a id="PERFORMING_ARTS">Performing Arts</a></h2>
+<p>The new Cairo Opera House (National Cultural Centre), rebuilt in the 
+1980s after the nineteenth-century original was destroyed by fire in 
+1971, is the city's principal performing-arts venue. The Cairo Opera 
+House presents touring theater and ballet troupes and musical groups, as
+ well as local performers, including the Cairo Opera Ballet Company and 
+the Cairo Orchestra. Located in the parklike setting of the Gazirah 
+Exhibition Grounds on the island of Gazirah, the opera house complex 
+includes an open-air theater and amphitheater, as well as two indoor 
+halls (a main one and a smaller one). A newer facility, the 2,500-seat 
+Cairo International Conference Centre in the suburb of Madinat Nasr, was
+ a gift from the Chinese in 1991. It opened the following year with a 
+performance by the Grigorovich Ballet of <a href="http://www.encyclopedia.com/places/commonwealth-independent-states-and-baltic-nations/cis-and-baltic-political-geography/russia">Russia</a>'s Bolshoi Theatre.</p>
+<p>Popular performance sites in Islamic Cairo, especially during the 
+holiday period of Ramadan, are the House of Zeinab Khatoun and the 
+Al-Ghouri complex. Plays and recitals are also presented at the Ewart 
+Hall and Wallace Theater on the campus of American University in Cairo.</p>
+<p>Cairo is a center of legitimate Arabic theater, although performances
+ are subject to government censorship. Both ballet and modern dance are 
+exceptionally popular in Cairo, whose ballet company (the Cairo Ballet) 
+was founded in 1960 with help from the <a href="http://www.encyclopedia.com/places/commonwealth-independent-states-and-baltic-nations/cis-and-baltic-political-geography/union">Soviet Union</a>,
+ which sent its own dance teachers to help train the members of the 
+company. However with the expulsion of Soviet advisers from Egypt in 
+1972, the Russian presence at the ballet ended. The quality of the 
+troupe is subsequently said to have declined, and in 1991 it was 
+bolstered by the addition of dancers from Russia and Italy.</p>
+<p>Cairo is the film capital of the Arabic world, although its film 
+industry has declined since its heyday in the 1940s and 1950s, thanks to
+ strict censorship and economic factors. However, Cairo's residents are 
+avid filmgoers and flock to both Egyptian and foreign movies.</p>
+<p>The Cairo Puppet Theater performs at the Ezbekiyya Gardens north of Ataba from October through May.</p>
+
+
+<h2>18. <a id="LIBRARIES_AND_MUSEUMS">Libraries and Museums</a></h2>
+<p>The Greater Cairo Library, housed in a restored villa in Zamalek, is 
+over 100 years old. Its holdings include books in Arabic, German, 
+French, and English. A research library, its collection contains only 
+non-circulating items, but its operating hours are extensive. It has 
+good collections in the areas of art and science, as well as 
+international periodicals. Included in its map collection
+
+
+are hand-drawn maps of Cairo dating back to 1480.</p>
+<p>The Mubarak Library is located in Giza. Opened in 1995, it provides a
+ popular library of circulating materials, with a large collection of 
+books, magazines, newspapers, CDs, cassettes, and videos. Special 
+services include story hours and puppet shows for preschoolers. There 
+are also two libraries in the suburb of Heliopolis. The older Heliopolis
+ Public Library offers organized programs for children and has a 
+high-tech multimedia auditorium. The newer El Mustaqbal Library has only
+ non-circulating materials. English-language books are available in 
+libraries at the British Council and the American Cultural Centre. Cairo
+ University has a central library, additional libraries for various 
+disciplines, and some 100 scientific research centers.</p>
+<p>Cairo's cultural legacy is evident in its rich and varied museum 
+collections. The Egyptian Museum at Maydan Tahrir houses the city's 
+premier collection of over 100,000 artifacts from nearly every period of
+ Egyptian history. The museum's neoclassical building, which dates from 
+1902, has received updated security and lighting following a daring 1996
+ robbery attempt, and there has long been talk of building a new 
+facility that can more adequately house the museum's voluminous 
+holdings. Among these holdings are the treasures of Tutankhamun (d. c. 
+1340 B. C. ), a royal mummy room, artifacts from the Old and Middle 
+kingdoms, jewelry rooms, and animal mummies.</p>
+<p>The Coptic Museum, located in Misr al-Qadimah, displays items from 
+the pre-Islamic period, including textiles, stones, and religious icons.
+ A church on the museum grounds, popularly known as the Hanging Church, 
+is said to date back to the fourth century A. D. and is thought to be 
+the earliest place of Christian worship in Cairo. The renovated Museum 
+of Islamic Art, in Bab Zuweyla, houses brass, wood, glass, inlaid items,
+ textiles, carpets, and fountains from the Mamluk and Ottoman
+
+
+eras, as well as Mamluk Korans and illuminated manuscripts.</p>
+<p>Other museums in Cairo include the War Museum, the Egyptian National 
+Railways Museum, the Museum of Modern Art, and National Military Museum,
+ as well as a post office Museum, an agricultural museum, and a carriage
+ museum.</p>
+
+
+<h2>19. <a id="TOURISM">Tourism</a></h2>
+<p>Popular for its warm climate and famous as the home of King 
+Tutankhamun's treasures, Cairo is Egypt's most popular tourist city, and
+ tourism is central to the local economy. Roughly one-third of Egypt's 
+hotels (including three Hilton hotels) are located in the city, and 
+souvenir shops and restaurants cater to travelers and locals alike.</p>
+<p>In the 1990s, Egypt's $4.1 billion dollar per year tourist industry 
+was threatened by terrorist attacks by Muslim extremists seeking to 
+overthrow the secular government of Hosni Mubarak. In 1996 terrorists 
+killed 18 members of a Greek tour group as they left a hotel on the 
+outskirts of the city, bound for the Pyramids. The following year, nine 
+German tourists were killed in an assault on a tour bus in front of the 
+Egyptian Museum.</p>
+<p>In 1996, visitors to Egypt numbered 3,895,942.</p>
+
+
+<h2>20. <a id="HOLIDAYS_AND_FESTIVALS">Holidays and Festivals</a></h2>
+<p><b>January</b>  <br>New Year's Day<br>Cairo Book Fair</p>
+<p><b>April</b>  <br>Sinai Liberation Day<br>Images Festival of Independent Film and Video</p>
+<p><b>May</b>  <br>May Day</p>
+<p><b>July</b>  <br>Revolution Day</p>
+<p><b>September</b>  <br>Experimental Theatre Festival</p>
+<p><b>October</b>  <br>National Day<br>Pharaohs' Rally</p>
+<p><b>November</b>  <br>Arabic Music Festival</p>
+
+<p><b>December</b>  <br>Cairo International Film Festival</p>
+
+
+<h2>21. <a id="FAMOUS_CITIZENS">Famous Citizens</a></h2>
+<p>Auguste Mariette (1821<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span></span></span></span></span>1881), Frenchborn archaeologist.</p>
+<p>Saad Zaghlul (1857<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span></span></span></span></span>1927), early nationalist leader.</p>
+<p>Taha Husayn (1889<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span></span></span></span></span>1973), controversial historian.</p>
+<p>Naguib Mahfouz (b. 1911), Nobel Prizewinning novelist.</p>
+<p><a href="http://www.encyclopedia.com/philosophy-and-religion/islam/islam/abbas">Abbas</a> al-Aqqad (1889<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span></span></span></span></span>1964), poet.</p>
+<p>Tawfiq al-Hakim (1898<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span></span></span></span></span>1987), playwright and leading figure in modern Egyptian literature.</p>
+<p>Yusuf Idris (1927<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span></span></span></span></span>1991), groundbreaking playwright and short-story writer.</p>
+<p>King Faruk (1920<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span></span></span></span></span>1965), Egypt's last ruling monarch.</p>
+
+
+<h2>22. <a id="FOR_FURTHER_STUDY">For Further Study</a></h2>
+
+
+<h3>Websites</h3>
+<p>Egypt World Wide Web Index. [Online] Available http://www.pharos.bu.edu/Egypt/Home.html (accessed October 7, 1999).</p>
+<p>Egyptian Ministry of Tourism. [Online] Available http://interoz.com/Egypt (accessed October 7, 1999).</p>
+<p><i>Middle East Times.</i> [Online] Available <a href="http://www.metimes.com/">http://www.metimes.com</a> (accessed October 7, 1999).</p>
+
+
+<h3>Government Offices</h3>
+<p>Cairo Chamber of Commerce<br>4 Maydan Falaki<br>Bab al-Luq<br>Cairo, Egypt</p>
+<p>Embassy of the United States of America<br>5 Latin America Street<br>Garden City<br>Cairo, Egypt</p>
+
+
+<h3>Tourist and Convention Bureaus</h3>
+<p>Egyptian Ministry of Tourism<br>Misr Travel Tower<br>Abbassia Square<br>Cairo, Egypt</p>
+<p>Tourist Friends Association<br>33 Qasr el-Nil, 9th Floor<br>Cairo, Egypt</p>
+
+
+<h3>Publications</h3>
+<p>Al Ahram<br>Sharia al-Galaa<br>Post No.11511<br>Cairo, Egypt</p>
+<p>Al Hayat<br>1 Latin America St.<br>Garden City<br>Cairo, Egypt</p>
+<p>Egyptian Gazette<br>24-26 Sharia Zakaria Ahmed St.<br>Al Tahir<br>Cairo, Egypt</p>
+
+
+<h3>Books</h3>
+<p>Abu Lughod, Janet. <i>Cairo: 1001 Years of the City Victorious.</i> Princeton, NJ: Princeton University Press, 1971.</p>
+<p>Freeman-Grenville, G. S. P. <i>The Beauty of Cairo: A Historical Guide to the Chief Islamic and Coptic Monuments.</i> London: East-West Publications, 1981.</p>
+<p>Gaston, Wiet. <i>Cairo: City of Art and Commerce.</i> Trans. Seymour Feiler. Norman, OK: University of Oklahoma Press, 1964.</p>
+<p>Ghosh, Amitav. <i>In an Antique Land.</i> New York: Alfred A. Knopf, 1993.</p>
+<p>Raafat, Samir. <i>Maadi 1904<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span></span></span></span></span>1962: Society and History in a Cairo Suburb.</i> Cairo: Palm Press, 1994.</p>
+<p>Roberts, Paul William. <i>River in the Desert: Modern Travels in Ancient Egypt.</i> New York: Random House, 1993.</p>
+<p>Rodenbeck, Max. <i>Cairo: The City Victorious.</i> New York: Alfred A. Knopf, 1999.</p>
+<p>Stewart, Desmond. <i>Cairo: 5500 Years</i>. New York: Crowell, 1968.</p>
+
+<p>Wikan, Unni. <i>Tomorrow, God-willing: Self-made Destinies in Cairo</i>. <a href="http://www.encyclopedia.com/places/united-states-and-canada/us-political-geography/chicago">Chicago</a>: University of Chicago Press, 1996.</p>
+<p>Williams, Caroline. <i>Islamic Monuments in Cairo: A Practical Guide.</i> Cairo: American University in Cairo Press, 1993.</p>
+
+
+<h3>Videorecordings</h3>
+<p><i>Egypt 1</i> [videorecording] : <i>Cairo &amp; the Pyramids</i>. Derry, NH: Chip Taylor Communications, 1991. 1 videocassette (16 min.): sd., col.; 1/2 in. "Exploring the World" series. <i>Travel</i> magazine.</p>
+
+
+
+</div><!-- /62541793/enc_linkads -->
+<div id="div-gpt-ad-bodybtf">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-bodybtf'); });
+</script>
+</div>
+<div id="TopicCitationDiv">
+    
+    <div id="TabbedPanels1">
+        <p class="citationprefix">
+            <a name="citationanchor"></a><span class="citethis">Cite this article </span>
+            <br>
+            <span class="selectcitationtext">Pick a style below, and copy the text for your bibliography.
+            </span>
+        </p>
+        <div class="TabbedPanels" id="citationtabstabs726000">
+            <ul class="TabbedPanelsTabGroup">
+                <li class="TabbedPanelsTab TabbedPanelsTabSelected">
+                    <div>
+                        MLA
+                    </div>
+                </li>
+                <li class="TabbedPanelsTab">
+                    <div>
+                        Chicago</div>
+                </li>
+                <li class="TabbedPanelsTab">
+                    <div>
+                        APA
+                    </div>
+                </li>
+            </ul>
+            <div class="TabbedPanelsContentGroup">
+                <div class="TabbedPanelsContent TabbedPanelsContentVisible" id="divMLA">
+                    <p class="cittext">
+                        
+                        "<a href="http://www.encyclopedia.com/international/encyclopedias-almanacs-transcripts-and-maps/cairo">Cairo.</a>"
+                        <u>
+                            Junior Worldmark Encyclopedia of World Cities</u>.
+                        .
+                        
+                        <i>Encyclopedia.com.</i>
+                        16 Nov. 2016
+                        <span>&lt;</span><a href="http://www.encyclopedia.com/">http://www.encyclopedia.com</a><span>&gt;</span>.
+                    </p>
+                </div>
+                <div class="TabbedPanelsContent" id="divChicago">
+                    <p class="cittext">
+                        
+                        "Cairo." <u>
+                            Junior Worldmark Encyclopedia of World Cities</u>.
+                        
+                        . <i>Encyclopedia.com.</i>
+                        (November 16, 2016). <a href="http://www.encyclopedia.com/international/encyclopedias-almanacs-transcripts-and-maps/cairo">
+                            http://www.encyclopedia.com/international/encyclopedias-almanacs-transcripts-and-maps/cairo</a>
+                    </p>
+                </div>
+                <div class="TabbedPanelsContent" id="divAPA">
+                    <p class="cittext">
+                        
+                        "Cairo." <u>
+                            Junior Worldmark Encyclopedia of World Cities</u>.
+                        
+                        . Retrieved
+                        November 16, 2016
+                        from Encyclopedia.com: <a href="http://www.encyclopedia.com/international/encyclopedias-almanacs-transcripts-and-maps/cairo">
+                            http://www.encyclopedia.com/international/encyclopedias-almanacs-transcripts-and-maps/cairo</a>
+                    </p>
+                </div>
+            </div>       
+            
+        </div>
+    </div>    
+</div>
+
+
+<div class="citation-learnmore">
+<a class="citationTrigger" id="citationTrigger-726000">Learn more about citation styles <i class="fa fa-angle-down"></i></a>
+<div class="citation-content">
+	<div class="box" id="LearnCitationsContainer">
+		
+	</div>
+</div>
+</div>
+  </div>
+    <div class="articleWrapper" id="articleWrapper-647949">
+    <div class="divpagetoolscontrol" id="divpagetoolscontrol">
+    <div class="page-tools-flyout" id="divpagetoolsflyout">        
+        <ul>
+            <li><a rel="nofollow" id="pagetools_hlPrint" class="pagetools_hlPrint"><i class="fa fa-print"></i>Print this article</a></li>
+            <li><a target="_blank" rel="nofollow" class="pagetools_printAll"><i class="fa fa-print"></i>Print all entries for this topic</a></li>
+            <li><a class="pagetools_showCitation"><i class="fa fa-quote-left"></i>Cite this article</a></li>           
+        </ul>  
+    </div>
+    <a class="btn btn-primary btn-tools linkimagepagetools" id="linkimagepagetools">
+        Tools <i class="fa fa-angle-down"></i>
+    </a>
+</div>
+<span class="document-id" data-val="1G23424600628"></span>
+<h2 class="doctitle">Cairo
+</h2><div class="bylinecontainer" id="divwallbyline"><span class="publisher" data-pub="2785"></span><span class="publication">Encyclopedia of the Modern Middle East and North Africa</span> <br>
+COPYRIGHT 2004 The Gale Group, Inc.</div>
+<!-- /62541793/enc_linkads -->
+<div id="div-gpt-ad-bodyatf">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-bodyatf'); });
+</script>
+</div>
+<div class="doccontentwrapper">
+
+
+<h1><a href="http://www.encyclopedia.com/places/africa/egyptian-political-geography/cairo">CAIRO</a></h1>
+<blockquote>
+<p>the capital of <a href="http://www.encyclopedia.com/places/africa/egyptian-political-geography/egypt">egypt</a>,
+ the largest city in the middle east and africa, and a major political, 
+religious, and cultural hub for the arab, islamic, and african worlds.</p> 
+</blockquote>
+<p>A city with fertile hinterland and a crossroads location for river, 
+sea, and land trade has flourished near the juncture of the Nile valley 
+of Upper Egypt and the delta of Lower Egypt for five thousand years. In 
+640 c.e. the conquering Muslim Arabs founded al-Fustat (now <i>Old Cairo</i> to Westerners), which superseded the Babylon of the Romans and its predecessor across the river, the <a href="http://www.encyclopedia.com/places/united-states-and-canada/us-political-geography/memphis">Memphis</a>
+ of the pharaohs. In 969 the invading Fatimids founded al-Qahira (the 
+Victorious), and Cairo acquired its current name and resumed its ancient
+ role as an imperial center. (In Arabic, <i>Misr</i> has long been used 
+interchangeably for both Egypt and Cairo.) The Fatimids established the 
+renowned mosque-university alAzhar, and Salah al-Din (Saladin) of the 
+Ayyubid dynasty built the hilltop Citadel, which remained the seat of 
+power until the mid-nineteenth century.</p>
+<p>Its population weakened by epidemics and the ruling Mamluks' 
+internecine warfare, Cairo fell to the Ottomans in 1517. By the 
+seventeenth century the Cape of Good Hope route had deprived Cairo 
+(reduced once more to the status of a provincial city) of much of its 
+spice trade. Europeans no longer spoke with awe of the city Egyptians 
+called the Mother of the World. In 1798 the cartographers of Napol<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">é</span></span></span></span>on
+ Bonaparte's military expedition found a city of a quarter of a million 
+people, half of the population of Cairo at its fourteenth-century peak. 
+The narrow, irregular streets of the preindustrial city served 
+pedestrians, riders, and pack animals well enough, and balconies 
+provided welcome shade. Gates that closed at night and dead-end alleys 
+marked off city quarters, which were defined mainly along religious, 
+ethnic, and occupational lines. Waqf endowments supported mosques, 
+schools, Sufi lodges, baths, fountains, and hospitals.</p>
+<p>The military, economic, administrative, and educational reforms introduced during Muhammad Ali's reign (1805<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span>1848)
+ left few external marks on Cairo, and the city's population, checked by
+ epidemics and competition from burgeoning Alexandria,
+
+
+
+ <br><br>
+
+remained stagnant until the middle of the century. After 1850, however, 
+the population grew because of lower mortality rates, an influx of 
+people from the countryside, and the immigration of European and 
+Levantine entrepreneurs. The Alexandria-Cairo Railroad and the Suez 
+Canal, whose construction was completed respectively in 1855 and 1869, 
+quickened the pace of life in Cairo. The city's share of Egypt's total 
+population, which had dipped from 5.8 percent in 1800 to a low of 4.7 
+percent in 1865 (when Alexandria was in full bloom), rose to 6.9 percent
+ in 1897. Today it accounts for over a quarter of the total population 
+of Egypt.</p>
+<p>Under Muhammad Ali's grandson Isma<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">ʿ</span></span></span></span>il (r. 1863<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span>1879) and the British occupation (1882<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span>1922),
+ the unused space between Cairo and its river ports Bulaq and Old Cairo 
+was developed. Inspired by the municipal improvements effected in Paris 
+by Baron Georges Haussmann and determined to impress the Europeans at 
+the ceremonies celebrating the Suez Canal's completion, Isma<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">ʿ</span></span></span></span>il instructed engineer Ali Mubarak to equip the suburb Isma<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">ʿ</span></span></span></span>iliyya with Parisian-style boulevards, traffic hubs, gardens, palaces, and even an opera house. Isma<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">ʿ</span></span></span></span>il
+ had two boulevards for vehicle traffic cut through the old city before 
+the bankruptcy of Egypt intervened and cost him the throne. European 
+connoisseurs of "Oriental Cairo" persuaded his successor to found the 
+Comit<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">é</span></span></span></span>
+ de Preservation des Monuments de l'Art Arabe (1881), and 
+preservationists still fight to save some monuments and neighborhoods in
+ Cairo from relentless overpopulation, decay, and demolition for urban 
+renewal.</p>
+<p>Under the British, Cairo's European population (30,000, or 6 percent 
+of the city's population in 1897) dominated big business and filled the 
+fashionable new quarters of Heliopolis, Garden City, Ma<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">ʿ</span></span></span></span>adi, and Zamalek with their Mediterranean-style villas. European concessionaires developed the
+
+
+
+
+
+ <br><br>
+
+water, gas, electricity, telephone, and tramway services, and built the 
+bridges across the Nile. Bridges made accessible the first artery to the
+ <a href="http://www.encyclopedia.com/places/asia/west-bank-and-gaza-political-geography/west-bank">West Bank</a>
+ in 1872. By 1914 the access provided by additional bridges to more 
+arteries to the West Bank and to the islands of Rawda and Gazira 
+resulted in rapid development. Between 1896 and 1914 electric tramways 
+(soon replaced by motor vehicles) revolutionized transportation within 
+the city and made possible the swift development of suburbs to the 
+northeast (Abbasiyya, Heliopolis), the north (Shubra), and the west 
+(Rawda, Zamalik, Giza).</p>
+<p>Between 1922 and 1952 the domination by Europeans of economic and 
+political life in Egypt ebbed. In 1949 the closing of the Mixed Courts 
+put an end to special privileges for Westerners, and Cairo belatedly 
+acquired a municipal government that was distinct from the national 
+ministries. Life in the old city deteriorated (see the masterful 
+portrayal of this time by novelist Najib Mahfuz). Well-to-do Egyptians 
+left for the suburbs, Egyptians from rural parts of the country crowded 
+in, and the overflow of tens of thousands of inhabitants spilled over 
+into the cemeteries of the City of the Dead.</p>
+
+
+
+<table><thead><tr><td rowspan="1" colspan="2"><b>Cairo Population Estimates</b>  
+</td>
+
+</tr></thead><tfoot><tr><td rowspan="1" colspan="2">sources: abu-lughod, janet. <a href="http://www.encyclopedia.com/places/africa/egyptian-political-geography/cairo">cairo</a>:
+ 1,001 years of the city victorious. princeton, nj: princeton university
+ press, 1971; world almanac 2004. new york: world almanac education 
+group.
+</td>
+</tr></tfoot><tbody><tr><td rowspan="1" colspan="1">1798:
+</td>
+<td rowspan="1" colspan="1">264,000
+</td>
+
+</tr><tr><td rowspan="1" colspan="1">1846:
+</td>
+<td rowspan="1" colspan="1">257,000
+</td>
+
+</tr><tr><td rowspan="1" colspan="1">1897:
+</td>
+<td rowspan="1" colspan="1">590,000
+</td>
+
+</tr><tr><td rowspan="1" colspan="1">1927:
+</td>
+<td rowspan="1" colspan="1">1,065,000
+</td>
+
+</tr><tr><td rowspan="1" colspan="1">1947:
+</td>
+<td rowspan="1" colspan="1">2,048,000
+</td>
+
+</tr><tr><td rowspan="1" colspan="1">1960:
+</td>
+<td rowspan="1" colspan="1">3,416,000
+</td>
+
+</tr><tr><td rowspan="1" colspan="1">1970:
+</td>
+<td rowspan="1" colspan="1">7,000,000
+</td>
+
+</tr><tr><td rowspan="1" colspan="1">2003:
+</td>
+<td rowspan="1" colspan="1">9,600,000
+</td>
+
+</tr></tbody></table><p>Under Gamal Abdel Nasser (r. 1952<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span>1970)
+ there was an acceleration of both planned and unplanned urban 
+development. Private utility and transport concessions reverted to the 
+state, <i>waqf</i> reform freed land for development, a new airport 
+opened, and a revamped road network briefly alleviated some of the 
+traffic congestion. The Corniche exposed Cairo to the river, and Maydan 
+al-Tahrir became the city center. The Nile Hilton and the new 
+Shepheard's were the first of many luxury hotels built to cater to the 
+expanding tourist trade. Heavy industry was set up in suburban Hilwan 
+and Shubra al-Khayma. The 1956 Master Plan for Cairo recommended that 
+the city limit its population to 3.5 million (a maximum that had already
+ been exceeded) and advocated planned satellite communities and 
+development on desert rather than on agricultural land. The resulting 
+Nasr City<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">—</span></span></span></span>with government offices, housing blocks, schools, a 100,000-seat stadium, and a new campus for al-Azhar<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">—</span></span></span></span>was a success, but Muqattam City, perched high on the desert cliffs, was not.</p>
+<p>Since 1970 the Hilwan<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span>al-Marj
+ metro line has been opened in Cairo, sewer and telephone systems have 
+been upgraded, and more satellite cities have been built in the desert 
+(Sadat City, 10th Ramadan, 6th October, al-Ubur, 15th May). The 
+population crush nevertheless threatens to dwarf such efforts. The 
+runaway sprawl into agricultural lands in the delta and Giza continues 
+while the problem-plagued desert satellite cities sit half empty and a 
+purple cloud of polluted air regularly hangs over Cairo. Opportunities 
+for jobs, schooling, housing, and healthcare are better in Cairo than in
+ the teeming countryside, and people from rural areas keep pouring in. 
+Shanty towns proliferate. One out of every four Egyptians lives in this 
+Third-World megalopolis of seventeen million people.</p>
+<p>Cairo remains the cultural capital of the Arab world. Its assets 
+include al-Azhar and four modern universities, twenty-odd museums, a 
+major movie industry and playhouses, a radio and television industry, 
+bookshops and publishing houses, <i>al-Ahram</i> and other periodicals, a zoo, a new opera house, the headquarters of the Arab League, and the Academy of the Arabic Language.</p>
+
+
+<p>see also 
+azhar, al-; 
+bonaparte, napol<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">É</span></span></span></span>on; 
+cairo university; 
+egypt; 
+mahfuz, najib; 
+mamluks; 
+mixed courts; 
+muhammad ali; 
+nasser, gamal abdel; 
+suez canal; 
+waqf.</p>
+
+
+
+<h2>Bibliography</h2>
+<p>Abu-Lughod, Janet. <i>Cairo: 1,001 Years of the City Victorious.</i> Princeton, NJ: Princeton University Press, 1971.</p>
+<p>Andr<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">é</span></span></span></span>, Raymond. <i>Cairo.</i> Cambridge, MA: Harvard University Press, 2000.</p>
+<p>Francy, Claire E. <i>Cairo: The Practical Guide, 2003.</i> Cairo: American University in Cairo, 2002.</p>
+<p>Rodenbeck, Max. <i>Cairo: The City Victorious.</i> New York: Knopf, 1999.</p>
+<p>Seton-Williams, Veronica; Stocks, Peter; and Seton-Williams, M. V. <i>The Blue Guide Egypt,</i> 3d edition. New York: W. W. Norton, 1993.</p> <br><p>Staffa, Susan Jane. <i>Conquest and Fusion: The Social Evolution of</i> <i>Cairo, A.D. 642<span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;"><span style="font-family:Lucida Sans Unicode;">–</span></span></span></span>1850.</i> Leiden, Netherlands: Brill, 1977.</p>
+<p>Stewart, Desmond. <i>Great Cairo: Mother of the World,</i> 3d edition. Cairo: American University in Cairo, 1996.</p>
+
+
+<p><b>Donald Malcolm Reid</b>  </p>
+
+
+</div><!-- /62541793/enc_linkads -->
+<div id="div-gpt-ad-bodybtf">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-bodybtf'); });
+</script>
+</div>
+<div id="TopicCitationDiv">
+    
+    <div id="TabbedPanels1">
+        <p class="citationprefix">
+            <a name="citationanchor"></a><span class="citethis">Cite this article </span>
+            <br>
+            <span class="selectcitationtext">Pick a style below, and copy the text for your bibliography.
+            </span>
+        </p>
+        <div class="TabbedPanels" id="citationtabstabs647949">
+            <ul class="TabbedPanelsTabGroup">
+                <li class="TabbedPanelsTab TabbedPanelsTabSelected">
+                    <div>
+                        MLA
+                    </div>
+                </li>
+                <li class="TabbedPanelsTab">
+                    <div>
+                        Chicago</div>
+                </li>
+                <li class="TabbedPanelsTab">
+                    <div>
+                        APA
+                    </div>
+                </li>
+            </ul>
+            <div class="TabbedPanelsContentGroup">
+                <div class="TabbedPanelsContent TabbedPanelsContentVisible" id="divMLA">
+                    <p class="cittext">
+                        
+                        "<a href="http://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/cairo">Cairo.</a>"
+                        <u>
+                            Encyclopedia of the Modern Middle East and North Africa</u>.
+                        .
+                        
+                        <i>Encyclopedia.com.</i>
+                        16 Nov. 2016
+                        <span>&lt;</span><a href="http://www.encyclopedia.com/">http://www.encyclopedia.com</a><span>&gt;</span>.
+                    </p>
+                </div>
+                <div class="TabbedPanelsContent" id="divChicago">
+                    <p class="cittext">
+                        
+                        "Cairo." <u>
+                            Encyclopedia of the Modern Middle East and North Africa</u>.
+                        
+                        . <i>Encyclopedia.com.</i>
+                        (November 16, 2016). <a href="http://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/cairo">
+                            http://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/cairo</a>
+                    </p>
+                </div>
+                <div class="TabbedPanelsContent" id="divAPA">
+                    <p class="cittext">
+                        
+                        "Cairo." <u>
+                            Encyclopedia of the Modern Middle East and North Africa</u>.
+                        
+                        . Retrieved
+                        November 16, 2016
+                        from Encyclopedia.com: <a href="http://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/cairo">
+                            http://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/cairo</a>
+                    </p>
+                </div>
+            </div>       
+            
+        </div>
+    </div>    
+</div>
+
+
+<div class="citation-learnmore">
+<a class="citationTrigger" id="citationTrigger-647949">Learn more about citation styles <i class="fa fa-angle-down"></i></a>
+<div class="citation-content">
+	<div class="box" id="LearnCitationsContainer">
+		
+	</div>
+</div>
+</div>
+  </div>
+    <div class="articleWrapper" id="articleWrapper-477253">
+    <div class="divpagetoolscontrol" id="divpagetoolscontrol">
+    <div class="page-tools-flyout" id="divpagetoolsflyout">        
+        <ul>
+            <li><a rel="nofollow" id="pagetools_hlPrint" class="pagetools_hlPrint"><i class="fa fa-print"></i>Print this article</a></li>
+            <li><a target="_blank" rel="nofollow" class="pagetools_printAll"><i class="fa fa-print"></i>Print all entries for this topic</a></li>
+            <li><a class="pagetools_showCitation"><i class="fa fa-quote-left"></i>Cite this article</a></li>           
+        </ul>  
+    </div>
+    <a class="btn btn-primary btn-tools linkimagepagetools" id="linkimagepagetools">
+        Tools <i class="fa fa-angle-down"></i>
+    </a>
+</div>
+<span class="document-id" data-val="1E1CairoEg"></span>
+<h2 class="doctitle">Cairo (city, Egypt)
+</h2><div class="bylinecontainer" id="divwallbyline"><span class="publisher" data-pub="2838"></span><span class="publication">The Columbia Encyclopedia, 6th ed.</span> <br>
+<p>Copyright The Columbia University Press</p></div>
+<!-- /62541793/enc_linkads -->
+<div id="div-gpt-ad-bodyatf">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-bodyatf'); });
+</script>
+</div>
+<div class="doccontentwrapper"><p>Cairo <span class="pronounced">(kī´rō)</span>, Arab. <i>Al Qahirah,</i>
+ city (1996 pop. 6,789,479), capital of Egypt and the Cairo governorate,
+ NE Egypt, a port on the Nile River near the head of its delta, at the 
+boundary of ancient Upper and Lower Egypt. The city includes two islands
+ in the Nile, Zamalik (Gezira) and Roda (Rawdah), which are linked to 
+the mainland by bridges. Cairo is the largest city in the Middle East 
+and in Africa. It is Egypt's administrative center and, along with <a href="http://www.encyclopedia.com/doc/1E1-AlxndriaEg.html">Alexandria</a>,
+ the heart of its economy. Cairo's manufactures include textiles, food 
+and tobacco products, chemicals, plastics, metals, and automobiles. 
+Tourism is central to the local economy. The first railroad in Africa 
+(built 1855) linked Cairo with Alexandria, and today Cairo has extensive
+ rail facilities and is also a road and air hub.
+
+      <br><br><strong>Points of Interest</strong><br><br>Much of Cairo 
+is modern, with wide streets. Its famed mosques, palaces, and city gates
+ are found mostly in the older sections. The mosques of Amur (7th 
+cent.), Ibn Tulun (876–79), Hasan (c.1356), and Qait Bay (1475) are 
+especially noted for their bold design. Khedive Ismail's palace on 
+Zamalik island is a notable 19th-century structure. The Mosque of Al 
+Azhar (970) and adjoining buildings house Al Azhar Univ., considered the
+ world's leading center of Qur'anic studies. Cairo also is the center of
+ Coptic Christianity.<br><br>The city is the seat of the American Univ. 
+in Cairo, Cairo Polytechnic Institute, the Higher Institute of Finance 
+and Commerce, the College of Fine Arts, and the Higher Institute of 
+Theatrical Arts. The Univ. of Cairo is nearby, in Giza. Among Cairo's 
+many museums, the Egyptian National Museum is especially noted for its 
+holdings of ancient Egyptian art. The museum is on Tahrir (Liberation) 
+Square, which was the site in 2011 of massive demonstrations against 
+President Mubarak. The Nilometer, a graduated column dating from 716 and
+ used to measure the river's water level, is on Roda island, where 
+tradition says the infant Moses was found in the bulrushes.
+      <br><br><strong>History</strong><br><br>Almost directly across the Nile from Cairo was <a href="http://www.encyclopedia.com/doc/1E1-MemphisEg.html">Memphis</a>,
+ an ancient Egyptian capital. Babylon, a Roman fortress city, occupied 
+what is now a SE section called Old Cairo. Cairo itself was founded in 
+969 by the Fatimid general Jauhar Al Rumi to replace nearby Al Qatai 
+(established in the 9th cent. by an Abbasid governor of Egypt) as the 
+capital of Egypt. In the 12th cent. <a href="http://www.encyclopedia.com/doc/1E1-Saladin.html">Saladin</a>
+ ended Fatimid rule and established the Ayyubite dynasty (1171–1250). To
+ defend the city against Crusaders, Saladin erected (c.1179) the 
+citadel, which still stands, and extended the walls of the city, parts 
+of which remain. Cairo prospered under the rule of the Mamluks, who 
+added many buildings of artistic merit, but the city declined after it 
+was conquered (1517) by the Ottoman Empire.<br><br>At the time of its 
+capture (1798) by Napoleon Bonaparte's forces, the city had about 
+250,000 inhabitants. British and Turkish forces ousted the French in 
+1801, and Cairo was returned to Ottoman control. Under Muhammad Ali 
+(ruled 1805–49), it became the capital of a virtually independent 
+country and grew in commercial importance; many Europeans settled in the
+ city. During World War II, Cairo was the Allied headquarters and supply
+ center for the Middle East and the site (1943) of the <a href="http://www.encyclopedia.com/doc/1E1-CairoCon.html">Cairo Conference</a>. The <a href="http://www.encyclopedia.com/doc/1E1-ArabLeag.html">Arab League</a>
+ is headquartered in Cairo. In the late 20th cent. the city has been 
+plagued by poverty and overcrowding, which has forced many Cairenes to 
+settle in the City of the Dead, a vast expanse of cemeteries to the S 
+and E; the area is not administered or serviced by the city.<br><br><strong>Bibliography</strong><br><br></p><p>See M. Rodenbeck, <i>Cairo: The City Victorious</i> (1998); N. Alsayyad, <i>Cairo: Histories of a City</i> (2011); D. Sims, <i>Understanding Cairo</i> (2011).</p>
+</div><!-- /62541793/enc_linkads -->
+<div id="div-gpt-ad-bodybtf">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-bodybtf'); });
+</script>
+</div>
+<div id="TopicCitationDiv">
+    
+    <div id="TabbedPanels1">
+        <p class="citationprefix">
+            <a name="citationanchor"></a><span class="citethis">Cite this article </span>
+            <br>
+            <span class="selectcitationtext">Pick a style below, and copy the text for your bibliography.
+            </span>
+        </p>
+        <div class="TabbedPanels" id="citationtabstabs477253">
+            <ul class="TabbedPanelsTabGroup">
+                <li class="TabbedPanelsTab TabbedPanelsTabSelected">
+                    <div>
+                        MLA
+                    </div>
+                </li>
+                <li class="TabbedPanelsTab">
+                    <div>
+                        Chicago</div>
+                </li>
+                <li class="TabbedPanelsTab">
+                    <div>
+                        APA
+                    </div>
+                </li>
+            </ul>
+            <div class="TabbedPanelsContentGroup">
+                <div class="TabbedPanelsContent TabbedPanelsContentVisible" id="divMLA">
+                    <p class="cittext">
+                        
+                        "<a href="http://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/cairo-city-egypt">Cairo (city, Egypt).</a>"
+                        <u>
+                            The Columbia Encyclopedia, 6th ed.</u>.
+                        .
+                        
+                        <i>Encyclopedia.com.</i>
+                        16 Nov. 2016
+                        <span>&lt;</span><a href="http://www.encyclopedia.com/">http://www.encyclopedia.com</a><span>&gt;</span>.
+                    </p>
+                </div>
+                <div class="TabbedPanelsContent" id="divChicago">
+                    <p class="cittext">
+                        
+                        "Cairo (city, Egypt)." <u>
+                            The Columbia Encyclopedia, 6th ed.</u>.
+                        
+                        . <i>Encyclopedia.com.</i>
+                        (November 16, 2016). <a href="http://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/cairo-city-egypt">
+                            http://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/cairo-city-egypt</a>
+                    </p>
+                </div>
+                <div class="TabbedPanelsContent" id="divAPA">
+                    <p class="cittext">
+                        
+                        "Cairo (city, Egypt)." <u>
+                            The Columbia Encyclopedia, 6th ed.</u>.
+                        
+                        . Retrieved
+                        November 16, 2016
+                        from Encyclopedia.com: <a href="http://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/cairo-city-egypt">
+                            http://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/cairo-city-egypt</a>
+                    </p>
+                </div>
+            </div>       
+            
+        </div>
+    </div>    
+</div>
+
+
+<div class="citation-learnmore">
+<a class="citationTrigger" id="citationTrigger-477253">Learn more about citation styles <i class="fa fa-angle-down"></i></a>
+<div class="citation-content">
+	<div class="box" id="LearnCitationsContainer">
+		
+	</div>
+</div>
+</div>
+  </div>
+    <div class="articleWrapper" id="articleWrapper-477254">
+    <div class="divpagetoolscontrol" id="divpagetoolscontrol">
+    <div class="page-tools-flyout" id="divpagetoolsflyout">        
+        <ul>
+            <li><a rel="nofollow" id="pagetools_hlPrint" class="pagetools_hlPrint"><i class="fa fa-print"></i>Print this article</a></li>
+            <li><a target="_blank" rel="nofollow" class="pagetools_printAll"><i class="fa fa-print"></i>Print all entries for this topic</a></li>
+            <li><a class="pagetools_showCitation"><i class="fa fa-quote-left"></i>Cite this article</a></li>           
+        </ul>  
+    </div>
+    <a class="btn btn-primary btn-tools linkimagepagetools" id="linkimagepagetools">
+        Tools <i class="fa fa-angle-down"></i>
+    </a>
+</div>
+<span class="document-id" data-val="1E1CairoUS"></span>
+<h2 class="doctitle">Cairo (city, United States)
+</h2><div class="bylinecontainer" id="divwallbyline"><span class="publisher" data-pub="2838"></span><span class="publication">The Columbia Encyclopedia, 6th ed.</span> <br>
+<p>Copyright The Columbia University Press</p></div>
+<!-- /62541793/enc_linkads -->
+<div id="div-gpt-ad-bodyatf">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-bodyatf'); });
+</script>
+</div>
+<div class="doccontentwrapper"><p>Cairo <span class="pronounced">(kā´rō, kâ´rō)</span>,
+ city (1990 pop. 4,846), seat of Alexander co., extreme S Ill., on a 
+levee-protected tongue of land adjacent to the confluence of the 
+Mississippi and Ohio rivers (spanned by several bridges); inc. 1857. It 
+is a center for shipping by river, rail, and highway and the processing 
+and distribution point for a fertile farm area. Cotton and grain are 
+grown, and manufactures include polyurethene, lumber, and cleaning 
+products. The city and its environs are popularly called 
+    "Little Egypt"
+   because of the deltalike geographical similarity. Permanent 
+settlement began in 1837. In the Civil War the strategic location was a 
+crowded military camp, a Union supply depot, and General Grant's 
+headquarters during much of his Western campaign. Fort Defiance State 
+Park, the site of a Civil War fort, offers a magnificent view of the 
+convergence of the Ohio and Mississippi.</p>
+</div><!-- /62541793/enc_linkads -->
+<div id="div-gpt-ad-bodybtf">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-bodybtf'); });
+</script>
+</div>
+<div id="TopicCitationDiv">
+    
+    <div id="TabbedPanels1">
+        <p class="citationprefix">
+            <a name="citationanchor"></a><span class="citethis">Cite this article </span>
+            <br>
+            <span class="selectcitationtext">Pick a style below, and copy the text for your bibliography.
+            </span>
+        </p>
+        <div class="TabbedPanels" id="citationtabstabs477254">
+            <ul class="TabbedPanelsTabGroup">
+                <li class="TabbedPanelsTab TabbedPanelsTabSelected">
+                    <div>
+                        MLA
+                    </div>
+                </li>
+                <li class="TabbedPanelsTab">
+                    <div>
+                        Chicago</div>
+                </li>
+                <li class="TabbedPanelsTab">
+                    <div>
+                        APA
+                    </div>
+                </li>
+            </ul>
+            <div class="TabbedPanelsContentGroup">
+                <div class="TabbedPanelsContent TabbedPanelsContentVisible" id="divMLA">
+                    <p class="cittext">
+                        
+                        "<a href="http://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/cairo-city-united-states">Cairo (city, United States).</a>"
+                        <u>
+                            The Columbia Encyclopedia, 6th ed.</u>.
+                        .
+                        
+                        <i>Encyclopedia.com.</i>
+                        16 Nov. 2016
+                        <span>&lt;</span><a href="http://www.encyclopedia.com/">http://www.encyclopedia.com</a><span>&gt;</span>.
+                    </p>
+                </div>
+                <div class="TabbedPanelsContent" id="divChicago">
+                    <p class="cittext">
+                        
+                        "Cairo (city, United States)." <u>
+                            The Columbia Encyclopedia, 6th ed.</u>.
+                        
+                        . <i>Encyclopedia.com.</i>
+                        (November 16, 2016). <a href="http://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/cairo-city-united-states">
+                            
+http://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/cairo-city-united-states</a>
+                    </p>
+                </div>
+                <div class="TabbedPanelsContent" id="divAPA">
+                    <p class="cittext">
+                        
+                        "Cairo (city, United States)." <u>
+                            The Columbia Encyclopedia, 6th ed.</u>.
+                        
+                        . Retrieved
+                        November 16, 2016
+                        from Encyclopedia.com: <a href="http://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/cairo-city-united-states">
+                            
+http://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/cairo-city-united-states</a>
+                    </p>
+                </div>
+            </div>       
+            
+        </div>
+    </div>    
+</div>
+
+
+<div class="citation-learnmore">
+<a class="citationTrigger" id="citationTrigger-477254">Learn more about citation styles <i class="fa fa-angle-down"></i></a>
+<div class="citation-content">
+	<div class="box" id="LearnCitationsContainer">
+		
+	</div>
+</div>
+</div>
+  </div>
+    <div class="articleWrapper" id="articleWrapper-371238">
+    <div class="divpagetoolscontrol" id="divpagetoolscontrol">
+    <div class="page-tools-flyout" id="divpagetoolsflyout">        
+        <ul>
+            <li><a rel="nofollow" id="pagetools_hlPrint" class="pagetools_hlPrint"><i class="fa fa-print"></i>Print this article</a></li>
+            <li><a target="_blank" rel="nofollow" class="pagetools_printAll"><i class="fa fa-print"></i>Print all entries for this topic</a></li>
+            <li><a class="pagetools_showCitation"><i class="fa fa-quote-left"></i>Cite this article</a></li>           
+        </ul>  
+    </div>
+    <a class="btn btn-primary btn-tools linkimagepagetools" id="linkimagepagetools">
+        Tools <i class="fa fa-angle-down"></i>
+    </a>
+</div>
+<span class="document-id" data-val="1O101Cairo"></span>
+<h2 class="doctitle">Cairo
+</h2><div class="bylinecontainer" id="divwallbyline"><span class="publisher" data-pub="3660"></span><span class="publication">The Concise Oxford Dictionary of World Religions</span> <br>
+© The Concise Oxford Dictionary of World Religions 1997, originally published by Oxford University Press 1997.</div>
+<!-- /62541793/enc_linkads -->
+<div id="div-gpt-ad-bodyatf">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-bodyatf'); });
+</script>
+</div>
+<div class="doccontentwrapper"><p></p><strong>Cairo</strong> (Arab., al-Qāhira, ‘the victorious’, but also from al-Qāhir, Mars, the city of Mars). Capital city of the <a href="http://www.encyclopedia.com/doc/1O101-Fimids.html">Fāṭimids</a>,
+ established by al-Muʿizz in 969 (AH 358). It was originally called 
+al-Manṣūriyya until al-Muʿizz entered it, and only then was it called 
+‘the victorious city of al-Muʿizz’. Under the Mamluke dynasty (1250–1517
+ (AH 648–922)), many of the great <a href="http://www.encyclopedia.com/doc/1O101-Mosque.html">mosques</a> were built, including <a href="http://www.encyclopedia.com/doc/1O101-alAzhar.html">al-Azhar</a>.<br>
+</div><!-- /62541793/enc_linkads -->
+<div id="div-gpt-ad-bodybtf">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-bodybtf'); });
+</script>
+</div>
+<div id="TopicCitationDiv">
+    
+    <div id="TabbedPanels1">
+        <p class="citationprefix">
+            <a name="citationanchor"></a><span class="citethis">Cite this article </span>
+            <br>
+            <span class="selectcitationtext">Pick a style below, and copy the text for your bibliography.
+            </span>
+        </p>
+        <div class="TabbedPanels" id="citationtabstabs371238">
+            <ul class="TabbedPanelsTabGroup">
+                <li class="TabbedPanelsTab TabbedPanelsTabSelected">
+                    <div>
+                        MLA
+                    </div>
+                </li>
+                <li class="TabbedPanelsTab">
+                    <div>
+                        Chicago</div>
+                </li>
+                <li class="TabbedPanelsTab">
+                    <div>
+                        APA
+                    </div>
+                </li>
+            </ul>
+            <div class="TabbedPanelsContentGroup">
+                <div class="TabbedPanelsContent TabbedPanelsContentVisible" id="divMLA">
+                    <p class="cittext">
+                        
+                        "<a href="http://www.encyclopedia.com/religion/dictionaries-thesauruses-pictures-and-press-releases/cairo">Cairo.</a>"
+                        <u>
+                            The Concise Oxford Dictionary of World Religions</u>.
+                        .
+                        
+                        <i>Encyclopedia.com.</i>
+                        16 Nov. 2016
+                        <span>&lt;</span><a href="http://www.encyclopedia.com/">http://www.encyclopedia.com</a><span>&gt;</span>.
+                    </p>
+                </div>
+                <div class="TabbedPanelsContent" id="divChicago">
+                    <p class="cittext">
+                        
+                        "Cairo." <u>
+                            The Concise Oxford Dictionary of World Religions</u>.
+                        
+                        . <i>Encyclopedia.com.</i>
+                        (November 16, 2016). <a href="http://www.encyclopedia.com/religion/dictionaries-thesauruses-pictures-and-press-releases/cairo">
+                            http://www.encyclopedia.com/religion/dictionaries-thesauruses-pictures-and-press-releases/cairo</a>
+                    </p>
+                </div>
+                <div class="TabbedPanelsContent" id="divAPA">
+                    <p class="cittext">
+                        
+                        "Cairo." <u>
+                            The Concise Oxford Dictionary of World Religions</u>.
+                        
+                        . Retrieved
+                        November 16, 2016
+                        from Encyclopedia.com: <a href="http://www.encyclopedia.com/religion/dictionaries-thesauruses-pictures-and-press-releases/cairo">
+                            http://www.encyclopedia.com/religion/dictionaries-thesauruses-pictures-and-press-releases/cairo</a>
+                    </p>
+                </div>
+            </div>       
+            
+        </div>
+    </div>    
+</div>
+
+
+<div class="citation-learnmore">
+<a class="citationTrigger" id="citationTrigger-371238">Learn more about citation styles <i class="fa fa-angle-down"></i></a>
+<div class="citation-content">
+	<div class="box" id="LearnCitationsContainer">
+		
+	</div>
+</div>
+</div>
+  </div>
+    <div class="articleWrapper" id="articleWrapper-477252">
+    <div class="divpagetoolscontrol" id="divpagetoolscontrol">
+    <div class="page-tools-flyout" id="divpagetoolsflyout">        
+        <ul>
+            <li><a rel="nofollow" id="pagetools_hlPrint" class="pagetools_hlPrint"><i class="fa fa-print"></i>Print this article</a></li>
+            <li><a target="_blank" rel="nofollow" class="pagetools_printAll"><i class="fa fa-print"></i>Print all entries for this topic</a></li>
+            <li><a class="pagetools_showCitation"><i class="fa fa-quote-left"></i>Cite this article</a></li>           
+        </ul>  
+    </div>
+    <a class="btn btn-primary btn-tools linkimagepagetools" id="linkimagepagetools">
+        Tools <i class="fa fa-angle-down"></i>
+    </a>
+</div>
+<span class="document-id" data-val="1O233Cairo"></span>
+<h2 class="doctitle">Cairo
+</h2><div class="bylinecontainer" id="divwallbyline"><span class="publisher" data-pub="3660"></span><span class="publication">Oxford Dictionary of Rhymes</span> <br>
+© Oxford Dictionary of Rhymes 2007, originally        published by Oxford University Press 2007.</div>
+<!-- /62541793/enc_linkads -->
+<div id="div-gpt-ad-bodyatf">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-bodyatf'); });
+</script>
+</div>
+<div class="doccontentwrapper"><p></p><strong>Cairo</strong> 
+•<strong>arrow</strong>, barrow, farrow, harrow, <a href="http://www.encyclopedia.com/places/britain-ireland-france-and-low-countries/british-and-irish-political-geography/jarrow">Jarrow</a>, marrow, narrow, sparrow, taro, tarot, Varro, yarrow
+•gabbro • Avogadro • Afro • aggro
+•macro • cilantro • Castro
+•wheelbarrow
+•<strong>Faro</strong>, <a href="http://www.encyclopedia.com/places/africa/african-physical-geography/kilimanjaro">Kilimanjaro</a>, Pissarro, Pizarro, Tupamaro
+•Pedro • allegro • hedgerow • velcro
+•escrow
+•<strong>metro</strong>, retro
+•electro • Jethro
+•<strong>bolero</strong>, caballero, dinero, Faeroe, pharaoh, ranchero, sombrero, torero
+•scarecrow • Ebro
+•<strong><a href="http://www.encyclopedia.com/places/spain-portugal-italy-greece-and-balkans/former-yugoslavian-political-geography/montenegro">Montenegro</a></strong>, Negro
+•repro • in vitro • <a href="http://www.encyclopedia.com/people/philosophy-and-religion/philosophy-biographies/pyrrho">Pyrrho</a> • synchro
+•windrow • impro • intro • bistro
+•Babygro • McEnroe
+•<strong>biro</strong>, Cairo, giro, gyro, tyro
+•fibro • micro • maestro
+•<strong>borrow</strong>, Corot, morrow, sorrow, tomorrow
+•cockcrow • cointreau
+•<strong>Moro</strong>, <a href="http://www.encyclopedia.com/places/asia/japanese-political-geography/sapporo">Sapporo</a>, Thoreau
+•Mindoro • Yamoussoukro
+•Woodrow
+•<strong>burro</strong>, burrow, furrow
+•upthrow
+•<strong>De Niro</strong>, hero, <a href="http://www.encyclopedia.com/people/history/ancient-history-rome-biographies/nero">Nero</a>, Pierrot, Pinero, Rio de Janeiro, sub-zero, zero
+•<strong>bureau</strong>, chiaroscuro, Douro, enduro, euro, Ishiguro, Oruro, Truro
+•Politburo • guacharo • Diderot
+•vigoro • Prospero • Cicero • in utero
+•Devereux • Jivaro • overthrow
+<br>
+</div><!-- /62541793/enc_linkads -->
+<div id="div-gpt-ad-bodybtf">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-bodybtf'); });
+</script>
+</div>
+<div id="TopicCitationDiv">
+    
+    <div id="TabbedPanels1">
+        <p class="citationprefix">
+            <a name="citationanchor"></a><span class="citethis">Cite this article </span>
+            <br>
+            <span class="selectcitationtext">Pick a style below, and copy the text for your bibliography.
+            </span>
+        </p>
+        <div class="TabbedPanels" id="citationtabstabs477252">
+            <ul class="TabbedPanelsTabGroup">
+                <li class="TabbedPanelsTab TabbedPanelsTabSelected">
+                    <div>
+                        MLA
+                    </div>
+                </li>
+                <li class="TabbedPanelsTab">
+                    <div>
+                        Chicago</div>
+                </li>
+                <li class="TabbedPanelsTab">
+                    <div>
+                        APA
+                    </div>
+                </li>
+            </ul>
+            <div class="TabbedPanelsContentGroup">
+                <div class="TabbedPanelsContent TabbedPanelsContentVisible" id="divMLA">
+                    <p class="cittext">
+                        
+                        "<a href="http://www.encyclopedia.com/humanities/dictionaries-thesauruses-pictures-and-press-releases/cairo">Cairo.</a>"
+                        <u>
+                            Oxford Dictionary of Rhymes</u>.
+                        .
+                        
+                        <i>Encyclopedia.com.</i>
+                        16 Nov. 2016
+                        <span>&lt;</span><a href="http://www.encyclopedia.com/">http://www.encyclopedia.com</a><span>&gt;</span>.
+                    </p>
+                </div>
+                <div class="TabbedPanelsContent" id="divChicago">
+                    <p class="cittext">
+                        
+                        "Cairo." <u>
+                            Oxford Dictionary of Rhymes</u>.
+                        
+                        . <i>Encyclopedia.com.</i>
+                        (November 16, 2016). <a href="http://www.encyclopedia.com/humanities/dictionaries-thesauruses-pictures-and-press-releases/cairo">
+                            http://www.encyclopedia.com/humanities/dictionaries-thesauruses-pictures-and-press-releases/cairo</a>
+                    </p>
+                </div>
+                <div class="TabbedPanelsContent" id="divAPA">
+                    <p class="cittext">
+                        
+                        "Cairo." <u>
+                            Oxford Dictionary of Rhymes</u>.
+                        
+                        . Retrieved
+                        November 16, 2016
+                        from Encyclopedia.com: <a href="http://www.encyclopedia.com/humanities/dictionaries-thesauruses-pictures-and-press-releases/cairo">
+                            http://www.encyclopedia.com/humanities/dictionaries-thesauruses-pictures-and-press-releases/cairo</a>
+                    </p>
+                </div>
+            </div>       
+            
+        </div>
+    </div>    
+</div>
+
+
+<div class="citation-learnmore">
+<a class="citationTrigger" id="citationTrigger-477252">Learn more about citation styles <i class="fa fa-angle-down"></i></a>
+<div class="citation-content">
+	<div class="box" id="LearnCitationsContainer">
+		
+	</div>
+</div>
+</div>
+  </div>
+
+  
+  
+
+  
+  
+
+  </div>
+</div>
+
+  </div>
+<div id="block-bottomcontentad">
+  
+    
+      <!-- OUTBRAIN FOOTER -->
+<div class="OUTBRAIN" data-widget-id="TF_1" data-ob-template="encyclopedia.com"></div>
+  </div>
+
+  </div>
+
+		
+		  <div>
+    
+
+  </div>
+
+
+	</div>
+	<div class="sidebar">
+					<aside class="layout-sidebar-first" role="complementary">
+			  <div>
+      <div class="clearfix">
+    
+    <div class="trending-topic-tools">
+        <a id="socialMediaFacebook" href="javascript:;">
+            <i class="fa fa-social-fb" title="Share this article on Facebook"></i>
+        </a>
+        <a id="socialMediaTwitter" href="javascript:;">
+            <i class="fa fa-social-twit" title="Twitter"></i>
+        </a><a id="socialMediaReddit" href="javascript:;">
+            <i class="fa fa-social-rddt" title="Submit this article to Reddit"></i>
+        </a>
+        <a id="socialMediaStumbleUpon" href="javascript:;">
+            <i class="fa fa-social-su" title="Give this article a thumbs-up on StumbleUpon"></i>
+        </a>
+    </div>
+  </div>
+  <script>
+    //var socialMediaPageUrl = "http%3a%2f%2fwww.encyclopedia.com%2ftopic%2fStephen_Watts_Kearny.aspx";
+    var socialMediaPageName = "Topic";
+    var socialMediaFacebookUrl = "http://www.facebook.com/sharer.php?u=";
+    var socialMediaTwitterUrl = "http://twitter.com/home?status=Check out @encyclopediacom's coverage of Stephen Watts Kearny at ";
+    var socialMediaRedditUrl = "http://reddit.com/submit?title=Stephen+Watts+Kearny&amp;url=";
+    var socialMediaStumbleUponUrl = "http://www.stumbleupon.com/submit?title=Stephen+Watts+Kearny&amp;url=";
+  </script>    
+<div id="block-media">
+  
+    
+      	<div class="imagestopicleft">
+	  <div id="heroimg" class="herowrap">
+					  		<a rel="nofollow" target="_blank" href="http://en.wikipedia.org/wiki/Image:View_from_Cairo_Tower_31march2007.jpg">
+				  <img src="page22_fichiers/2793576.jpg" typeof="foaf:Image" height="233" width="300">
+
+
+
+					</a>
+			<div id="hero-img-byline" class="mt4 fs80">
+			Cairo. 
+			    Other 
+			    			    			      (Public Domain)
+			    			</div>
+				</div>
+	</div>
+
+
+  </div>
+<div id="block-rightcolumntopad">
+  
+    
+      <!-- /62541793/enc_rightcolumnatf -->
+<div id="div-gpt-ad-rightcolumnatf">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-rightcolumnatf'); });
+</script>
+</div>
+  </div>
+<div class="views-element-container" id="block-views-block-topics-related-topics-block">
+  
+      <h4>Related Topics</h4>
+    
+      <div block="block-views-block-topics-related-topics-block"><div class="links-view js-view-dom-id-69e919dcf49b0bc229132dde535fd5e7e93b0c12cfe9109af96a26d29b00d18c">
+  
+  
+  
+
+  
+  
+  
+
+      <div>
+    <a href="http://www.encyclopedia.com/history/modern-europe/wars-and-battles/cairo-conference" hreflang="en">Cairo Conference</a>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  </div>
+</div>
+
+  </div>
+<div id="block-rightcolumnmiddlead">
+  
+    
+      <!-- OUTBRAIN SIDEBAR -->
+<div class="OUTBRAIN" data-widget-id="TS_1" data-ob-template="encyclopedia.com"></div>
+  </div>
+<div id="block-rightcolumnbottomad">
+  
+    
+      <!-- /62541793/enc_rightcolumnbtf -->
+<div id="div-gpt-ad-rightcolumnbtf">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-rightcolumnbtf'); });
+</script>
+</div>
+  </div>
+<div id="block-trendingtopics">
+  
+    	<div>
+	  	</div>
+  </div>
+<div id="block-facebooklikebox">
+  
+    
+      
+            <div><p><iframe allowtransparency="true" scrolling="no" src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fencyclopediacom&amp;width=300&amp;colorscheme=light&amp;show_faces=true&amp;stream=false&amp;header=false&amp;height=80" frameborder="0"></iframe></p>
+</div>
+      
+  </div>
+
+  </div>
+
+			</aside>
+		
+			</div>
+
+</div>
+
+			</div>
+		</div>
+	</div>
+
+	
+	
+		<div id="footer">
+		<footer>
+			  <div>
+    <div id="block-footerad">
+  
+    
+      <script>
+  var fullScreenTargeting = window.innerWidth > 500 ? 'screenshift_full' :
+    Math.floor(Math.random()*10) < 6 ? 'mobile_int' : 'screenshift_full';
+  googletag.cmd.push(function() {
+    googletag.pubads().setTargeting('fullscreen', fullScreenTargeting);
+  });
+</script>
+
+<!-- Screen Shift Full Screen Ad Unit -->
+<div id="div-gpt-ad-screenshift-full">
+  <script>
+    googletag.cmd.push(function() {
+      googletag.display('div-gpt-ad-screenshift-full');
+      googletag.pubads().display('/62541793/screenshift_full', [1, 1], 'div-gpt-ad-screenshift-full');
+    });
+  </script>
+</div>
+
+
+<!-- Mobile Interstitial -->
+<div id="div-gpt-ad-mobile-interstitial">
+  <script>
+    googletag.cmd.push(function() {
+      googletag.display('div-gpt-ad-mobile-interstitial');
+      googletag.pubads().display('/62541793/sticky_mobile', [1, 1], 'div-gpt-ad-mobile-interstitial');
+    });
+  </script>
+</div>
+  </div>
+<div id="block-sociallinks">
+  
+    
+      
+            <div><nav class="social"><a href="https://www.facebook.com/encyclopediacom" target="_blank" title="Facebook"><i class="fa fa-social-fb"></i></a> <a href="https://twitter.com/encyclopediacom" target="_blank" title="Twitter"><i class="fa fa-social-twit"></i></a> <a href="https://instagram.com/encyclopediacom" target="_blank" title="Instagram"><i class="fa fa-social-insta"></i></a></nav></div>
+      
+  </div>
+<nav role="navigation" aria-labelledby="block-encyclopedia-footer-menu" id="block-encyclopedia-footer">
+            
+  <h2 class="visually-hidden" id="block-encyclopedia-footer-menu">Footer menu</h2>
+  
+
+        
+              <ul block="block-encyclopedia-footer">
+              <li>
+        <a href="http://www.encyclopedia.com/" rel="nofollow" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+          <li>
+        <a href="http://www.encyclopedia.com/about" rel="nofollow" data-drupal-link-system-path="node/1319859">About Us</a>
+              </li>
+          <li>
+        <a href="http://www.encyclopedia.com/faq" rel="nofollow" data-drupal-link-system-path="node/1319856">Help</a>
+              </li>
+          <li>
+        <a href="http://www.encyclopedia.com/emailus" rel="nofollow">Site Feedback</a>
+              </li>
+          <li>
+        <a href="http://www.encyclopedia.com/privacy" rel="nofollow" data-drupal-link-system-path="node/1319857">Privacy Policy</a>
+              </li>
+          <li>
+        <a href="http://www.encyclopedia.com/termsofservice" rel="nofollow" data-drupal-link-system-path="node/1319858">Terms and Conditions</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<div id="block-copyright">
+  
+    
+      
+            <div><p>
+        <span>© 2016 Encyclopedia.com | All rights reserved.</span>
+     </p></div>
+      
+  </div>
+
+  </div>
+
+		</footer>
+	</div>
+	
+	<i class="fa fa-angle-up back-to-top visible"></i>
+	
+    <script src="page22_fichiers/jquery-migrate-1.js"></script>
+<script src="page22_fichiers/MicrosoftAjax.js"></script>
+<script src="page22_fichiers/js_9pEYPFAZx97JF2_70wXsmKBkaJBVqkZFSex22K8xHLI.js"></script>
+<script src="page22_fichiers/adsbygoogle.js"></script><script src="page22_fichiers/jquery.js" id="" type="text/javascript">(function(){var d=function(a){/BillyTestUA/.test(navigator.userAgent)&&(0===jQuery("#logbox").length&&jQuery("#header").append('\x3cdiv id\x3d"logbox" style\x3d"position: fixed; bottom: 20px; left: 0; padding: 10px; background-color: #fff; z-index: 1000; "\x3e\x3c/div\x3e'),jQuery("#logbox").append("\x3cbr\x3e"+a))},e=function(){jQuery("#omm_dynamic_footer").html('\x3cdiv class\x3d"OUTBRAIN" data-widget-id\x3d"TF_6" data-src\x3d"" data-ob-template\x3d"encyclopedia.com"\x3e\x3c/div\x3e');var a=document.createElement("script");
+a.src="http://widgets.outbrain.com/outbrain.js";a.async="async";a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a)},f=function(){jQuery("#omm_dynamic_footer").html('\x3cdiv id\x3d"contentad225204"\x3e\x3c/div\x3e');var a={id:"2761622c-b997-48a5-ac9b-0947cedc1e06",d:"ZW5jeWNsb3BlZGlhLmNvbQ\x3d\x3d",wid:"225204",cb:(new Date).getTime()},b=[],c;for(c in a)b.push(c+"\x3d"+encodeURIComponent(a[c]));a=document.createElement("script");a.type="text/javascript";a.async=!0;c="https:"==
+document.location.protocol?"https":"http";a.src=c+"://api.content.ad/Scripts/widget2.aspx?"+b.join("\x26");d(a.src);document.getElementById("contentad225204").appendChild(a)};jQuery(".citation-learnmore").after('\x3cdiv id\x3d"omm_dynamic_footer\x3e\x3c/div\x3e');var b=Math.round(100*Math.random());d(b);switch(!0){case 50>b:e();d("loaded outbrain");break;case 50<=b:f(),d("loaded content.ad")}})();</script><script id="" type="text/javascript">var rando=Math.floor(100*Math.random());if(89<rando||-1<top.document.location.href.indexOf("force_ad\x3dunderdog")){var underdogScript=document.createElement("script"),targetScript=top.document.getElementsByTagName("script")[0];underdogScript.src="//udmserve.net/udm/img.fetch?sid\x3d10780;tid\x3d1;dt\x3d6;";try{top.document.getElementsByTagName("head")[0].appendChild(underdogScript)}catch(a){targetScript.parentNode.insertBefore(underdogScript,targetScript)}};</script><style>
+  #ys-ad-block {
+    width: 100%;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 14px;
+    color: #333333;
+  }
+  #ys-ad-block .ys-item {
+    margin-bottom: 10px;
+  }
+  #ys-ad-block .ys-item a {
+    display: block;
+    line-height: 1em;
+    
+  }
+  #ys-ad-block .ys-item a .title {
+    color: #2196f3;
+  }
+  #ys-ad-block .ys-item a .description {
+    color: #333333;
+    padding: 3px 0;
+  }
+  #ys-ad-block .ys-item a .murl {
+    font-size: .8em;
+    font-weight: bold;
+    color: #f47421;
+  }
+
+  @media only screen and (min-width: 500px) {
+    #ys-ad-block .ys-item {
+      width: calc(50% - 10px);
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    #ys-ad-block .ys-item a .description {
+      color: #333333;
+      padding: 3px 0;
+      height: 2.2em;
+    }
+  }
+</style>
+<script id="" type="text/javascript">function deferYSListings(a){window.jQuery?a():setTimeout(function(){deferYSListings(a)},50)}
+deferYSListings(function(){try{var a=jQuery("meta[name\x3dtitle]").attr("content").replace(/ \| Encyclopedia.com articles about .+/,"").replace(" facts, information, pictures","").replace(" | Encyclopedia.com","");jQuery.getJSON("http://api.adrageo.us/ads?publisherid\x3denc_yahoo\x26search\x3d"+encodeURIComponent(a)+"\x26subid\x3dencyahoo",function(b){for(var a='\x3cdiv id\x3d"ys-ad-block"\x3e',c,d=0;d<b.ad.length&&6>d;d++)c=b.ad[d],a+='\x3cdiv class\x3d"ys-item"\x3e\x3ca href\x3d"'+decodeURI(c.clickurl)+
+'" target\x3d"_blank"\x3e\x3cdiv class\x3d"title"\x3e'+c.title+'\x3c/div\x3e\x3cdiv class\x3d"description"\x3e'+c.description+'\x3c/div\x3e\x3cdiv class\x3d"murl"\x3e'+c.displayurl+"\x3c/div\x3e\x3c/a\x3e\x3c/div\x3e";a+="\x3c/div\x3e";b=Math.floor(jQuery(".doccontentwrapper p").length/5);jQuery(".doccontentwrapper:visible p:eq("+b+")").before(a)})}catch(b){console.log(b)}});</script>
+<script src="page22_fichiers/outbrain.js"></script>
+<script src="page22_fichiers/js_QrI9l5toWnAmQPnbXVV8PjxZi1jR_BWShGbqEI3s4z0.js"></script>
+<script src="page22_fichiers/bootstrap.js" async="" data-owner="sitefuel"></script>
+<script src="page22_fichiers/js_kzFZSjGDVM1ar3cLbyXX9TeudQXM1WsenYdKCUSnkyI.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"944b4b637b","applicationID":"30464058","transactionName":"NVFXZEACDxcFVUdcDQwbYEJbTAgKAFNLGxIKRA==","queueTime":0,"applicationTime":2473,"atts":"GRZUEggYHBk=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+
+<div style="display: none; visibility: hidden;"><script type="text/javascript">adroll_adv_id="NH43OG47XZCUFK6LGB74KB";adroll_pix_id="HZTU354OYZE7FB543NF5NO";(function(){var b=window.onload;window.onload=function(){__adroll_loaded=!0;var a=document.createElement("script"),c="https:"==document.location.protocol?"https://s.adroll.com":"http://a.adroll.com";a.setAttribute("async","true");a.type="text/javascript";a.src=c+"/j/roundtrip.js";((document.getElementsByTagName("head")||[null])[0]||document.getElementsByTagName("script")[0].parentNode).appendChild(a);b&&b()}})();</script></div><div><iframe id="cross-domain-iframe-unify" src="page22_fichiers/uid.html" style="display: none;"></iframe></div><sf-dw-component style="width: 1px; display: none;" class="sf-dw-float ft-desktop" id="dwWindow"><sf-button class="dw-x-btn" id="closeBtn"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 15" style="fill: rgb(212, 212, 212);" xml:space="preserve"><polygon points="15,1.2 13.8,0 7.5,6.3 1.2,0 0,1.2 6.3,7.5 0,13.8 1.2,15 7.5,8.7 13.8,15 15,13.8 8.7,7.5"></polygon></svg></sf-button><sf-block style="padding: 0px 0px 0px 20px;" id="dwBody" class="dw-body"><sf-header style="display: none;" class="sfdw-header-wrapper ft-no-sorting" id="dw-header-oneline-slim">
+<sf-block style="padding-left: 10px; border-bottom-color: rgb(212, 212, 212); justify-content: flex-start; line-height: 1;" template="oneline-slim" class="sfdw-header sfdw-oneline-slim" id="dwHeader">
+    <sf-block class="sfdw-logo"><img id="logo_img" src="page22_fichiers/logo.png"></sf-block>
+    <form id="sfdw_searchForm" action="">
+        <sf-block style="border-color: rgb(212, 212, 212); margin-left: 10px; font-family: Merriweather,serif; color: rgb(51, 51, 51); max-width: 250px;" class="sfdw-search-box">
+            <input class="sfdw-search-input" id="searchTerm" placeholder="Search.." type="search">
+            <sf-span style="background: transparent none repeat scroll 0% 0%;" class="sfdw-search-btn-wrapper">
+                <input class="dw-search-btn" id="dw-search-btn" title="Search" type="button">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 30" style="fill: rgb(9, 79, 143);" xml:space="preserve"><path class="sticon" d="M25.9,26.3c-1,1.1-2.6,1.1-3.7,0l-3.1-3.2c-0.7-0.7-0.9-1.6-0.7-2.5c-1.6,1.3-3.6,2-5.6,2c-2.5,0-4.9-1-6.7-2.8c-1.8-1.8-2.8-4.3-2.8-7c0-2.6,1-5.1,2.7-7c3.7-3.9,9.6-3.9,13.3-0.1c3.3,3.5,3.7,9,1,12.8c0.8-0.2,1.7,0,2.4,0.7l3.1,3.2C26.9,23.5,26.9,25.3,25.9,26.3z M19.3,12.7c0-1.8-0.7-3.6-1.9-4.9c-2.6-2.7-6.7-2.6-9.3,0.1c-2.6,2.7-2.5,7.1,0,9.7c2.6,2.7,6.7,2.6,9.3-0.1C18.7,16.3,19.3,14.5,19.3,12.7z"></path></svg></sf-span>
+        </sf-block>
+    </form>
+    <sf-block style="display: none;" class="sfdw-additional-data"></sf-block>
+
+    <sf-block style="display: none;" class="sfdw-sorting">
+        <sf-span class="sfdw-sorting-title">Sort by:</sf-span>
+        <sf-block class="sfdw-switch-field">
+            <label for="sfdw-switch-relevant">
+                <span class="sfdw-sort-relevant">Relevance</span>
+                <input class="sfdw-sort-input" id="sfdw-switch-relevant" name="sort" value="relevance" type="radio">
+            </label>
+            <label for="sfdw-switch-date">
+                <span class="sfdw-sort-date">Date</span>
+                <input class="sfdw-sort-input" id="sfdw-switch-date" name="sort" value="date" type="radio">
+            </label>
+        </sf-block>
+    </sf-block>
+
+</sf-block></sf-header><sf-block id="scrollArea" class="mobileScroll"><section id="sectionWrapper" class="sfdw-sections visible-on"></section></sf-block></sf-block><sf-block style="padding: 0px 0px 0px 20px; font-family: Merriweather,serif; font-weight: normal; left: 790px;" id="dwExtension" class="sfdw-extension"><sf-block id="dwExtHeader" class="sfdw-ext-header"><sf-span id="dwGoBack" class="sfdw-go-back"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.5 18" style="enable-background:new 0 0 10.5 18" xml:space="preserve"><polygon class="" fill="#b3b3b3" points="10.5,1.5 9,0 1.5,7.5 0,9 1.5,10.5 9,18 10.5,16.5 3,9"></polygon></svg>Back to results</sf-span><sf-block id="dwExtHeaderLogo" class="sfdw-ext-header-logo">Provided by<sf-block id="dwExtHeaderLogoImg" class="sfdw-logo-img"></sf-block></sf-block></sf-block><sf-block id="dwExtContent" class="sfdw-ext-content"></sf-block></sf-block></sf-dw-component></body></html>

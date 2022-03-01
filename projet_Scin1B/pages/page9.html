@@ -1,0 +1,709 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><script src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/analytics.js" async=""></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="verify-v1" content="STDtWvgGjOy77mPN8tNAAfDaBqDkqWU7AHfu7opE3NQ=">
+	<meta name="description" content="algorithmic design research. features work from several institutions (gsapp, bartlett, pratt) and workshops (apomechanes). open source code primarily in python for rhinoceros 5.">
+	<meta name="keywords" content="design, architecture, algorithmic, computation">
+	<meta name="cargo_title" content="algorithmic design">
+	<meta name="ROBOTS" content="INDEX,FOLLOW">
+	
+	<!-- base href="http://code.algorithmicdesign.net/" -->
+	<link rel="shortcut icon" href="http://favicon.cargocollective.com/favicon.ico">
+			<link rel="canonical" href="http://code.algorithmicdesign.net/Recursive-Subdivision-Tiling">
+		<title>Recursive Subdivision Tiling - algorithmic design</title>
+			<link href="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/stylesheet.css" id="user_stylesheet" rel="stylesheet" type="text/css">
+	
+	<script src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/cargo.js"></script>
+	<script type="text/javascript" src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/cargo_004.js"></script>
+	<script type="text/javascript" src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/cargo_002.js"></script>
+
+	<script type="text/javascript" src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/template.js" charset="utf-8"></script>	<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+
+			<link href="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/globalstyle.css" rel="stylesheet" type="text/css" charset="utf-8">
+	<link href="http://code.algorithmicdesign.net/rss/" rel="alternate" type="application/rss+xml" title="Cargo feed">
+	
+	
+<style type="text/css">[draggable=true] {-webkit-user-drag: element; -webkit-user-select: none; -moz-user-select: none;}</style></head>
+
+<body>
+<customhtml><div id="myheader">
+    <div class="header_logo"><a href="http://code.algorithmicdesign.net/"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/logo.png" style="float:left;"></a>
+        <ul class="header_filter2">
+            <li><a href="#" onmouseover="mopen('m12')" onmouseout="mclosetime()">
+                <p id="filterMenuTitle2">pages</p>
+                </a>
+                <div id="m12" onmouseover="mcancelclosetime()" onmouseout="mclosetime()"><a href="http://code.algorithmicdesign.net/">home</a><a href="http://code.algorithmicdesign.net/#91183/About">about</a><a href="http://code.algorithmicdesign.net/#494133/News">news</a><a href="http://code.algorithmicdesign.net/#1692313/Links">links</a><a href="mailto:contact@algorithmicdesign.net">contact</a></div>
+            </li>
+        </ul>
+        <ul class="header_filter">
+            <li><a href="#" onmouseover="mopen('m1')" onmouseout="mclosetime()">
+                <p id="filterMenuTitle">filter</p>
+                </a>
+                <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()"><a href="http://code.algorithmicdesign.net/">view all</a><a href="http://code.algorithmicdesign.net/filter/python">python</a><a href="http://code.algorithmicdesign.net/filter/rhinoscript">rhinoscript</a><a href="http://code.algorithmicdesign.net/filter/grasshopper">grasshopper</a><a href="http://code.algorithmicdesign.net/filter/apomechanes">apomechanes</a><a href="http://code.algorithmicdesign.net/filter/encodedmatter">encodedmatter</a></div>
+            </li>
+        </ul>
+        <form id="search_form" action="#">
+            <input value="Search:" id="search_term" rel="Search:" type="text">
+        </form>
+    </div>
+</div>
+<!--script for the filter menu -->
+<script type="text/javascript">
+var url = window.location.pathname.split( '/' );
+var str = url[2];
+if (str==null)
+  {
+  str="filter";
+  }
+document.getElementById('filterMenuTitle').innerHTML = str;
+
+// Copyright 2006-2007 javascript-array.com
+
+var timeout    = 500;
+var closetimer    = 0;
+var ddmenuitem    = 0;
+
+// open hidden layer
+function mopen(id)
+{    
+    // cancel close timer
+    mcancelclosetime();
+
+    // close old layer
+    if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+    // get new layer and show it
+    ddmenuitem = document.getElementById(id);
+    ddmenuitem.style.visibility = 'visible';
+
+}
+// close showed layer
+function mclose()
+{
+    if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+// go close timer
+function mclosetime()
+{
+    closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+    if(closetimer)
+    {
+        window.clearTimeout(closetimer);
+        closetimer = null;
+    }
+}
+
+// close layer when click-out
+document.onclick = mclose;
+    </script>
+<!--------------------------------------------------------------------->
+<!--script for the filter menu 2 -->
+<script type="text/javascript">
+// Copyright 2006-2007 javascript-array.com
+
+var timeout    = 500;
+var closetimer    = 0;
+var ddmenuitem    = 0;
+
+// open hidden layer
+function mopen(id)
+{    
+    // cancel close timer
+    mcancelclosetime();
+
+    // close old layer
+    if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+    // get new layer and show it
+    ddmenuitem = document.getElementById(id);
+    ddmenuitem.style.visibility = 'visible';
+
+}
+// close showed layer
+function mclose()
+{
+    if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+// go close timer
+function mclosetime()
+{
+    closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+    if(closetimer)
+    {
+        window.clearTimeout(closetimer);
+        closetimer = null;
+    }
+}
+
+// close layer when click-out
+document.onclick = mclose;
+    </script>
+<!--script for the project thumb hover opacity -->
+<script type="text/javascript">    
+ $(document).ready(function(){       
+     createHover();  
+ });  
+ function createHover() {  
+     $(".project_thumb img").unbind('mouseenter').unbind('mouseleave'); // reset the hover to prevent doubling   
+     $(".project_thumb img").bind("mouseenter",function() { // crete hover  
+         $(this).fadeTo("slow", 0.3); // Sets the opacity to 70% on hover       
+     }).bind("mouseleave",function(){       
+         $(this).fadeTo("slow", 1.0); // Sets the opacity back to 100% on mouseout       
+     });  
+     $(".next_page").attr("onclick",""); // remove the pagination function  
+     $(".prev_page").attr("onclick",""); // remove the pagination function  
+     $(".next_page").click(function() { changePage((parseInt($("#current_page").val())+1),$("#limit").val()); setTimeout("createHover()",100); });  
+     $(".prev_page").click(function() { changePage((parseInt($("#current_page").val())-1),$("#limit").val()); setTimeout("createHover()",100); });  
+}  
+</script>
+<div class="cargo_link"><a href="http://cargocollective.com/"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/bolt-sc.png" height="20" width="20"></a></div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7328865-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</customhtml><div id="header"></div><div id="content_container"><div id="maincontainer" class="bodycopy detail_preload"><div class="project_header"><div class="project_next"><a href="#">next</a></div></div>
+		
+					<style>body{ background-color:#; } </style>
+				
+<div class="entry" id="entry_900961" page_type="project">
+
+	<div class="project_title">
+			Recursive Subdivision Tiling	</div>
+	
+<div class="project_content">
+	<img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/RecursiveSubdivisionHead_00_1000.jpg" width_o="1000" height_o="200" src_o="http://payload.cargocollective.com/1/0/9123/900961/RecursiveSubdivisionHead_00_o.jpg" data-mid="4316747" data-title="1000 — 1000 × 200" height="200" width="1000" align="left" border="0"><br>
+<h2>PseudoCode</h2><pre><code>Recursive Subdivision Tiling<br>
+<br>
+' From Tilings Encyclopedia: In general, even restricted to mathematics, the term substitutioncan have several meanings. In connection with tilings, it describes a simple but powerful method to produce tilings with many interesting properties. The main idea is to use a finite set of building blocks {T1, T2 ... Tm} (the prototiles), an expanding linear map Q (the inflation factor) and a rule, how to dissect each scaled tile QTi into copies of the original prototiles T1, T2…Tm This information can be encoded in terms of parametrized tiles and affine maps (see example below), or, more appealing, in a diagram.<br>
+<br>
+' This code will work for any subdivision tiling made of polylines with 1 ruleset of substitution.<br>
+' The code will need a geometric example of the tiling and some polylines to be applied to, as inputs.<br>
+<br>
+' Define Main Subroutine<br>
+	' Get User Input:<br>
+	' Get the Number of Generations (integer, how many times to subdivide)<br>
+	' Get the Ruleset (array, one by one the identifiers of the polylines of the ruleset)<br>
+	' Get the Starting Tiles to Subdivide (array, the identifiers of the polylines we wish to subdivide) <br>
+<br>
+	' Subdivide the Starting Tiles:<br>
+	' Loop Through the Starting Tiles<br>
+	'	Call the Tile function (custom function, input: the number of generations, the ruleset as an array of polylines, the current starting tile)<br>
+	' End Loop<br>
+' End Main Subroutine<br>
+<br>
+' This function takes a tile as a polyline and creates a number of new polylines - tiles inside it<br>
+' Define Custom Function Tile (3 inputs: the current generation as integer, the ruleset as an array of polylines, the tile to subdivide - the target)<br>
+<br>
+	' If the current generation is greater than zero (count backwards) Then<br>
+	' 	Get the Array of Points from the basic tile of the ruleset (array, the coordinates of all the points of the base polyline of the ruleset)<br>
+	' 	Get an Array of Points from the target tile (array, the coordinates of all the points of the tile to subdivide)<br>
+	' 	Orient the tiles from the base polyline to the target and copy<br>
+	' 	Calculate the appropriate scale factor to apply to the new created tiles by dividing the distance between two coordinates in the basic tile of the ruleset and the corresponding ones of the target tile<br>
+	' 	Scale the new created tiles by the appropriate factor<br>
+	' 	Loop through each of the new created tiles<br>
+	' 			If + some condition (this will create differentiation in the overall pattern) Then<br>
+	'				Note: This is where the Tile Function Calls itself<br>
+	'				Call the Tile Function (custom function, input: the current generation minus one, the ruleset as an array of polylines, the current new tile)<br>
+	' 			End If<br>
+	' 	End Loop<br>
+	' End If<br>
+' End Tile Function<br>
+<br>
+</code></pre><br>
+<h2>Recursive Sphinx</h2><pre><code>Option Explicit<br>
+'Script written by Roland Snooks<br>
+'Script copyrighted by <a href="http://www.kokkugia.com/" target="_blank">kokkugia</a><br>
+Call Main()<br>
+Sub Main()<br>
+	' user input: gens, array with 5 tiles, array starting objs<br>
+	Dim intGens : intGens = Rhino.GetReal("how many generations", 6)<br>
+	Dim arrObjs(4)<br>
+	arrObjs(0) = Rhino.GetObject("select large tile", 4)<br>
+	arrObjs(1) = Rhino.GetObject("select small tile 1", 4)<br>
+	arrObjs(2) = Rhino.GetObject("select small tile 2", 4)<br>
+	arrObjs(3) = Rhino.GetObject("select small tile 3", 4)<br>
+	arrObjs(4) = Rhino.GetObject("select small tile 4", 4)<br>
+	<br>
+	Dim startObjs : startObjs = Rhino.GetObjects("select starting tiles to subdivide", 4)<br>
+	' loop through starting objs<br>
+	Dim i<br>
+	For i = 0 To UBound(startObjs)<br>
+		' call the tile function<br>
+		Call tile(arrObjs, intGens, startObjs(i))<br>
+	Next<br>
+End Sub<br>
+<br>
+Function tile(arrObjs, intGens, targetObj)<br>
+	' if condition<br>
+	If intGens &gt; 0 Then<br>
+		' get arr of pts on base obj<br>
+		Dim arrBaseVtx : arrBaseVtx = Rhino.PolylineVertices(arrobjs(0))	<br>
+		' get arr of pts on target obj<br>
+		Dim arrTargetVtx : arrTargetVtx = Rhino.PolylineVertices(targetObj)<br>
+		' orient the objs<br>
+		Dim arrNewObjs : arrNewObjs = Rhino.OrientObjects(arrObjs, arrBaseVtx, arrTargetVtx, 1)<br>
+		' scale objs<br>
+		'd2/d1<br>
+		Dim dblScale : dblScale =  Rhino.Distance(arrTargetVtx(0), arrTargetVtx(1)) / Rhino.Distance(arrBaseVtx(0), arrBaseVtx(1))<br>
+		Call Rhino.ScaleObjects(arrNewObjs, arrTargetVtx(0), Array(dblScale, dblScale, dblScale))<br>
+		' call itself<br>
+		Dim i<br>
+		For i = 1 To Ubound(arrNewObjs)<br>
+			' loop through the number of small tiles<br>
+			If rnd &gt; 0.2 Then<br>
+				Call tile(arrObjs, intGens-1, arrNewObjs(i))<br>
+			End If	<br>
+		Next<br>
+	End If<br>
+End Function<br>
+<br>
+</code></pre><br>
+<h2>Recursive Sphinx with 2 rules</h2><pre><code>Option Explicit<br>
+'Script written by Roland Snooks<br>
+'Script copyrighted by <a href="http://www.kokkugia.com/" target="_blank">kokkugia</a><br>
+<br>
+Call Main()<br>
+Sub Main()<br>
+	' user input: gens, array with 5 tiles, array starting objs<br>
+	Dim intGens : intGens = Rhino.GetReal("how many generations", 6)<br>
+	Dim nest1 : nest1 = Rhino.GetInteger("how many tiles in nest 1", 7)<br>
+	ReDim arrObjs1(nest1)<br>
+	For i = 0 To nest1<br>
+		arrObjs1(i) = Rhino.GetObject("select nest i tile" &amp; i, 4)<br>
+	Next <br>
+	<br>
+	Dim nest2 : nest2 = Rhino.GetInteger("how many tiles in nest 2", 6)<br>
+	ReDim arrObjs2(nest2)<br>
+	For i = 0 To nest2<br>
+		arrObjs2(i) = Rhino.GetObject("select nest 2 tile" &amp; i, 4)<br>
+	Next <br>
+	<br>
+	Dim startObjs : startObjs = Rhino.GetObjects("select starting tiles to subdivide", 4)<br>
+	' loop through starting objs<br>
+	Dim i<br>
+	For i = 0 To UBound(startObjs)<br>
+		' call the tile function<br>
+		Call tile(arrObjs1, arrObjs2, intGens, startObjs(i))<br>
+	Next<br>
+End Sub<br>
+<br>
+Function tile(arrObjs1, arrObjs2, intGens, targetObj)<br>
+	Dim arrBaseVtx, arrNewObjs<br>
+	' if condition<br>
+	If intGens &gt; 0 Then<br>
+		' get arr of pts on target obj<br>
+		Dim arrTargetVtx : arrTargetVtx = Rhino.PolylineVertices(targetObj)<br>
+		<br>
+		' orient the objs<br>
+		' decide which tile next to use<br>
+		If Rhino.ObjectLayer(targetObj) = "nest1" Then<br>
+			' get arr of pts on base obj	<br>
+			arrBaseVtx = Rhino.PolylineVertices(arrobjs1(0))<br>
+			arrNewObjs = Rhino.OrientObjects(arrObjs1, arrBaseVtx, arrTargetVtx, 1)<br>
+		Else<br>
+			' get arr of pts on base obj	<br>
+			arrBaseVtx = Rhino.PolylineVertices(arrobjs2(0))<br>
+			arrNewObjs = Rhino.OrientObjects(arrObjs2, arrBaseVtx, arrTargetVtx, 1)	<br>
+		End if<br>
+		' scale objs<br>
+		'd2/d1<br>
+		Dim dblScale : dblScale =  Rhino.Distance(arrTargetVtx(0), arrTargetVtx(1)) / Rhino.Distance(arrBaseVtx(0), arrBaseVtx(1))<br>
+		Call Rhino.ScaleObjects(arrNewObjs, arrTargetVtx(0), Array(dblScale, dblScale, dblScale))<br>
+		'	Call Rhino.MoveObjects(arrNewObjs, array(0,0,0), array(0,0,intGens))<br>
+		' call itself<br>
+		Dim i<br>
+		For i = 1 To Ubound(arrNewObjs)<br>
+			' loop through the number of small tiles<br>
+			If rnd &gt; 0.2 Then<br>
+				Call tile(arrObjs1, arrObjs2, intGens-1, arrNewObjs(i))<br>
+			End If	<br>
+		Next<br>
+	End If<br>
+End Function<br>
+</code></pre><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/RecursiveSubdivisionHead_01_1000.jpg" width_o="1000" height_o="200" src_o="http://payload.cargocollective.com/1/0/9123/900961/RecursiveSubdivisionHead_01_o.jpg" data-mid="4316748" data-title="1000 — 1000 × 200" height="200" width="1000" align="left" border="0"><br>
+<h2>Ammann Tiling Create</h2><pre><code><br>
+Option Explicit<br>
+'Script written by Ezio Blasetti<br>
+'Script copyrighted by algorithmicdesign.net<br>
+<br>
+Call Main()<br>
+Sub Main()<br>
+	Dim n : n = Rhino.GetReal("please give the scale n for the tile (it can be negative too)", 0) <br>
+	Dim strType : strType = Rhino.GetString("please type the type of tile you want", "A", array("A","B","C") )<br>
+	Call addAmmannA3(strType, n)<br>
+	'Dim phi : phi = (sqr(5)+1)/2 'f<br>
+	'Call rhino.addline (array(0,0,0), array(phi^(-1),0,0))<br>
+End Sub<br>
+<br>
+Function addAmmannA3(strType, n)	<br>
+	Dim phi : phi = (sqr(5)+1)/2 'f<br>
+	Dim str<br>
+	If strType = "A" Then<br>
+		'                        f^n+1<br>
+		'                     5 _______4<br>
+		'                      |       |<br>
+		'                      |       |<br>
+		'                      |       | -----f^n+1<br>
+		'                      |      3|____2<br>
+		'                      |          ^ |<br>
+		'                f^n+3 |        f^n |<br>
+		'                      |            |<br>
+		'                      |            | f^n+2<br>
+		'                      |            |<br>
+		'                      |____________| <br>
+		'                    0,6   f^n+2   1<br>
+		ReDim arrPoints(6)<br>
+		arrPoints(0) = array( 0,        0,        0)<br>
+		arrPoints(1) = array( phi^(n+2),0,        0)<br>
+		arrPoints(2) = array( phi^(n+2),phi^(n+2),0)<br>
+		arrPoints(3) = array( phi^(n+1),phi^(n+2),0)<br>
+		arrPoints(4) = array( phi^(n+1),phi^(n+3),0)<br>
+		arrPoints(5) = array( 0,        phi^(n+3),0)<br>
+		arrPoints(6) = array( 0,        0,        0)<br>
+		str = rhino.AddPolyline(arrPoints)<br>
+		Call Rhino.AddLayer(strType)<br>
+		Call Rhino.ObjectLayer(str, strType)<br>
+		Call Rhino.ObjectName(str,n)<br>
+		addAmmannA3 = str<br>
+	ElseIf strType = "B" Then<br>
+		'                        f^n+1<br>
+		'                     5 _______4<br>
+		'                      |       |<br>
+		'             f^n+1 -  |       |<br>
+		'       7______________|6      |<br>
+		'       |       ^              | -----f^n+2<br>
+		'       |     f^n+2            |<br>
+		'       |                      |<br>
+		' f^n+2 |                     3|____2<br>
+		'       |                        ^  |<br>
+		'       |          2f^n+2       f^n | f^n+1<br>
+		'       |______________.____________|<br>
+		'       8            0,9            1<br>
+		ReDim arrPoints(9)<br>
+		arrPoints(0) = array(  0		 ,0        ,0)<br>
+		arrPoints(1) = array(  phi^(n+2) ,0,        0)<br>
+		arrPoints(2) = array(  phi^(n+2) ,phi^(n+1),0)<br>
+		arrPoints(3) = array(  phi^(n+1) ,phi^(n+1),0)<br>
+		arrPoints(4) = array(  phi^(n+1) ,phi^(n+3),0)<br>
+		arrPoints(5) = array(  0         ,phi^(n+3),0)<br>
+		arrPoints(6) = array(  0         ,phi^(n+2),0)<br>
+		arrPoints(7) = array(-(phi^(n+2)),phi^(n+2),0)<br>
+		arrPoints(8) = array(-(phi^(n+2)),0        ,0)<br>
+		arrPoints(9) = array(  0		 ,0        ,0)<br>
+		'arrPoints(0) = array(0,0,0)<br>
+		'arrPoints(1) = array(2*phi^(n+2),0,0)<br>
+		'arrPoints(2) = array(2*phi^(n+2),phi^(n+1),0)<br>
+		'arrPoints(3) = array(phi^(n+3),phi^(n+1),0)<br>
+		'arrPoints(4) = array(phi^(n+3),phi^(n+3),0)<br>
+		'arrPoints(5) = array(phi^(n+2),phi^(n+3),0)<br>
+		'arrPoints(6) = array(phi^(n+2),phi^(n+2),0)<br>
+		'arrPoints(7) = array(0,phi^(n+2),0)<br>
+		'arrPoints(8) = array(0,0,0)<br>
+		str = rhino.AddPolyline(arrPoints)<br>
+		Call Rhino.AddLayer(strType)<br>
+		Call Rhino.ObjectLayer(str, strType)<br>
+		Call Rhino.ObjectName(str,n)<br>
+		addAmmannA3 = str<br>
+	ElseIf strType = "C" Then<br>
+		'                        f^n+1<br>
+		'                     5 _______4<br>
+		'             f^n+1 -  |       |<br>
+		'                   |  |       |<br>
+		'               7___v__|6      |<br>
+		'       f^n -   |              | -----f^n+2<br>
+		'               |__9           |<br>
+		'               8  |           |<br>
+		' 	             ^ |          3|____2<br>
+		'            f^n-1 |             ^  |<br>
+		'   f^n+1 ------   |            f^n | f^n+1<br>
+		'                  |___.____________|<br>
+		'                 10  0,11  f^n+2   1<br>
+		ReDim arrPoints(11)<br>
+		arrPoints(0) = array(  0		 ,0        ,0)<br>
+		arrPoints(1) = array(  phi^(n+2) ,0        ,0)<br>
+		arrPoints(2) = array(  phi^(n+2) ,phi^(n+1),0)<br>
+		arrPoints(3) = array(  phi^(n+1) ,phi^(n+1),0)<br>
+		arrPoints(4) = array(  phi^(n+1) ,phi^(n+3),0)<br>
+		arrPoints(5) = array(  0         ,phi^(n+3),0)<br>
+		arrPoints(6) = array(  0         ,phi^(n+2),0)<br>
+		arrPoints(7) = array(-(phi^(n+1)),phi^(n+2),0)<br>
+		arrPoints(8) = array(-(phi^(n+1)),phi^(n+1),0)<br>
+		arrPoints(9) = array(-(phi^n)    ,phi^(n+1),0)<br>
+		arrPoints(10)= array(-(phi^n)    ,0        ,0)<br>
+		arrPoints(11)= array(  0		 ,0        ,0)<br>
+		str = rhino.AddPolyline(arrPoints)<br>
+		Call Rhino.AddLayer(strType)<br>
+		Call Rhino.ObjectLayer(str, strType)<br>
+		Call Rhino.ObjectName(str,n)<br>
+		addAmmannA3 = str<br>
+	End If<br>
+End Function<br>
+</code></pre><br>
+<h2>Ammann Tiling Subdivide</h2><pre><code><br>
+Option Explicit<br>
+'Script written by Ezio Blasetti<br>
+'Script not copyrighted by algorithmicdesign.net<br>
+'Script version Thursday, March 19, 2009 2:22:35 PM<br>
+<br>
+Call Main()<br>
+Sub Main()<br>
+	Dim arrParents : arrParents = Rhino.GetObjects("please give me the tile to subdivide",4)<br>
+	Dim strParent<br>
+	Call Rhino.AddLayer("used")<br>
+	For Each strParent In arrParents<br>
+		Call SubdivideAmmannA3(strParent)<br>
+		Call Rhino.ObjectLayer(strParent,"used")<br>
+	Next<br>
+End Sub<br>
+<br>
+Function SubdivideAmmannA3(strParent)<br>
+	SubdivideAmmannA3 = Null<br>
+	Dim strType : strType = Ucase(Left(Rhino.ObjectLayer(strParent),1))<br>
+	Dim n		: n		  = Rhino.ObjectName (strParent)<br>
+	Dim arrParentReference : arrParentReference = array(Rhino.PolylineVertices(strParent)(0),_<br>
+		Rhino.PolylineVertices(strParent)(1),Rhino.PolylineVertices(strParent)(5))<br>
+	Dim arrGlobalReference : arrGlobalReference = GetGlobalReference(n)<br>
+	Dim arrTarget, i<br>
+	If strType = "A" Then<br>
+		ReDim arrKids(1)	<br>
+		arrKids(0) = addAmmannA3("A",n-1)<br>
+		arrTarget  = GetTargetPointsForSubDivision(strType, "A", 0, n)<br>
+		Call Rhino.OrientObject (arrKids(0), arrGlobalReference, arrTarget)	<br>
+		Call Rhino.OrientObject (arrKids(0), arrGlobalReference, arrParentReference)<br>
+		arrKids(1) = addAmmannA3("B",n-1)<br>
+		arrTarget  = GetTargetPointsForSubDivision(strType, "B", 0, n)<br>
+		Call Rhino.OrientObject (arrKids(1), arrGlobalReference, arrTarget)	<br>
+		Call Rhino.OrientObject (arrKids(1), arrGlobalReference, arrParentReference)<br>
+	ElseIf strType = "B" Then<br>
+		ReDim arrKids(3)<br>
+		For i = 0 To 2<br>
+			arrKids(i) = addAmmannA3("A",n-1)<br>
+			arrTarget  = GetTargetPointsForSubDivision(strType, "A", i, n)<br>
+			Call Rhino.OrientObject (arrKids(i), arrGlobalReference, arrTarget)	<br>
+			Call Rhino.OrientObject (arrKids(i), arrGlobalReference, arrParentReference)<br>
+		Next<br>
+		arrKids(3) = addAmmannA3("C",n-1)<br>
+		arrTarget  = GetTargetPointsForSubDivision(strType, "C", 3, n)<br>
+		Call Rhino.OrientObject (arrKids(3), arrGlobalReference, arrTarget)	<br>
+		Call Rhino.OrientObject (arrKids(3), arrGlobalReference, arrParentReference)<br>
+	ElseIf strType = "C" Then<br>
+		ReDim arrKids(2)<br>
+		For i = 0 To 1<br>
+			arrKids(i) = addAmmannA3("A",n-1)<br>
+			arrTarget  = GetTargetPointsForSubDivision(strType, "A", i, n)<br>
+			Call Rhino.OrientObject (arrKids(i), arrGlobalReference, arrTarget)	<br>
+			Call Rhino.OrientObject (arrKids(i), arrGlobalReference, arrParentReference)<br>
+		Next<br>
+		arrKids(2) = addAmmannA3("C",n-1)<br>
+		arrTarget  = GetTargetPointsForSubDivision(strType, "C", 3, n)<br>
+		Call Rhino.OrientObject (arrKids(2), arrGlobalReference, arrTarget)	<br>
+		Call Rhino.OrientObject (arrKids(2), arrGlobalReference, arrParentReference)<br>
+	End If<br>
+	SubdivideAmmannA3 = arrKids<br>
+	<br>
+End Function<br>
+<br>
+Function GetTargetPointsForSubDivision(strParentType, strKidType, intKid, n)<br>
+	GetTargetPointsForSubDivision = Null<br>
+	Dim phi : phi = (sqr(5)+1)/2 'f<br>
+	Dim arrReferencePts(2)<br>
+	If 	     strParentType = "A" And strKidType = "A" Then<br>
+		arrReferencePts(0) = array( phi^(n+2),0        ,0)<br>
+		arrReferencePts(1) = array( phi^(n+2),phi^(n+2),0)<br>
+		arrReferencePts(2) = array( 0        ,0	       ,0)<br>
+		GetTargetPointsForSubDivision = arrReferencePts<br>
+	ElseIf   strParentType = "A" And strKidType = "B" Then<br>
+		arrReferencePts(0) = array( 0	     ,phi^(n+2),0)<br>
+		arrReferencePts(1) = array( 0        ,0	       ,0)<br>
+		arrReferencePts(2) = array( phi^(n+1),phi^(n+2),0)<br>
+		GetTargetPointsForSubDivision = arrReferencePts<br>
+	ElseIf   strParentType = "B" And strKidType = "A" Then<br>
+		If     intKid = 0 Then<br>
+			arrReferencePts(0) = array(-(phi^(n+2)),0        ,0)<br>
+			arrReferencePts(1) = array( 0          ,0	     ,0)<br>
+			arrReferencePts(2) = array(-(phi^(n+2)),phi^(n+2),0)<br>
+			GetTargetPointsForSubDivision = arrReferencePts<br>
+		ElseIf intKid = 1 Then<br>
+			arrReferencePts(0) = array( phi^(n+2) ,0,         0)<br>
+			arrReferencePts(1) = array( phi^(n+2) ,phi^(n+1) ,0)<br>
+			arrReferencePts(2) = array( 0	      ,0         ,0)<br>
+			GetTargetPointsForSubDivision = arrReferencePts<br>
+		ElseIf intKid = 2 Then<br>
+			arrReferencePts(0) = array(  phi^(n+1) ,phi^(n+3),0)<br>
+			arrReferencePts(1) = array(  0         ,phi^(n+3),0)<br>
+			arrReferencePts(2) = array(  phi^(n+1) ,phi^(n+1),0)<br>
+			GetTargetPointsForSubDivision = arrReferencePts<br>
+		End If<br>
+	ElseIf   strParentType = "B" And strKidType = "C" Then<br>
+		arrReferencePts(0) = array(  0         ,phi^(n+2),0)<br>
+		arrReferencePts(1) = array(-(phi^(n+2)),phi^(n+2),0)<br>
+		arrReferencePts(2) = array(  0		   ,0        ,0)<br>
+		GetTargetPointsForSubDivision = arrReferencePts<br>
+	ElseIf   strParentType = "C" And strKidType = "A" Then<br>
+		If     intKid = 0 Then<br>
+			arrReferencePts(0) = array( phi^(n+2) ,0,         0)<br>
+			arrReferencePts(1) = array( phi^(n+2) ,phi^(n+1) ,0)<br>
+			arrReferencePts(2) = array( 0	      ,0         ,0)<br>
+			GetTargetPointsForSubDivision = arrReferencePts<br>
+		ElseIf intKid = 1 Then<br>
+			arrReferencePts(0) = array(  phi^(n+1) ,phi^(n+3),0)<br>
+			arrReferencePts(1) = array(  0         ,phi^(n+3),0)<br>
+			arrReferencePts(2) = array(  phi^(n+1) ,phi^(n+1),0)<br>
+			GetTargetPointsForSubDivision = arrReferencePts<br>
+		End If<br>
+	ElseIf   strParentType = "C" And strKidType = "C" Then<br>
+		arrReferencePts(0) = array(  0         ,phi^(n+2),0)<br>
+		arrReferencePts(1) = array(-(phi^(n+2)),phi^(n+2),0)<br>
+		arrReferencePts(2) = array(  0		   ,0        ,0)<br>
+		GetTargetPointsForSubDivision = arrReferencePts<br>
+	End If<br>
+End Function<br>
+<br>
+Function GetGlobalReference(n)<br>
+	GetGlobalReference = Null<br>
+	Dim phi : phi = (sqr(5)+1)/2 'f<br>
+	Dim arrReferencePts(2)<br>
+	arrReferencePts(0) = array( 0,        0,        0)<br>
+	arrReferencePts(1) = array( phi^(n+2),0,        0)<br>
+	arrReferencePts(2) = array( 0,        phi^(n+3),0)<br>
+	GetGlobalReference = arrReferencePts<br>
+End Function<br>
+<br>
+Function addAmmannA3(strType, n)	<br>
+	Dim phi : phi = (sqr(5)+1)/2 'f<br>
+	Dim str<br>
+	If strType = "A" Then<br>
+		'                        f^n+1<br>
+		'                     5 _______4<br>
+		'                      |       |<br>
+		'                      |       |<br>
+		'                      |       | -----f^n+1<br>
+		'                      |      3|____2<br>
+		'                      |          ^ |<br>
+		'                f^n+3 |        f^n |<br>
+		'                      |            |<br>
+		'                      |            | f^n+2<br>
+		'                      |            |<br>
+		'                      |____________| <br>
+		'                    0,6   f^n+2   1<br>
+		ReDim arrPoints(6)<br>
+		arrPoints(0) = array( 0,        0,        0)<br>
+		arrPoints(1) = array( phi^(n+2),0,        0)<br>
+		arrPoints(2) = array( phi^(n+2),phi^(n+2),0)<br>
+		arrPoints(3) = array( phi^(n+1),phi^(n+2),0)<br>
+		arrPoints(4) = array( phi^(n+1),phi^(n+3),0)<br>
+		arrPoints(5) = array( 0,        phi^(n+3),0)<br>
+		arrPoints(6) = array( 0,        0,        0)<br>
+		str = rhino.AddPolyline(arrPoints)<br>
+		Call Rhino.AddLayer(strType)<br>
+		Call Rhino.ObjectLayer(str, strType)<br>
+		Call Rhino.ObjectName(str,n)<br>
+		addAmmannA3 = str<br>
+	ElseIf strType = "B" Then<br>
+		'                        f^n+1<br>
+		'                     5 _______4<br>
+		'                      |       |<br>
+		'             f^n+1 -  |       |<br>
+		'       7______________|6      |<br>
+		'       |       ^              | -----f^n+2<br>
+		'       |     f^n+2            |<br>
+		'       |                      |<br>
+		' f^n+2 |                     3|____2<br>
+		'       |                        ^  |<br>
+		'       |          2f^n+2       f^n | f^n+1<br>
+		'       |______________.____________|<br>
+		'       8            0,9            1<br>
+		ReDim arrPoints(9)<br>
+		arrPoints(0) = array(  0		 ,0        ,0)<br>
+		arrPoints(1) = array(  phi^(n+2) ,0,        0)<br>
+		arrPoints(2) = array(  phi^(n+2) ,phi^(n+1),0)<br>
+		arrPoints(3) = array(  phi^(n+1) ,phi^(n+1),0)<br>
+		arrPoints(4) = array(  phi^(n+1) ,phi^(n+3),0)<br>
+		arrPoints(5) = array(  0         ,phi^(n+3),0)<br>
+		arrPoints(6) = array(  0         ,phi^(n+2),0)<br>
+		arrPoints(7) = array(-(phi^(n+2)),phi^(n+2),0)<br>
+		arrPoints(8) = array(-(phi^(n+2)),0        ,0)<br>
+		arrPoints(9) = array(  0		 ,0        ,0)<br>
+		'arrPoints(0) = array(0,0,0)<br>
+		'arrPoints(1) = array(2*phi^(n+2),0,0)<br>
+		'arrPoints(2) = array(2*phi^(n+2),phi^(n+1),0)<br>
+		'arrPoints(3) = array(phi^(n+3),phi^(n+1),0)<br>
+		'arrPoints(4) = array(phi^(n+3),phi^(n+3),0)<br>
+		'arrPoints(5) = array(phi^(n+2),phi^(n+3),0)<br>
+		'arrPoints(6) = array(phi^(n+2),phi^(n+2),0)<br>
+		'arrPoints(7) = array(0,phi^(n+2),0)<br>
+		'arrPoints(8) = array(0,0,0)<br>
+		str = rhino.AddPolyline(arrPoints)<br>
+		Call Rhino.AddLayer(strType)<br>
+		Call Rhino.ObjectLayer(str, strType)<br>
+		Call Rhino.ObjectName(str,n)<br>
+		addAmmannA3 = str<br>
+	ElseIf strType = "C" Then<br>
+		'                        f^n+1<br>
+		'                     5 _______4<br>
+		'             f^n+1 -  |       |<br>
+		'                   |  |       |<br>
+		'               7___v__|6      |<br>
+		'       f^n -   |              | -----f^n+2<br>
+		'               |__9           |<br>
+		'               8  |           |<br>
+		' 	         ^ |          3|____2<br>
+		'            f^n-1 |             ^  |<br>
+		'   f^n+1 ------   |            f^n | f^n+1<br>
+		'                  |___.____________|<br>
+		'                 10  0,11  f^n+2   1<br>
+		ReDim arrPoints(11)<br>
+		arrPoints(0) = array(  0		 ,0        ,0)<br>
+		arrPoints(1) = array(  phi^(n+2) ,0        ,0)<br>
+		arrPoints(2) = array(  phi^(n+2) ,phi^(n+1),0)<br>
+		arrPoints(3) = array(  phi^(n+1) ,phi^(n+1),0)<br>
+		arrPoints(4) = array(  phi^(n+1) ,phi^(n+3),0)<br>
+		arrPoints(5) = array(  0         ,phi^(n+3),0)<br>
+		arrPoints(6) = array(  0         ,phi^(n+2),0)<br>
+		arrPoints(7) = array(-(phi^(n+1)),phi^(n+2),0)<br>
+		arrPoints(8) = array(-(phi^(n+1)),phi^(n+1),0)<br>
+		arrPoints(9) = array(-(phi^n)    ,phi^(n+1),0)<br>
+		arrPoints(10)= array(-(phi^n)    ,0        ,0)<br>
+		arrPoints(11)= array(  0		 ,0        ,0)<br>
+		str = rhino.AddPolyline(arrPoints)<br>
+		Call Rhino.AddLayer(strType)<br>
+		Call Rhino.ObjectLayer(str, strType)<br>
+		Call Rhino.ObjectName(str,n)<br>
+		addAmmannA3 = str<br>
+	End If<br>
+End Function<br>
+</code></pre>		
+	<directlink id="dl_900961" link="http://code.algorithmicdesign.net/Recursive-Subdivision-Tiling"></directlink>
+</div>
+
+	</div>
+	
+
+</div><div id="page_1"><div class="project_thumb" id="item_10471000" name="10471000" page="1" spot="-1"><div id="pr_contain_item_10471000"><a href="http://code.algorithmicdesign.net/Kaleidoscope" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p10471000" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_10471000"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_10471000" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1443282587.jpg" rel="testprt_1443282587.jpg" data-hi-res="http://payload408.cargocollective.com/1/0/9123/10471000/prt_200x200_1443282587_2x.jpg" data-4x="http://payload408.cargocollective.com/1/0/9123/10471000/prt_200x200_1443282587_4x.jpg" height="200" width="200" border="0"></div><div class="thumb_title notag"><span class="text">Kaleidoscope</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_10460189" name="10460189" page="1" spot="-1"><div id="pr_contain_item_10460189"><a href="http://code.algorithmicdesign.net/cloudWeaver" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p10460189" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_10460189"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_10460189" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1443072413.jpg" rel="testprt_1443072413.jpg" data-hi-res="http://transit6.cargocollective.com/1/0/9123/10460189/prt_200x200_1443072413_2x.jpg" data-4x="http://transit6.cargocollective.com/1/0/9123/10460189/prt_200x200_1443072413_4x.jpg" height="200" width="200" border="0"></div><div class="thumb_title notag"><span class="text">cloudWeaver</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_10447994" name="10447994" page="1" spot="-1"><div id="pr_contain_item_10447994"><a href="http://code.algorithmicdesign.net/The-Rose" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p10447994" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_10447994"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_10447994" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1442872479.jpg" rel="testprt_1442872479.jpg" data-hi-res="http://payload407.cargocollective.com/1/0/9123/10447994/prt_200x200_1442872479_2x.jpg" data-4x="http://payload407.cargocollective.com/1/0/9123/10447994/prt_200x200_1442872479_4x.jpg" height="200" width="200" border="0"></div><div class="thumb_title notag"><span class="text">The Rose</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_10401619" name="10401619" page="1" spot="-1"><div id="pr_contain_item_10401619"><a href="http://code.algorithmicdesign.net/Cymatics" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p10401619" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_10401619"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_10401619" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1442857595.jpg" rel="testprt_1442857595.jpg" data-hi-res="http://payload405.cargocollective.com/1/0/9123/10401619/prt_200x200_1442857595_2x.jpg" data-4x="http://payload405.cargocollective.com/1/0/9123/10401619/prt_200x200_1442857595_4x.jpg" height="200" width="200" border="0"></div><div class="thumb_title notag"><span class="text">Cymatics</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_4489398" name="4489398" page="1" spot="-1"><div id="pr_contain_item_4489398"><a href="http://code.algorithmicdesign.net/Schizo-Metr-ic" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p4489398" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_4489398"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_4489398" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1353701180.jpg" rel="testprt_1353701180.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Schizo(Metr)ic</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_4492754" name="4492754" page="1" spot="-1"><div id="pr_contain_item_4492754"><a href="http://code.algorithmicdesign.net/Petrification" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p4492754" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_4492754"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_4492754" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1353791896.jpg" rel="testprt_1353791896.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Petrification</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_4489453" name="4489453" page="1" spot="-1"><div id="pr_contain_item_4489453"><a href="http://code.algorithmicdesign.net/P-n-eu-omatic" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p4489453" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_4489453"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_4489453" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1353702432.jpg" rel="testprt_1353702432.jpg" border="0"></div><div class="thumb_title notag"><span class="text">(P)n(eu)omatic</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_4493012" name="4493012" page="1" spot="-1"><div id="pr_contain_item_4493012"><a href="http://code.algorithmicdesign.net/Adaptive-Cell-Structure" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p4493012" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_4493012"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_4493012" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1353795402.jpg" rel="testprt_1353795402.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Adaptive Cell Structure</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_10742685" name="10742685" page="1" spot="-1"><div id="pr_contain_item_10742685"><a href="http://code.algorithmicdesign.net/Venation" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p10742685" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_10742685"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_10742685" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1448381378.png" rel="testprt_1448381378.png" data-hi-res="http://payload422.cargocollective.com/1/0/9123/10742685/prt_200x200_1448381378_2x.png" data-4x="http://payload422.cargocollective.com/1/0/9123/10742685/prt_200x200_1448381378_4x.png" height="200" width="200" border="0"></div><div class="thumb_title notag"><span class="text">Venation</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_4492636" name="4492636" page="1" spot="-1"><div id="pr_contain_item_4492636"><a href="http://code.algorithmicdesign.net/BL2bz" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p4492636" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_4492636"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_4492636" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1353789054.jpg" rel="testprt_1353789054.jpg" border="0"></div><div class="thumb_title notag"><span class="text">BL2bz</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_4493352" name="4493352" page="1" spot="-1"><div id="pr_contain_item_4493352"><a href="http://code.algorithmicdesign.net/Monkey-Hamlet" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p4493352" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_4493352"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_4493352" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1353802291.jpg" rel="testprt_1353802291.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Monkey Hamlet</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_4492896" name="4492896" page="1" spot="-1"><div id="pr_contain_item_4492896"><a href="http://code.algorithmicdesign.net/Quadaggregation" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p4492896" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_4492896"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_4492896" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1353801110.jpg" rel="testprt_1353801110.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Quadaggregation</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_4493629" name="4493629" page="1" spot="-1"><div id="pr_contain_item_4493629"><a href="http://code.algorithmicdesign.net/Loosing-Ground" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p4493629" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_4493629"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_4493629" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1353806455.jpg" rel="testprt_1353806455.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Loosing Ground</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_4493429" name="4493429" page="1" spot="-1"><div id="pr_contain_item_4493429"><a href="http://code.algorithmicdesign.net/Sarcomere-Organizations" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p4493429" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_4493429"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_4493429" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1353805250.jpg" rel="testprt_1353805250.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Sarcomere Organizations</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_2360270" name="2360270" page="1" spot="-1"><div id="pr_contain_item_2360270"><a href="http://code.algorithmicdesign.net/noSO" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p2360270" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_2360270"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_2360270" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1322189748.jpg" rel="testprt_1322189748.jpg" border="0"></div><div class="thumb_title notag"><span class="text">[noSO]</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_2747663" name="2747663" page="1" spot="-1"><div id="pr_contain_item_2747663"><a href="http://code.algorithmicdesign.net/AgentSense" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p2747663" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_2747663"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_2747663" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1328472272.jpg" rel="testprt_1328472272.jpg" border="0"></div><div class="thumb_title notag"><span class="text">AgentSense</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_6680606" name="6680606" page="1" spot="-1"><div id="pr_contain_item_6680606"><a href="http://code.algorithmicdesign.net/Stochastic-Aggregation" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p6680606" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_6680606"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_6680606" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1383683101.jpg" rel="testprt_1383683101.jpg" data-hi-res="http://payload219.cargocollective.com/1/0/9123/6680606/prt_200x200_1383683101_2x.jpg" height="200" width="200" border="0"></div><div class="thumb_title notag"><span class="text">Stochastic Aggregation</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_2748639" name="2748639" page="1" spot="-1"><div id="pr_contain_item_2748639"><a href="http://code.algorithmicdesign.net/geneWave" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p2748639" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_2748639"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_2748639" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1328478461.jpg" rel="testprt_1328478461.jpg" border="0"></div><div class="thumb_title notag"><span class="text">geneWave</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_2762337" name="2762337" page="1" spot="-1"><div id="pr_contain_item_2762337"><a href="http://code.algorithmicdesign.net/woolNet" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p2762337" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_2762337"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_2762337" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1328638151.jpg" rel="testprt_1328638151.jpg" border="0"></div><div class="thumb_title notag"><span class="text">woolNet</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_2360412" name="2360412" page="1" spot="-1"><div id="pr_contain_item_2360412"><a href="http://code.algorithmicdesign.net/dress-the-cloud" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p2360412" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_2360412"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_2360412" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1322189639.jpg" rel="testprt_1322189639.jpg" border="0"></div><div class="thumb_title notag"><span class="text">dress the cloud</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_2360924" name="2360924" page="1" spot="-1"><div id="pr_contain_item_2360924"><a href="http://code.algorithmicdesign.net/Entropy-Body" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p2360924" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_2360924"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_2360924" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1322189854.jpg" rel="testprt_1322189854.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Entropy[Body]</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_2405570" name="2405570" page="1" spot="-1"><div id="pr_contain_item_2405570"><a href="http://code.algorithmicdesign.net/vis-ke-ask-vein" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p2405570" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_2405570"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_2405570" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1323015984.jpg" rel="testprt_1323015984.jpg" border="0"></div><div class="thumb_title notag"><span class="text">’vis-kē-äsk’vein</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_2360852" name="2360852" page="1" spot="-1"><div id="pr_contain_item_2360852"><a href="http://code.algorithmicdesign.net/octopamorphic" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p2360852" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_2360852"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_2360852" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1322189454.jpg" rel="testprt_1322189454.jpg" border="0"></div><div class="thumb_title notag"><span class="text">octopamorphic</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_2362610" name="2362610" page="1" spot="-1"><div id="pr_contain_item_2362610"><a href="http://code.algorithmicdesign.net/EMF-Waves" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p2362610" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_2362610"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_2362610" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1322235825.jpg" rel="testprt_1322235825.jpg" border="0"></div><div class="thumb_title notag"><span class="text">EMF Waves</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_2403051" name="2403051" page="1" spot="-1"><div id="pr_contain_item_2403051"><a href="http://code.algorithmicdesign.net/Cellular-Automa-tan" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p2403051" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_2403051"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_2403051" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1322943507.jpg" rel="testprt_1322943507.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Cellular Automa-tan</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_2363280" name="2363280" page="1" spot="-1"><div id="pr_contain_item_2363280"><a href="http://code.algorithmicdesign.net/mag-net" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p2363280" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_2363280"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_2363280" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1322247025.jpg" rel="testprt_1322247025.jpg" border="0"></div><div class="thumb_title notag"><span class="text">mag|net</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_2362892" name="2362892" page="1" spot="-1"><div id="pr_contain_item_2362892"><a href="http://code.algorithmicdesign.net/Aenao" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p2362892" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_2362892"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_2362892" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1322240308.jpg" rel="testprt_1322240308.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Aenao</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_4225366" name="4225366" page="1" spot="-1"><div id="pr_contain_item_4225366"><a href="http://code.algorithmicdesign.net/Flocking-Agents" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p4225366" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_4225366"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_4225366" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1349803145.jpg" rel="testprt_1349803145.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Flocking Agents</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_1455356" name="1455356" page="1" spot="-1"><div id="pr_contain_item_1455356"><a href="http://code.algorithmicdesign.net/Simple-Agent-Class" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p1455356" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_1455356"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_1455356" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1308756932.jpg" rel="testprt_1308756932.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Simple Agent Class</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_991727" name="991727" page="1" spot="-1"><div id="pr_contain_item_991727"><a href="http://code.algorithmicdesign.net/Navigate-Mesh" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p991727" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_991727"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_991727" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1308945073.jpg" rel="testprt_1308945073.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Navigate Mesh</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_1658758" name="1658758" page="1" spot="-1"><div id="pr_contain_item_1658758"><a href="http://code.algorithmicdesign.net/Recursive-Aggregation-Mesh" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p1658758" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_1658758"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_1658758" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1309313047.jpg" rel="testprt_1309313047.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Recursive Aggregation Mesh</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_966684" name="966684" page="1" spot="-1"><div id="pr_contain_item_966684"><a href="http://code.algorithmicdesign.net/Self-Organizing-Curves" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p966684" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_966684"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_966684" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1297193836.jpg" rel="testprt_1297193836.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Self Organizing Curves</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_1226760" name="1226760" page="1" spot="-1"><div id="pr_contain_item_1226760"><a href="http://code.algorithmicdesign.net/Parametrization-Equations" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p1226760" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_1226760"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_1226760" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1315960376.jpg" rel="testprt_1315960376.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Parametrization  Equations</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_900991" name="900991" page="1" spot="-1"><div id="pr_contain_item_900991"><a href="http://code.algorithmicdesign.net/MultiState-1d-Cellular-Automata" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p900991" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_900991"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_900991" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1294135994.jpg" rel="testprt_1294135994.jpg" border="0"></div><div class="thumb_title notag"><span class="text">MultiState 1d Cellular Automata</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_6589121" name="6589121" page="1" spot="-1"><div id="pr_contain_item_6589121"><a href="http://code.algorithmicdesign.net/Langton-s-ant" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p6589121" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_6589121"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_6589121" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1382461607.jpg" rel="testprt_1382461607.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Langton's ant</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_6850370" name="6850370" page="1" spot="-1"><div id="pr_contain_item_6850370"><a href="http://code.algorithmicdesign.net/coral" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p6850370" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_6850370"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_6850370" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1412103829.jpg" rel="testprt_1412103829.jpg" border="0"></div><div class="thumb_title notag"><span class="text">coral</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_1035425" name="1035425" page="1" spot="-1"><div id="pr_contain_item_1035425"><a href="http://code.algorithmicdesign.net/Game-Of-Life" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p1035425" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_1035425"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_1035425" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1297211092.jpg" rel="testprt_1297211092.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Game Of Life</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_1035281" name="1035281" page="1" spot="-1"><div id="pr_contain_item_1035281"><a href="http://code.algorithmicdesign.net/1d-Cellular-Automata-Surface" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p1035281" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_1035281"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_1035281" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1297208787.jpg" rel="testprt_1297208787.jpg" border="0"></div><div class="thumb_title notag"><span class="text">1d Cellular Automata Surface</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_1036129" name="1036129" page="1" spot="-1"><div id="pr_contain_item_1036129"><a href="http://code.algorithmicdesign.net/Introduction-To-Python" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p1036129" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_1036129"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_1036129" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1328277574.jpg" rel="testprt_1328277574.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Introduction To Python</span>&nbsp;</div></a></div></div><div class="project_thumb" id="item_895523" name="895523" page="1" spot="-1"><div id="pr_contain_item_895523"><a href="http://code.algorithmicdesign.net/Introduction-to-Rhinoscript" onmouseover="this.className='hover';" onmouseout="this.className='nohover';" class="nohover" id="p895523" rel="history" name="algorithmicdesign" onfocus="this.blur()"><div class="loader_holder " id="load_895523"><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/loadingAnim.gif"></div><div class="cardimgcrop " id="cardthumb_895523" name=""><img src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/prt_200x200_1293978116.jpg" rel="testprt_1293978116.jpg" border="0"></div><div class="thumb_title notag"><span class="text">Introduction to Rhinoscript</span>&nbsp;</div></a></div></div><div class="pagecontainer" id="item_91183" name="91183" page="0" spot="40"></div><div class="pagecontainer" id="item_494133" name="494133" page="0" spot="40"></div></div><br></div><div id="foot_container"><input id="current_open" value="900961" type="hidden"><input id="prev_open" value="900961" type="hidden"><input id="prev_type" value="project_link" type="hidden"><input id="this_spot" value="-1" type="hidden"><input id="is_domain" value="code.algorithmicdesign.net" type="hidden"><input id="url" value="algorithmicdesign" type="hidden"><input id="uid" value="9123" type="hidden"><input id="current_page" value="1" type="hidden"><input id="total_pages" value="1" type="hidden"><input id="limit" value="100" type="hidden"><input id="viewtype" value="list" type="hidden"><input id="previewtemplate" value="false" type="hidden"><input id="template" value="escher" type="hidden"><input id="design" value="kennedy" type="hidden"><input id="templatepath" value="designs/escher" type="hidden"><input id="designpath" value="designs/escher/kennedy" type="hidden"><input id="sticky_page" value="bottom" type="hidden"><input id="o_thumb_nav" value="no" type="hidden"><input id="is_solo" value="false" type="hidden"><input id="is_direct" value="true" type="hidden"><input id="start_page" value="897384" type="hidden"><fullscreen_option data="fill"></fullscreen_option><script type="text/html" id="fullscreen_src"><div class="freshbox_navigation"><div class="freshbox_navigation_group"><a href="#"id="fullscreen_prev"class="freshbox_nav_button"><svg viewBox="0 0 30 30"height="100%"width="100%"version="1.1"><g transform="translate(11, 11)"><path class="nav_svg"d="M 0 4 L 8 8 L 8 8 L 8 0"/></g></svg></a><a href="#"id="fullscreen_close"class="freshbox_nav_button"><svg viewBox="0 0 30 30"height="100%"width="100%"version="1.1"><g class="nav_svg"transform="translate(10, 10)"><rect x="1"width="1"height="1"/><rect x="1"y="1"width="1"height="1"/><rect x="2"y="1"width="1"height="1"/><rect x="1"y="2"width="1"height="1"/><rect x="2"y="2"width="1"height="1"/><rect x="3"y="2"width="1"height="1"/><rect x="4"y="3"width="1"height="1"/><rect x="3"y="4"width="1"height="1"/><rect x="4"y="4"width="1"height="1"/><rect x="5"y="3"width="1"height="1"/><rect x="6"y="2"width="1"height="1"/><rect x="7"y="1"width="1"height="1"/><rect x="8"width="1"height="1"/><rect x="9"y="1"width="1"height="1"/><rect x="8"y="1"width="1"height="1"/><rect x="7"y="2"width="1"height="1"/><rect x="8"y="2"width="1"height="1"/><rect x="7"y="3"width="1"height="1"/><rect x="6"y="3"width="1"height="1"/><rect x="5"y="4"width="1"height="1"/><rect x="6"y="4"width="1"height="1"/><rect x="5"y="5"width="1"height="1"/><rect x="6"y="5"width="1"height="1"/><rect x="7"y="6"width="1"height="1"/><rect x="8"y="7"width="1"height="1"/><rect x="9"y="8"width="1"height="1"/><rect x="8"y="9"width="1"height="1"/><rect x="7"y="8"width="1"height="1"/><rect x="7"y="7"width="1"height="1"/><rect x="6"y="7"width="1"height="1"/><rect x="6"y="6"width="1"height="1"/><rect x="5"y="6"width="1"height="1"/><rect x="4"y="6"width="1"height="1"/><rect x="3"y="7"width="1"height="1"/><rect x="3"y="6"width="1"height="1"/><rect x="2"y="6"width="1"height="1"/><rect x="2"y="7"width="1"height="1"/><rect x="1"y="7"width="1"height="1"/><rect y="8"width="1"height="1"/><rect x="1"y="8"width="1"height="1"/><rect x="3"y="5"width="1"height="1"/><rect x="2"y="8"width="1"height="1"/><rect x="1"y="9"width="1"height="1"/><rect x="8"y="8"width="1"height="1"/><rect x="4"y="5"width="1"height="1"/><rect x="2"y="3"width="1"height="1"/><rect x="3"y="3"width="1"height="1"/><rect y="1"width="1"height="1"/></g></svg></a><a href="#"id="fullscreen_next"class="freshbox_nav_button"><svg viewBox="0 0 30 30"height="100%"width="100%"version="1.1"><g transform="translate(20, 11) scale(-1, 1)"><path class="nav_svg"d="M 0 4 L 8 8 L 8 8 L 8 0"/></g></svg></a><a href="#"id="fullscreen_zoom" class="freshbox_nav_button"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="30px" viewBox="0 0 60 30" xml:space="preserve"><g class="nav_svg"><polygon points="22,8 16.111,8 18.296,10.186 15.914,12.564 17.438,14.088 19.818,11.707 22,13.891 "/><polygon points="12.564,15.914 10.184,18.295 8,16.109 8,22 13.891,22 11.707,19.816 14.087,17.436 "/></g><g class="nav_svg"><polygon points="46.914,13.087 52.803,13.087 50.618,10.902 53,8.523 51.477,7 49.096,9.38 46.914,7.197 "/><polygon points="38.522,23 40.903,20.619 43.087,22.805 43.087,16.914 37.196,16.914 39.38,19.098 37,21.479 "/></g></svg></a></div></div><div id="fullscreen_imgs"></div></script><script language="javascript">		var pid_list = new Array("10471000","10460189","10447994","10401619","4489398","4492754","4489453","4493012","10742685","4492636","4493352","4492896","4493629","4493429","2360270","2747663","6680606","2748639","2762337","2360412","2360924","2405570","2360852","2362610","2403051","2363280","2362892","4225366","1455356","991727","1658758","966684","1226760","900991","6589121","6850370","1035425","1035281","1036129","895523","91183","494133",""); 		var pr_list = new Array("10471000","10460189","10447994","10401619","4489398","4492754","4489453","4493012","10742685","4492636","4493352","4492896","4493629","4493429","2360270","2747663","6680606","2748639","2762337","2360412","2360924","2405570","2360852","2362610","2403051","2363280","2362892","4225366","1455356","991727","1658758","966684","1226760","900991","6589121","6850370","1035425","1035281","1036129","895523"); 		var prt_list = new Array("Kaleidoscope","cloudWeaver","The Rose","Cymatics","Schizo(Metr)ic","Petrification","(P)n(eu)omatic","Adaptive Cell Structure","Venation","BL2bz","Monkey Hamlet","Quadaggregation","Loosing Ground","Sarcomere Organizations","[noSO]","AgentSense","Stochastic Aggregation","geneWave","woolNet","dress the cloud","Entropy[Body]","’vis-kē-äsk’vein","octopamorphic","EMF Waves","Cellular Automa-tan","mag|net","Aenao","Flocking Agents","Simple Agent Class","Navigate Mesh","Recursive Aggregation Mesh","Self Organizing Curves","Parametrization  Equations","MultiState 1d Cellular Automata","Langton\'s ant","coral","Game Of Life","1d Cellular Automata Surface","Introduction To Python","Introduction to Rhinoscript"); </script> <div class="bottompad">&nbsp;</div></div><!-- following rail -->
+<script type="text/javascript" src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/cargo_003.js"></script>
+<script type="text/javascript" src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/rail.js"></script>
+<script type="text/javascript" src="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/rail_002.js"></script>
+<link href="Recursive%20Subdivision%20Tiling%20-%20algorithmic%20design_fichiers/rail.css" rel="stylesheet" type="text/css">
+</body></html>

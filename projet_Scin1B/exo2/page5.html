@@ -1,0 +1,175 @@
+<!--?xml version="1.0" encoding="iso-8859-1"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/sclab.dwt" codeOutsideHTMLIsLocked="false" --><head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Elementary Recursion Lab</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Author" content="Doug Baldwin and Greg Scragg">
+<meta name="Copyright" content="Copyright © 2004. Charles River Media. All rights reserved.">
+<!-- InstanceBeginEditable name="keywords" -->
+<meta name="Keywords" content="computer science, introductory course, science of computing, laboratory exercise, recursion">
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="Elementary%20Recursion%20Lab_fichiers/scstyles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="doc-title">
+
+<h3>Laboratory Exercise</h3>
+<h1><!-- InstanceBeginEditable name="LabTitle" -->Elementary Recursion with Robots<!-- InstanceEndEditable --></h1>
+
+<p class="center-note">Supplemental Material for Baldwin and Scragg, <cite>Algorithms
+    and Data Structures: The Science of Computing</cite>; Charles River Media,
+    2004</p>
+</div>
+<p class="right-note"><a href="http://www.delmarlearning.com/companions/content/1584502509/Algorithms/index-body.html">Site Index</a></p>
+<hr width="80%" align="center">
+
+<h2><a name="purpose" id="purpose"></a>Purpose</h2>
+<!-- InstanceBeginEditable name="Purpose" -->This exercise develops students’ability to 
+design and code simple recursive algorithms.<!-- InstanceEndEditable -->
+<h2><a name="prereqs" id="prereqs"></a>Prerequisites</h2>
+<!-- InstanceBeginEditable name="Prereqs" -->Understanding of Chapter 6 of <cite>Algorithms
+and
+Data Structures: The Science of Computing</cite>, particularly sections 6.1 through
+6.4.<!-- InstanceEndEditable -->
+<h2><a name="background" id="background"></a>Background</h2>
+<!-- InstanceBeginEditable name="Background" -->
+<p>This laboratory exercise asks
+  students to design and code a series of recursive algorithms. Many, but not all,
+  of these algorithms use the robot introduced in Chapter 2 of <cite>Algorithms
+  and Data
+  Structures: The Science of Computing</cite>.</p>
+<h3>Robots</h3>
+<p>The robot is available as a Java class named <code>Robot</code> (and a supporting
+  class named <code>RobotRoom</code>). Programs that use these classes need to
+  include two Java files: Robot.java and RobotRoom.java. The “<a href="#CourseInfo">Final
+  Details</a>” section of this document explains how to find these files
+and their documentation.</p>
+<p class="local-item">Any Java source file that refers to the <code>Robot</code> or <code>RobotRoom</code> classes
+  should “import” those classes, via the statement</p>
+<pre><code>    import geneseo.cs.sc.*;</code></pre>
+<p>at the beginning of the file.</p>
+<p>Several of the methods students write in this exercise need to be tested in
+  rooms other than the default one (specifically, in rooms that have colored
+  tiles located in strategic places). There is 
+  a <code>RobotRoom</code> constructor whose parameter is a string specification
+  for the room. This constructor can create the rooms needed in this lab. See
+  the documentation for <code>RobotRoom</code> for more information on 
+  the constructor. Once an appropriate room exists, the four-parameter
+  constructor for <code>Robot</code> can place a robot in that room.
+  For example, the following statements first create a 3 tile wide by 10 tile
+  high (including walls) room with a red tile 2 rows below
+   the north wall in the center column, and then place
+  a robot
+  at the center of the south side of the room, facing the red tile:</p>
+<pre><code>    RobotRoom room = new RobotRoom( "3 10 1 2 R" );
+    Robot occupant = new Robot( 1, 8, Robot.NORTH, room );</code></pre>
+<h3>Constructors in Subclasses</h3>
+<p>A constructor is basically a method that initializes a new object (see Sections
+  3.4.2 and A.4.4 of <cite>Algorithms and Data Structures: The Science of Computing</cite>).
+  In Java, constructors have the same name as the class they initialize — for example, the constructors for <code>Robot</code> objects
+  are named <code>Robot</code>, the constructors for instances of a hypothetical <code>ExtendedRobot</code> subclass
+  of <code>Robot</code> would be named <code>ExtendedRobot</code>, and so forth.
+  Note that subclasses don’t inherit constructors from their superclass
+  the way they inherit other methods — for example, even if a constructor
+  for <code>Robot</code> logically does everything necessary to initialize instances
+  of an <code>ExtendedRobot</code> subclass, there is no way to automatically
+  apply this constructor to <code>ExtendedRobot</code> objects.</p>
+<p>Even though Java doesn’t do it automatically, one often wants to initialize
+  instances of a subclass by just calling a superclass’s constructor. This
+  will probably be the case for the subclass of <code>Robot</code> defined in
+  this lab. To do this, define constructors for the subclass that do nothing
+  but call the corresponding superclass constructor. Within a constructor, the
+  word <code>super</code> can be used to call a superclass constructor. For example,
+  to allow instances of an <code>ExtendedRobot</code> subclass of <code>Robot</code> to
+  be initialized with their position, heading, and room (just like the four-parameter
+  constructor for <code>Robot</code> does), include the following constructor
+  in <code>ExtendedRobot</code>:</p>
+<pre><code>    // Within the ExtendedRobot class...
+    public ExtendedRobot( int column, int row, int heading, RobotRoom room ) {
+        super( column, row, heading, room );
+    }</code></pre>
+<p>A statement such as the following implicitly uses this constructor to initialize
+  an extended robot:</p>
+<pre><code>    ExtendedRobot r = new ExtendedRobot( 1, 3, Robot.NORTH, myRoom );</code></pre>
+<!-- InstanceEndEditable -->
+<h2><a name="exercise" id="exercise"></a>Exercise</h2>
+<!-- InstanceBeginEditable name="Exercise" -->
+<p>Design and code recursive methods that solve each of the problems
+  described below. The first five problems involve robots, and their solutions
+  should be coded as methods of a subclass of <code>Robot</code>.
+  The last problem can be coded as a static method in the main class.</p>
+<h3>Find a Red Tile</h3>
+<p>Design and code a recursive algorithm that causes a robot to move forward
+  until it is standing on a red tile. If the robot is initially standing on a
+  red tile, it should not move at all. Assume as a precondition that
+  there is at least one red tile between the robot and whatever wall it is facing
+  (although the red tile may be at the robot’s initial position).</p>
+<h3>Red Line</h3>
+<p>Design and code a recursive algorithm that makes a robot draw a straight red
+  line <var>n</var> tiles long, where <var>n</var> is a parameter to the algorithm. Assume as preconditions
+  that <var>n</var>&nbsp;&gt;=&nbsp;0, the robot is initially standing on what will be the
+  first tile of the line, facing in the direction the line should grow, and that
+  there are no obstructions on the <var>n</var> tiles in front of the robot.</p>
+<h3>Red Diagonal</h3>
+<p>Design and code a recursive algorithm that makes a robot draw a diagonal red
+  line <var>n</var> steps long, where <var>n</var> is a parameter to the algorithm.
+  Assume as preconditions that <var>n</var>&nbsp;&gt;=&nbsp;0, the robot is initially
+  standing where the southwest tile of the line will be, facing north, and that
+  there are no obstructions on the tiles that need to be colored for the line,
+  or on any tile adjacent to those colored for the line.</p>
+<p>As an example, here is a robot that has just drawn a 4-step diagonal. The
+  robot started in the lower left corner of its room:</p>
+<p align="center"><img src="Elementary%20Recursion%20Lab_fichiers/lab-recursion1-1.gif" alt="[Diagonal Red Line to the North and East of SouthWest Corner]" height="343" width="343"></p>
+<h3 align="left">Counting Red Tiles</h3>
+<p align="left">Design and code a recursive algorithm that moves a robot forward
+  until it comes to a wall, and returns the number of red tiles that the robot
+  encounters on the way, including any red tile that the robot starts on, and
+  any that is next to the wall.</p>
+<h3 align="left">Spiral</h3>
+<p align="left">Design and code an algorithm that makes a robot draw  draw a
+  red, square-cornered, spiral,  in which the first side is <var>n</var> tiles
+  long, and each subsequent side is 1 tile shorter than the previous side. In
+  other words, the second side is <var>n</var>&nbsp;-&nbsp;1 tiles long, the third <var>n</var>&nbsp;-&nbsp;2,
+  etc. The
+  length of the first side, <var>n</var>,
+  is a parameter to the algorithm. Assume as preconditions that <var>n</var>&nbsp;&gt;=&nbsp;0,
+  and that there are no obstructions within the spiral’s bounding box (i.e.,
+  within the smallest rectangular group of tiles that contains the spiral).</p>
+<p align="left">For example, here is a robot that has just finished drawing a
+  square spiral whose first side is 7 tiles long:</p>
+<p align="center"><img src="Elementary%20Recursion%20Lab_fichiers/lab-recursion1-2.gif" alt="[A Square Spiral]" height="343" width="343"></p>
+<h3 align="left">Squaring</h3>
+<p align="left">Design and code a recursive algorithm that computes <var>n</var><sup>2</sup>,
+  where <var>n</var> is an integer parameter to the algorithm. The recursion
+  should be based on the fact that, when <var>n</var>&nbsp;&gt;&nbsp;0, <var>n</var><sup>2</sup>&nbsp;=&nbsp;(<var>n</var>-1)<sup>2</sup>&nbsp;+&nbsp;2<var>n</var>&nbsp;-&nbsp;1.
+  When <var>n</var>&nbsp;=&nbsp;0, <var>n</var><sup>2</sup>&nbsp;=&nbsp;0 too.
+  Assume as a precondition that <var>n</var>&nbsp;&gt;=&nbsp;0.</p>
+<!-- InstanceEndEditable -->
+<h2><a name="CourseInfo" id="CourseInfo"></a>Final Details</h2>
+<!-- InstanceBeginEditable name="LocalInfo" -->
+<h3>The Robot Class</h3>
+<p class="local-item">Students can download both <a href="http://www.delmarlearning.com/companions/content/1584502509/Algorithms/classes/Robot.java" target="_top">Robot.java</a> and <a href="http://www.delmarlearning.com/companions/content/1584502509/Algorithms/classes/RobotRoom.java" target="_top">RobotRoom.java</a> from
+  the Web.</p>
+<p class="local-item"><a href="http://www.delmarlearning.com/companions/content/1584502509/Algorithms/doc/" target="_top">Documentation</a> on
+  both classes is also available on the Web. The main documentation page is an
+  index to documentation for all the Java classes written for use with <cite>Algorithms
+  and Data Structures: The Science of Computing</cite>. To see the documentation
+  for a specific class, click on that class’s name in the left-hand panel
+  of the page.</p>
+<h3>Submitting Your Work</h3>
+<p class="local-item">Turn in your solution to this exercise as directed by your
+  instructor.</p>
+<!-- InstanceEndEditable -->
+<hr width="80%" align="center">
+<p class="left-note" style="float:left">Copyright © 2004. Charles River Media. All rights reserved.</p>
+<p class="right-note">Revised <!-- InstanceBeginEditable name="RevisionDate" -->Mar.
+    3, 2004<!-- InstanceEndEditable --></p>
+<p class="right-note"><a href="http://www.delmarlearning.com/companions/content/1584502509/Algorithms/index-body.html">Site Index</a></p>
+
+
+</body><!-- InstanceEnd --></html>
